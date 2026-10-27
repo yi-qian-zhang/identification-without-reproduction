@@ -1,0 +1,167 @@
+"""Run one (tokenizer, objective, seed) cell end to end.
+
+    python -m pilot2.run_pilot --tokenizer 3mer --objective ar --seed 0 --gpu 0
+    python -m pilot2.run_pilot --smoke --tokenizer 6mer --objective mlm@0.15
+
+Run name: <tokenizer>_<objective>_s<seed>, under --out.
+Memorization metrics are read from final.pt unless --checkpoint best.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+import time
+from pathlib import Path
+
+import torch
+
+from .data import WINDOW, build_dataset
+from .real_data import DATA_PATHS, REAL_DATA, build_real_dataset
+from .model import Backbone
+from .score import score_run
+from .tokenizers import get_tokenizer
+from .train import parse_objective, train_cell
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--tokenizer", default="char", help="char | 3mer | 6mer")
+    ap.add_argument("--objective", default="ar")
+    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--gpu", type=int, default=0)
+    ap.add_argument("--out", default="outputs/pilot2")
+    ap.add_argument("--n_train", type=int, default=5000)
+    ap.add_argument("--n_val", type=int, default=500)
+    ap.add_argument("--n_test", type=int, default=500)
+    ap.add_argument("--probes_per_tier", type=int, default=20)
+    ap.add_argument("--tiers", default="1,4,16")
+    ap.add_argument("--n_nonmember", type=int, default=40)
+    ap.add_argument("--data_seed", type=int, default=1234)
+    ap.add_argument("--data", default="synthetic", choices=["synthetic", *REAL_DATA], help="synthetic iid DNA, or real E. coli windows")
+    ap.add_argument("--fasta", default=None, help="override the default path of --data")
+    ap.add_argument("--canary_npz", default=None, help="real-canary pool from pilot2.human_canary (default: iid uniform 96-mers)")
+    ap.add_argument("--enrich_k", type=int, default=None,
+                    help="synthetic only: make the canaries' own k-mers more common in the corpus")
+    ap.add_argument("--enrich_factor", type=float, default=1.0)
+    ap.add_argument("--epochs", type=int, default=30)
+    ap.add_argument("--max_steps", type=int, default=None, help="cap optimizer steps (fixed-supervised-token budget)")
+    ap.add_argument("--batch", type=int, default=64)
+    ap.add_argument("--lr", type=float, default=3e-4)
+    ap.add_argument("--pool", type=int, default=500)
+    ap.add_argument("--floor_n", type=int, default=500)
+    ap.add_argument("--checkpoint", default="final", choices=["best", "final"])
+    ap.add_argument("--score_only", action="store_true")
+    ap.add_argument("--smoke", action="store_true")
+    ap.add_argument("--save_epochs", default="", help="comma list of 1-indexed epochs to snapshot, e.g. 1,2,5,10")
+    ap.add_argument("--score_snapshots", action="store_true", help="also score every saved ep<N>.pt -> scores_ep<N>.json")
+    ap.add_argument("--d_model", type=int, default=None, help="backbone width (default 512)")
+    ap.add_argument("--n_layers", type=int, default=None, help="backbone depth (default 4)")
+    ap.add_argument("--n_heads", type=int, default=None, help="attention heads (default 8)")
+    ap.add_argument("--d_ff", type=int, default=None, help="capacity control: feed-forward width (default 4*d)")
+    ap.add_argument("--emb_rank", type=int, default=None, help="capacity control: factorized tied embedding rank")
+    ap.add_argument("--emb_lr_mult", type=float, default=1.0, help="learning-rate multiplier for the token embedding only")
+    ap.add_argument("--init_from", default=None,
+                    help="start from another run's final.pt (makes this cell a fine-tune, not a from-scratch run)")
+    ap.add_argument("--lora_r", type=int, default=0,
+                    help="train a LoRA adapter of this rank instead of all parameters (needs --pos_enc rope)")
+    ap.add_argument("--probe_offset", default="fixed", choices=["fixed", "random"],
+                    help="fixed: every probe copy at nt 96 (token-aligned); random: each copy at a random offset")
+    ap.add_argument("--pos_enc", default="abs", choices=["abs", "rope"],
+                    help="abs: learned absolute position embedding; rope: rotary (relative) positions")
+    ap.add_argument("--keep_snapshots", action="store_true",
+                    help="accepted for compatibility and now a no-op: snapshots are kept by default")
+    ap.add_argument("--drop_snapshots", action="store_true",
+                    help="delete ep<N>.pt after scoring. NOT the default any more -- keeping checkpoints is now the default: /data has 5.3 TiB free, our own snapshots are 56 MiB each and a 250M released one is about 1 GiB, and keeping them is what lets the search-based decoder in pilot2.recon_audit be pointed at any round of a finished run instead of only at its last one. That is how the extraction-versus-training-round curve gets measured without retraining anything.")
+    args = ap.parse_args(argv)
+    if args.smoke:
+        args.n_train, args.n_val, args.n_test = 400, 64, 64
+        args.probes_per_tier, args.n_nonmember = 3, 3
+        args.epochs, args.pool, args.floor_n = 2, 30, 64
+        args.out = os.path.join(args.out, "smoke")
+
+    device = f"cuda:{args.gpu}"
+    torch.cuda.set_device(args.gpu)
+    kind, _ = parse_objective(args.objective)
+    tok = get_tokenizer(args.tokenizer, WINDOW)
+    assert kind == "ar" or not hasattr(tok, "fill_id"), "spaced k-mer tokenizers are AR only"
+    name = f"{tok.name}_{args.objective.replace('@', '')}"
+    if args.enrich_k and args.enrich_factor != 1.0:
+        name += f"_enr{args.enrich_k}x{args.enrich_factor:g}"
+    if args.init_from:
+        name += "_ft" if not args.lora_r else ""
+    if args.lora_r:
+        name += f"_lora{args.lora_r}"
+    name += f"_s{args.seed}"
+    out_dir = Path(args.out) / name
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "args.json").write_text(json.dumps(vars(args), indent=1), encoding="utf-8")
+
+    t0 = time.time()
+    tiers = tuple(int(t) for t in args.tiers.split(","))
+    if args.data != "synthetic":
+        args.fasta = args.fasta or DATA_PATHS[args.data]
+        ds = build_real_dataset(args.fasta, args.n_train, args.n_val, args.n_test, args.probes_per_tier, tiers,
+                                args.n_nonmember, args.data_seed, offset_mode=args.probe_offset,
+                                canary_npz=args.canary_npz)
+    else:
+        ds = build_dataset(args.n_train, args.n_val, args.n_test, args.probes_per_tier, tiers, args.n_nonmember,
+                           args.data_seed, offset_mode=args.probe_offset,
+                           enrich_k=args.enrich_k, enrich_factor=args.enrich_factor)
+    ds.save_meta(out_dir / "data_meta.json")
+    print(f"[{name}] tokenizer {tok.name}: k={tok.k}, vocab={tok.vocab_size}, {tok.n_tokens} tok/window; "
+          f"train={ds.train.shape} probes={len(ds.probes)}", flush=True)
+
+    model_kw = {k: v for k, v in (("d_model", args.d_model), ("n_layers", args.n_layers),
+                                  ("n_heads", args.n_heads), ("d_ff", args.d_ff),
+                                  ("emb_rank", args.emb_rank)) if v}
+    if args.pos_enc != "abs":
+        model_kw["pos_enc"] = args.pos_enc
+    if args.score_only:
+        model = Backbone(tok.vocab_size, tok.n_tokens + 1, causal=(kind == "ar"), **model_kw).to(device)
+        summary = json.loads((out_dir / "train_summary.json").read_text(encoding="utf-8"))
+    else:
+        model, summary = train_cell(ds, tok, args.objective, args.seed, out_dir, device,
+                                    epochs=args.epochs, batch=args.batch, lr=args.lr, max_steps=args.max_steps,
+                                    save_epochs=[int(e) for e in args.save_epochs.split(',') if e], model_kw=model_kw,
+                                    emb_lr_mult=args.emb_lr_mult, lora_r=args.lora_r,
+                                    init_from=args.init_from)
+        print(f"[{name}] trained {summary['n_params']/1e6:.2f}M ({summary['n_params_non_embedding']/1e6:.2f}M non-emb), "
+              f"{summary['steps']} steps, {summary['supervised_tokens_seen']/1e6:.1f}M supervised tokens, "
+              f"{summary['total_train_sec']:.0f}s", flush=True)
+    if args.score_only or args.checkpoint != "best":
+        model.load_state_dict(torch.load(out_dir / f"{args.checkpoint}.pt", map_location=device))
+    model.eval()
+
+    t1 = time.time()
+    scores = score_run(model, tok, kind, ds, device, pool_size=args.pool, seed=args.seed, floor_n=args.floor_n,
+                         offset_mode=args.probe_offset)
+    scores.update(train_summary=summary, score_sec=time.time() - t1, total_sec=time.time() - t0,
+                  checkpoint=args.checkpoint)
+    fname = "scores.json" if args.checkpoint == "best" else "scores_final.json"
+    (out_dir / fname).write_text(json.dumps(scores, indent=1), encoding="utf-8")
+    for f in scores["floors"]:
+        print(f"[{name}] floor {f['scorer']:6s}: {f['bits_per_nt_mean']:.4f} bits/nt "
+              f"{'OK' if f['floor_ok'] else 'VIOLATION'}", flush=True)
+    print(f"[{name}] done in {scores['total_sec']:.0f}s -> {out_dir/fname}", flush=True)
+
+    if args.score_snapshots:
+        for e in sorted(int(x) for x in args.save_epochs.split(",") if x):
+            ck = out_dir / f"ep{e}.pt"
+            if not ck.exists():
+                continue
+            model.load_state_dict(torch.load(ck, map_location=device)); model.eval()
+            t2 = time.time()
+            sc = score_run(model, tok, kind, ds, device, pool_size=args.pool, seed=args.seed, floor_n=args.floor_n,
+                         offset_mode=args.probe_offset)
+            sc.update(train_summary=summary, score_sec=time.time() - t2, checkpoint=f"ep{e}", epoch=e)
+            (out_dir / f"scores_ep{e}.json").write_text(json.dumps(sc, indent=1), encoding="utf-8")
+            fl = sc["floors"][0]["bits_per_nt_mean"]
+            print(f"[{name}] snapshot ep{e}: floor {fl:.4f}  ({sc['score_sec']:.0f}s)", flush=True)
+            if args.drop_snapshots:
+                ck.unlink()
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,9172 @@
+{
+ "kind": "dnabert2",
+ "k": "bpe",
+ "objective": "mlm",
+ "pool_size": 200,
+ "stride": 1,
+ "floors": [
+  {
+   "scorer": "token_pll",
+   "n_windows": 200,
+   "positions": 288,
+   "bits_per_nt_mean": 1.7280694577145852,
+   "bits_per_nt_std": 0.6294082440261713,
+   "floor_ok": false
+  }
+ ],
+ "probes": [
+  {
+   "probe_id": 0,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 20,
+     "n_pool": 200,
+     "p_chance": 0.09950248756218906,
+     "offset": 131,
+     "positions": 19,
+     "probe_bits_per_nt": 0.8275663050623436,
+     "pool_bits_per_nt_mean": 1.98923290519732,
+     "z": 1.7535752171992298
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 92,
+     "positions": 19,
+     "probe_bits_per_nt": 0.02584447332134484,
+     "pool_bits_per_nt_mean": 1.911786671913321,
+     "z": 2.814867293794716
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 131,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 38
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 92,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [
+    92
+   ],
+   "fresh_offset": 131
+  },
+  {
+   "probe_id": 1,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 26,
+     "n_pool": 200,
+     "p_chance": 0.12935323383084577,
+     "offset": 13,
+     "positions": 19,
+     "probe_bits_per_nt": 0.8210100728341786,
+     "pool_bits_per_nt_mean": 1.9087143225007275,
+     "z": 1.5719334477122306
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 59,
+     "positions": 20,
+     "probe_bits_per_nt": 0.21535998931208106,
+     "pool_bits_per_nt_mean": 1.9043593200432696,
+     "z": 2.455890060925837
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 13,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 59,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 37
+    }
+   },
+   "train_offsets": [
+    59
+   ],
+   "fresh_offset": 13
+  },
+  {
+   "probe_id": 2,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 87,
+     "positions": 18,
+     "probe_bits_per_nt": 0.38577276183518305,
+     "pool_bits_per_nt_mean": 1.9371605191225405,
+     "z": 2.315987108060855
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 99,
+     "positions": 18,
+     "probe_bits_per_nt": 0.034547976523162514,
+     "pool_bits_per_nt_mean": 1.9689307022348856,
+     "z": 2.8580263834317163
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 87,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 99,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 31
+    }
+   },
+   "train_offsets": [
+    99
+   ],
+   "fresh_offset": 87
+  },
+  {
+   "probe_id": 3,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 40,
+     "n_pool": 200,
+     "p_chance": 0.19900497512437812,
+     "offset": 153,
+     "positions": 20,
+     "probe_bits_per_nt": 1.0654535998501464,
+     "pool_bits_per_nt_mean": 1.9105617089613676,
+     "z": 1.263470256999658
+    },
+    "span_pll/train": {
+     "rank": 5,
+     "n_pool": 200,
+     "p_chance": 0.024875621890547265,
+     "offset": 20,
+     "positions": 20,
+     "probe_bits_per_nt": 0.4395245132716812,
+     "pool_bits_per_nt_mean": 1.8564912315236626,
+     "z": 2.1348396700523358
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 153,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 39
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 20,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    20
+   ],
+   "fresh_offset": 153
+  },
+  {
+   "probe_id": 4,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 60,
+     "n_pool": 200,
+     "p_chance": 0.29850746268656714,
+     "offset": 119,
+     "positions": 18,
+     "probe_bits_per_nt": 1.7858585509822655,
+     "pool_bits_per_nt_mean": 1.99282625902039,
+     "z": 0.30922253036538055
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 102,
+     "positions": 18,
+     "probe_bits_per_nt": 0.011346188590852103,
+     "pool_bits_per_nt_mean": 1.985227538431772,
+     "z": 2.7323102416742957
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 119,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 38
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 102,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    102
+   ],
+   "fresh_offset": 119
+  },
+  {
+   "probe_id": 5,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 68,
+     "n_pool": 200,
+     "p_chance": 0.3383084577114428,
+     "offset": 185,
+     "positions": 20,
+     "probe_bits_per_nt": 1.7269981683080213,
+     "pool_bits_per_nt_mean": 1.9269107287335592,
+     "z": 0.29023125019378765
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 87,
+     "positions": 21,
+     "probe_bits_per_nt": 0.2946656583556352,
+     "pool_bits_per_nt_mean": 1.9185595722105677,
+     "z": 2.4694527541308022
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 185,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 39
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 87,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    87
+   ],
+   "fresh_offset": 185
+  },
+  {
+   "probe_id": 6,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 61,
+     "n_pool": 200,
+     "p_chance": 0.3034825870646766,
+     "offset": 14,
+     "positions": 22,
+     "probe_bits_per_nt": 1.4935412507030483,
+     "pool_bits_per_nt_mean": 1.904174295558725,
+     "z": 0.5727757496476217
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 127,
+     "positions": 22,
+     "probe_bits_per_nt": 0.2961576587292936,
+     "pool_bits_per_nt_mean": 1.9592192249607983,
+     "z": 2.3835016274508836
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 14,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 127,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 29
+    }
+   },
+   "train_offsets": [
+    127
+   ],
+   "fresh_offset": 14
+  },
+  {
+   "probe_id": 7,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 20,
+     "n_pool": 200,
+     "p_chance": 0.09950248756218906,
+     "offset": 80,
+     "positions": 20,
+     "probe_bits_per_nt": 0.7731754555792382,
+     "pool_bits_per_nt_mean": 1.8788945033302002,
+     "z": 1.7744910911518252
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 170,
+     "positions": 21,
+     "probe_bits_per_nt": 0.06010481875596407,
+     "pool_bits_per_nt_mean": 1.8790574384346355,
+     "z": 2.498581961483241
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 80,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 42
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 170,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    170
+   ],
+   "fresh_offset": 80
+  },
+  {
+   "probe_id": 8,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 57,
+     "n_pool": 200,
+     "p_chance": 0.2835820895522388,
+     "offset": 79,
+     "positions": 20,
+     "probe_bits_per_nt": 1.446367439219591,
+     "pool_bits_per_nt_mean": 1.8364463269426734,
+     "z": 0.6171367215939386
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 68,
+     "positions": 20,
+     "probe_bits_per_nt": 0.09780039481490693,
+     "pool_bits_per_nt_mean": 1.9757168041233504,
+     "z": 2.5967815382116246
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 79,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 68,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    68
+   ],
+   "fresh_offset": 79
+  },
+  {
+   "probe_id": 9,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 94,
+     "n_pool": 200,
+     "p_chance": 0.46766169154228854,
+     "offset": 109,
+     "positions": 21,
+     "probe_bits_per_nt": 2.1008816826474956,
+     "pool_bits_per_nt_mean": 1.8785216923329884,
+     "z": -0.3538405514895749
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 88,
+     "positions": 22,
+     "probe_bits_per_nt": 0.07818925021381724,
+     "pool_bits_per_nt_mean": 2.2002767508221166,
+     "z": 2.8431912638775723
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 109,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 88,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [
+    88
+   ],
+   "fresh_offset": 109
+  },
+  {
+   "probe_id": 10,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 167,
+     "positions": 19,
+     "probe_bits_per_nt": 0.3785685407391776,
+     "pool_bits_per_nt_mean": 1.8255419269142852,
+     "z": 2.2387976878358153
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 152,
+     "positions": 20,
+     "probe_bits_per_nt": 0.05250179776940623,
+     "pool_bits_per_nt_mean": 1.9582131915809324,
+     "z": 2.8036300352649057
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 167,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 8
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 152,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 19
+    }
+   },
+   "train_offsets": [
+    152
+   ],
+   "fresh_offset": 167
+  },
+  {
+   "probe_id": 11,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 10,
+     "n_pool": 200,
+     "p_chance": 0.04975124378109453,
+     "offset": 64,
+     "positions": 17,
+     "probe_bits_per_nt": 0.6240921072981365,
+     "pool_bits_per_nt_mean": 1.9368747793761074,
+     "z": 1.9715032050041197
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 170,
+     "positions": 17,
+     "probe_bits_per_nt": 0.01806682676870734,
+     "pool_bits_per_nt_mean": 1.8214097695439877,
+     "z": 2.7566403217049564
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 64,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 170,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 32
+    }
+   },
+   "train_offsets": [
+    170
+   ],
+   "fresh_offset": 64
+  },
+  {
+   "probe_id": 12,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 68,
+     "n_pool": 200,
+     "p_chance": 0.3383084577114428,
+     "offset": 133,
+     "positions": 20,
+     "probe_bits_per_nt": 1.6484555126006564,
+     "pool_bits_per_nt_mean": 1.8804592079825457,
+     "z": 0.32989384682092576
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 115,
+     "positions": 20,
+     "probe_bits_per_nt": 0.1580121634713303,
+     "pool_bits_per_nt_mean": 2.0656416784129887,
+     "z": 2.7698439321597887
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 133,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 42
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 115,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [
+    115
+   ],
+   "fresh_offset": 133
+  },
+  {
+   "probe_id": 13,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 109,
+     "positions": 20,
+     "probe_bits_per_nt": 0.1770879950745439,
+     "pool_bits_per_nt_mean": 1.9001925690204666,
+     "z": 2.501915960235183
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 113,
+     "positions": 21,
+     "probe_bits_per_nt": 0.08172757152824246,
+     "pool_bits_per_nt_mean": 1.9974078051364506,
+     "z": 2.7683652775309358
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 109,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 36
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 113,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [
+    113
+   ],
+   "fresh_offset": 109
+  },
+  {
+   "probe_id": 14,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 42,
+     "positions": 20,
+     "probe_bits_per_nt": 0.44153711704280457,
+     "pool_bits_per_nt_mean": 1.9795191834672863,
+     "z": 2.0328564280955903
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 160,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0053083642145203965,
+     "pool_bits_per_nt_mean": 1.8427041213564734,
+     "z": 2.891543737188699
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 42,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 7
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 160,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 14
+    }
+   },
+   "train_offsets": [
+    160
+   ],
+   "fresh_offset": 42
+  },
+  {
+   "probe_id": 15,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 180,
+     "positions": 20,
+     "probe_bits_per_nt": 0.09282173966668966,
+     "pool_bits_per_nt_mean": 1.8908504286991246,
+     "z": 2.736793984480922
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 187,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0073192094752678695,
+     "pool_bits_per_nt_mean": 2.0065114044113477,
+     "z": 2.6687134082249173
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 180,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 6
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 187,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 6
+    }
+   },
+   "train_offsets": [
+    187
+   ],
+   "fresh_offset": 180
+  },
+  {
+   "probe_id": 16,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 26,
+     "positions": 19,
+     "probe_bits_per_nt": 0.3018467114115103,
+     "pool_bits_per_nt_mean": 1.875081955571239,
+     "z": 2.4287214301287414
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 145,
+     "positions": 18,
+     "probe_bits_per_nt": 0.030955111635927953,
+     "pool_bits_per_nt_mean": 2.0942690753561495,
+     "z": 2.678925281340605
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 26,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 145,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    145
+   ],
+   "fresh_offset": 26
+  },
+  {
+   "probe_id": 17,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 32,
+     "n_pool": 200,
+     "p_chance": 0.15920398009950248,
+     "offset": 129,
+     "positions": 20,
+     "probe_bits_per_nt": 0.9249334874084743,
+     "pool_bits_per_nt_mean": 1.8664630495784627,
+     "z": 1.4558248174223847
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 129,
+     "positions": 20,
+     "probe_bits_per_nt": 0.026348601889413122,
+     "pool_bits_per_nt_mean": 2.123131395114656,
+     "z": 2.773954727054905
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 129,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 36
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 129,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 29
+    }
+   },
+   "train_offsets": [
+    129
+   ],
+   "fresh_offset": 129
+  },
+  {
+   "probe_id": 18,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 15,
+     "positions": 19,
+     "probe_bits_per_nt": 0.15374980874867905,
+     "pool_bits_per_nt_mean": 1.8252236114907459,
+     "z": 2.5726956980581157
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 49,
+     "positions": 19,
+     "probe_bits_per_nt": 0.014065308540641551,
+     "pool_bits_per_nt_mean": 1.9061905947241524,
+     "z": 2.780763041790881
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 15,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 17
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 49,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 14
+    }
+   },
+   "train_offsets": [
+    49
+   ],
+   "fresh_offset": 15
+  },
+  {
+   "probe_id": 19,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 121,
+     "positions": 16,
+     "probe_bits_per_nt": 0.2980467277140704,
+     "pool_bits_per_nt_mean": 1.8916700125968218,
+     "z": 2.435208836854462
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 34,
+     "positions": 16,
+     "probe_bits_per_nt": 0.06440178116916619,
+     "pool_bits_per_nt_mean": 1.9579989320614775,
+     "z": 2.717412174825389
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 121,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 21
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 34,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 14
+    }
+   },
+   "train_offsets": [
+    34
+   ],
+   "fresh_offset": 121
+  },
+  {
+   "probe_id": 20,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 42,
+     "n_pool": 200,
+     "p_chance": 0.208955223880597,
+     "offset": 88,
+     "positions": 20,
+     "probe_bits_per_nt": 1.2723014552305745,
+     "pool_bits_per_nt_mean": 1.8731583131486007,
+     "z": 0.9572130132831517
+    },
+    "span_pll/train": {
+     "rank": 18,
+     "n_pool": 200,
+     "p_chance": 0.08955223880597014,
+     "offset": 44,
+     "positions": 21,
+     "probe_bits_per_nt": 0.7643020827787401,
+     "pool_bits_per_nt_mean": 1.9317558172410554,
+     "z": 1.6885929236677968
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 88,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 36
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 44,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 32
+    }
+   },
+   "train_offsets": [
+    44
+   ],
+   "fresh_offset": 88
+  },
+  {
+   "probe_id": 21,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 25,
+     "n_pool": 200,
+     "p_chance": 0.12437810945273632,
+     "offset": 155,
+     "positions": 19,
+     "probe_bits_per_nt": 0.8032812088085376,
+     "pool_bits_per_nt_mean": 1.8479093751342388,
+     "z": 1.6234830333005268
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 52,
+     "positions": 20,
+     "probe_bits_per_nt": 0.19558825769822863,
+     "pool_bits_per_nt_mean": 1.8659261329593795,
+     "z": 2.5176915611005874
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 155,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 52,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [
+    52
+   ],
+   "fresh_offset": 155
+  },
+  {
+   "probe_id": 22,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 57,
+     "n_pool": 200,
+     "p_chance": 0.2835820895522388,
+     "offset": 45,
+     "positions": 19,
+     "probe_bits_per_nt": 1.560226183729086,
+     "pool_bits_per_nt_mean": 1.9257721334930153,
+     "z": 0.5275455551960709
+    },
+    "span_pll/train": {
+     "rank": 4,
+     "n_pool": 200,
+     "p_chance": 0.01990049751243781,
+     "offset": 191,
+     "positions": 18,
+     "probe_bits_per_nt": 0.34385232575122937,
+     "pool_bits_per_nt_mean": 1.8696561524539959,
+     "z": 2.166841672355672
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 45,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 191,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 42
+    }
+   },
+   "train_offsets": [
+    191
+   ],
+   "fresh_offset": 45
+  },
+  {
+   "probe_id": 23,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 87,
+     "n_pool": 200,
+     "p_chance": 0.43283582089552236,
+     "offset": 1,
+     "positions": 18,
+     "probe_bits_per_nt": 2.003437044376634,
+     "pool_bits_per_nt_mean": 1.8548638894077931,
+     "z": -0.22515573673839445
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 91,
+     "positions": 18,
+     "probe_bits_per_nt": 0.3370255344111691,
+     "pool_bits_per_nt_mean": 2.018195778407902,
+     "z": 2.6122921610019274
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 1,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 91,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [
+    91
+   ],
+   "fresh_offset": 1
+  },
+  {
+   "probe_id": 24,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 104,
+     "n_pool": 200,
+     "p_chance": 0.5174129353233831,
+     "offset": 11,
+     "positions": 19,
+     "probe_bits_per_nt": 2.2586516741608333,
+     "pool_bits_per_nt_mean": 1.951335131185189,
+     "z": -0.40453935446499006
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 42,
+     "positions": 19,
+     "probe_bits_per_nt": 0.03289163202137246,
+     "pool_bits_per_nt_mean": 2.362935798726645,
+     "z": 2.958488992772479
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 11,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 36
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 42,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [
+    42
+   ],
+   "fresh_offset": 11
+  },
+  {
+   "probe_id": 25,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 37,
+     "n_pool": 200,
+     "p_chance": 0.18407960199004975,
+     "offset": 0,
+     "positions": 19,
+     "probe_bits_per_nt": 0.9409417732103574,
+     "pool_bits_per_nt_mean": 1.8178337853064415,
+     "z": 1.2715945734556726
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 31,
+     "positions": 20,
+     "probe_bits_per_nt": 0.018977768120775555,
+     "pool_bits_per_nt_mean": 1.9545204413965862,
+     "z": 2.574898862826395
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 0,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 28
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 31,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [
+    31
+   ],
+   "fresh_offset": 0
+  },
+  {
+   "probe_id": 26,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 155,
+     "positions": 17,
+     "probe_bits_per_nt": 0.2517893161642464,
+     "pool_bits_per_nt_mean": 1.8408867895834857,
+     "z": 2.433054111449031
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 14,
+     "positions": 17,
+     "probe_bits_per_nt": 0.013351273558503322,
+     "pool_bits_per_nt_mean": 1.8667228981454604,
+     "z": 2.6792089060999738
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 155,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 14,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 31
+    }
+   },
+   "train_offsets": [
+    14
+   ],
+   "fresh_offset": 155
+  },
+  {
+   "probe_id": 27,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 8,
+     "n_pool": 200,
+     "p_chance": 0.03980099502487562,
+     "offset": 139,
+     "positions": 21,
+     "probe_bits_per_nt": 0.5941251068436024,
+     "pool_bits_per_nt_mean": 1.9020759116666353,
+     "z": 1.947300895332174
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 38,
+     "positions": 21,
+     "probe_bits_per_nt": 0.037426032162883274,
+     "pool_bits_per_nt_mean": 1.878679601389081,
+     "z": 2.7726526337169815
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 139,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 30
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 38,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 37
+    }
+   },
+   "train_offsets": [
+    38
+   ],
+   "fresh_offset": 139
+  },
+  {
+   "probe_id": 28,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 57,
+     "n_pool": 200,
+     "p_chance": 0.2835820895522388,
+     "offset": 68,
+     "positions": 18,
+     "probe_bits_per_nt": 1.5245129127130372,
+     "pool_bits_per_nt_mean": 1.901027815137818,
+     "z": 0.565541934794405
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 69,
+     "positions": 18,
+     "probe_bits_per_nt": 0.20713996268355842,
+     "pool_bits_per_nt_mean": 1.9693765190099788,
+     "z": 2.59339352815009
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 68,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 69,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 32
+    }
+   },
+   "train_offsets": [
+    69
+   ],
+   "fresh_offset": 68
+  },
+  {
+   "probe_id": 29,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 131,
+     "positions": 20,
+     "probe_bits_per_nt": 0.24558922300909958,
+     "pool_bits_per_nt_mean": 2.110021665461295,
+     "z": 2.7006386384098535
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 44,
+     "positions": 20,
+     "probe_bits_per_nt": 0.011659189194920434,
+     "pool_bits_per_nt_mean": 1.9005083993759455,
+     "z": 2.765230898562994
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 131,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 44,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 43
+    }
+   },
+   "train_offsets": [
+    44
+   ],
+   "fresh_offset": 131
+  },
+  {
+   "probe_id": 30,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 5,
+     "n_pool": 200,
+     "p_chance": 0.024875621890547265,
+     "offset": 93,
+     "positions": 22,
+     "probe_bits_per_nt": 0.5281358165581834,
+     "pool_bits_per_nt_mean": 2.120938952388303,
+     "z": 2.2887244491796475
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 116,
+     "positions": 20,
+     "probe_bits_per_nt": 0.026234663223809296,
+     "pool_bits_per_nt_mean": 1.9703491087109013,
+     "z": 2.615044975772926
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 93,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 14
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 116,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 14
+    }
+   },
+   "train_offsets": [
+    116
+   ],
+   "fresh_offset": 93
+  },
+  {
+   "probe_id": 31,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 4,
+     "n_pool": 200,
+     "p_chance": 0.01990049751243781,
+     "offset": 158,
+     "positions": 18,
+     "probe_bits_per_nt": 0.5033176894032633,
+     "pool_bits_per_nt_mean": 1.8645283465272704,
+     "z": 2.179939695412049
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 82,
+     "positions": 18,
+     "probe_bits_per_nt": 0.09147167516569302,
+     "pool_bits_per_nt_mean": 2.041635815421438,
+     "z": 2.6966926363049595
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 158,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 9
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 82,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 11
+    }
+   },
+   "train_offsets": [
+    82
+   ],
+   "fresh_offset": 158
+  },
+  {
+   "probe_id": 32,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 61,
+     "n_pool": 200,
+     "p_chance": 0.3034825870646766,
+     "offset": 6,
+     "positions": 20,
+     "probe_bits_per_nt": 1.630006170143865,
+     "pool_bits_per_nt_mean": 2.0056589570748953,
+     "z": 0.5245981332761013
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 27,
+     "positions": 20,
+     "probe_bits_per_nt": 0.04488325983237871,
+     "pool_bits_per_nt_mean": 1.979361937409429,
+     "z": 2.7581279190865557
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 6,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 38
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 27,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [
+    27
+   ],
+   "fresh_offset": 6
+  },
+  {
+   "probe_id": 33,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 104,
+     "positions": 20,
+     "probe_bits_per_nt": 0.2324720856118863,
+     "pool_bits_per_nt_mean": 1.9664617743795316,
+     "z": 2.5025585268276123
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 27,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0067445496133760946,
+     "pool_bits_per_nt_mean": 1.8907791975736796,
+     "z": 2.806171554018441
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 104,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 18
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 27,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 18
+    }
+   },
+   "train_offsets": [
+    27
+   ],
+   "fresh_offset": 104
+  },
+  {
+   "probe_id": 34,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 12,
+     "n_pool": 200,
+     "p_chance": 0.05970149253731343,
+     "offset": 161,
+     "positions": 17,
+     "probe_bits_per_nt": 0.6967587312496771,
+     "pool_bits_per_nt_mean": 2.092501617378912,
+     "z": 2.0759116852446433
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 171,
+     "positions": 18,
+     "probe_bits_per_nt": 0.024428618799631433,
+     "pool_bits_per_nt_mean": 1.9786741800021774,
+     "z": 2.6389143362292535
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 161,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 18
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 171,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 12
+    }
+   },
+   "train_offsets": [
+    171
+   ],
+   "fresh_offset": 161
+  },
+  {
+   "probe_id": 35,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 27,
+     "n_pool": 200,
+     "p_chance": 0.13432835820895522,
+     "offset": 165,
+     "positions": 20,
+     "probe_bits_per_nt": 0.8759626342991468,
+     "pool_bits_per_nt_mean": 1.915067390040435,
+     "z": 1.4660504333833533
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 30,
+     "positions": 20,
+     "probe_bits_per_nt": 0.11641241666059744,
+     "pool_bits_per_nt_mean": 1.9488872811908953,
+     "z": 2.7081644079772045
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 165,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 33
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 30,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [
+    30
+   ],
+   "fresh_offset": 165
+  },
+  {
+   "probe_id": 36,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 9,
+     "n_pool": 200,
+     "p_chance": 0.04477611940298507,
+     "offset": 106,
+     "positions": 17,
+     "probe_bits_per_nt": 0.5740617512596848,
+     "pool_bits_per_nt_mean": 1.9151966542321484,
+     "z": 2.0194057801945955
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 68,
+     "positions": 18,
+     "probe_bits_per_nt": 0.06789650238488561,
+     "pool_bits_per_nt_mean": 1.9064914193351836,
+     "z": 2.7814680063835757
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 106,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 68,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [
+    68
+   ],
+   "fresh_offset": 106
+  },
+  {
+   "probe_id": 37,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 70,
+     "n_pool": 200,
+     "p_chance": 0.3482587064676617,
+     "offset": 25,
+     "positions": 19,
+     "probe_bits_per_nt": 1.9886458675431722,
+     "pool_bits_per_nt_mean": 2.000722071142263,
+     "z": 0.016898832168133295
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 39,
+     "positions": 19,
+     "probe_bits_per_nt": 0.04109345370092652,
+     "pool_bits_per_nt_mean": 2.008596469963291,
+     "z": 2.6796980458121933
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 25,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 30
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 39,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [
+    39
+   ],
+   "fresh_offset": 25
+  },
+  {
+   "probe_id": 38,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 65,
+     "n_pool": 200,
+     "p_chance": 0.32338308457711445,
+     "offset": 137,
+     "positions": 19,
+     "probe_bits_per_nt": 1.754830031984685,
+     "pool_bits_per_nt_mean": 1.885875279261997,
+     "z": 0.20642573900997924
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 191,
+     "positions": 19,
+     "probe_bits_per_nt": 0.16166870531987979,
+     "pool_bits_per_nt_mean": 1.9962544379542937,
+     "z": 2.3373167969926874
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 137,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 43
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 191,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 32
+    }
+   },
+   "train_offsets": [
+    191
+   ],
+   "fresh_offset": 137
+  },
+  {
+   "probe_id": 39,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 136,
+     "positions": 19,
+     "probe_bits_per_nt": 0.40181987843263955,
+     "pool_bits_per_nt_mean": 1.8729167694797257,
+     "z": 2.2994801459969527
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 144,
+     "positions": 19,
+     "probe_bits_per_nt": 0.09213696074999907,
+     "pool_bits_per_nt_mean": 1.8795015652231557,
+     "z": 2.661499026262202
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 136,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 36
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 144,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 28
+    }
+   },
+   "train_offsets": [
+    144
+   ],
+   "fresh_offset": 136
+  },
+  {
+   "probe_id": 40,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 70,
+     "n_pool": 200,
+     "p_chance": 0.3482587064676617,
+     "offset": 41,
+     "positions": 21,
+     "probe_bits_per_nt": 1.8685748021090172,
+     "pool_bits_per_nt_mean": 1.9728421609497773,
+     "z": 0.15110728975518053
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 156,
+     "positions": 20,
+     "probe_bits_per_nt": 0.30143550457496754,
+     "pool_bits_per_nt_mean": 1.8841035974511064,
+     "z": 2.2932778753310394
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 41,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 32
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 156,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    156
+   ],
+   "fresh_offset": 41
+  },
+  {
+   "probe_id": 41,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 4,
+     "n_pool": 200,
+     "p_chance": 0.01990049751243781,
+     "offset": 29,
+     "positions": 17,
+     "probe_bits_per_nt": 0.4774638255628749,
+     "pool_bits_per_nt_mean": 1.842425565838391,
+     "z": 2.07509632702956
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 82,
+     "positions": 17,
+     "probe_bits_per_nt": 0.14755434891994196,
+     "pool_bits_per_nt_mean": 2.3634389737446564,
+     "z": 2.699816639676702
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 29,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 25
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 82,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 22
+    }
+   },
+   "train_offsets": [
+    82
+   ],
+   "fresh_offset": 29
+  },
+  {
+   "probe_id": 42,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 5,
+     "n_pool": 200,
+     "p_chance": 0.024875621890547265,
+     "offset": 42,
+     "positions": 20,
+     "probe_bits_per_nt": 0.4734188507989748,
+     "pool_bits_per_nt_mean": 1.8390077546877084,
+     "z": 2.132224233688887
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 177,
+     "positions": 20,
+     "probe_bits_per_nt": 0.04474150045404545,
+     "pool_bits_per_nt_mean": 1.9760341507984303,
+     "z": 2.7982313222539976
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 42,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 12
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 177,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 10
+    }
+   },
+   "train_offsets": [
+    177
+   ],
+   "fresh_offset": 42
+  },
+  {
+   "probe_id": 43,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 68,
+     "n_pool": 200,
+     "p_chance": 0.3383084577114428,
+     "offset": 163,
+     "positions": 20,
+     "probe_bits_per_nt": 1.939807199020571,
+     "pool_bits_per_nt_mean": 2.0021298076053027,
+     "z": 0.08796055536735004
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 185,
+     "positions": 20,
+     "probe_bits_per_nt": 0.018624700960500267,
+     "pool_bits_per_nt_mean": 1.9893477011233847,
+     "z": 2.929018470135429
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 163,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 185,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    185
+   ],
+   "fresh_offset": 163
+  },
+  {
+   "probe_id": 44,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 63,
+     "n_pool": 200,
+     "p_chance": 0.31343283582089554,
+     "offset": 39,
+     "positions": 19,
+     "probe_bits_per_nt": 1.6707552270898287,
+     "pool_bits_per_nt_mean": 1.8617940983433416,
+     "z": 0.3061490339474029
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 144,
+     "positions": 19,
+     "probe_bits_per_nt": 0.007323812201636024,
+     "pool_bits_per_nt_mean": 1.89943250118875,
+     "z": 2.6565065611609007
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 39,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 36
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 144,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    144
+   ],
+   "fresh_offset": 39
+  },
+  {
+   "probe_id": 45,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 30,
+     "positions": 15,
+     "probe_bits_per_nt": 0.13433609937738633,
+     "pool_bits_per_nt_mean": 1.8981794511680363,
+     "z": 2.556843496256195
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 78,
+     "positions": 15,
+     "probe_bits_per_nt": 0.008040678835057961,
+     "pool_bits_per_nt_mean": 2.5870472142510583,
+     "z": 2.6306429923940327
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 30,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 8
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 78,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 5
+    }
+   },
+   "train_offsets": [
+    78
+   ],
+   "fresh_offset": 30
+  },
+  {
+   "probe_id": 46,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 123,
+     "positions": 19,
+     "probe_bits_per_nt": 0.40601169305948065,
+     "pool_bits_per_nt_mean": 1.8823980306204953,
+     "z": 2.3537965459523917
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 2,
+     "positions": 17,
+     "probe_bits_per_nt": 0.013779591522270127,
+     "pool_bits_per_nt_mean": 1.9036124195055977,
+     "z": 2.711090366106829
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 123,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 43
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 2,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    2
+   ],
+   "fresh_offset": 123
+  },
+  {
+   "probe_id": 47,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 57,
+     "n_pool": 200,
+     "p_chance": 0.2835820895522388,
+     "offset": 15,
+     "positions": 19,
+     "probe_bits_per_nt": 1.4358093960653195,
+     "pool_bits_per_nt_mean": 1.8401783559469524,
+     "z": 0.6354113504731427
+    },
+    "span_pll/train": {
+     "rank": 5,
+     "n_pool": 200,
+     "p_chance": 0.024875621890547265,
+     "offset": 158,
+     "positions": 19,
+     "probe_bits_per_nt": 0.44094491332035385,
+     "pool_bits_per_nt_mean": 1.869093474449951,
+     "z": 2.151749300316613
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 15,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 36
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 158,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    158
+   ],
+   "fresh_offset": 15
+  },
+  {
+   "probe_id": 48,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 112,
+     "positions": 15,
+     "probe_bits_per_nt": 0.3645997416328602,
+     "pool_bits_per_nt_mean": 1.8916726028821484,
+     "z": 2.3869135223755023
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 169,
+     "positions": 15,
+     "probe_bits_per_nt": 0.030333293742202748,
+     "pool_bits_per_nt_mean": 2.0364782852354617,
+     "z": 2.687005812641368
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 42,
+     "offset": 112,
+     "n_generated_nt": 54,
+     "exact": false,
+     "hamming_nt": 20
+    },
+    "train": {
+     "k_revealed_nt": 42,
+     "offset": 169,
+     "n_generated_nt": 54,
+     "exact": false,
+     "hamming_nt": 19
+    }
+   },
+   "train_offsets": [
+    169
+   ],
+   "fresh_offset": 112
+  },
+  {
+   "probe_id": 49,
+   "repetitions": 1,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 12,
+     "n_pool": 200,
+     "p_chance": 0.05970149253731343,
+     "offset": 109,
+     "positions": 20,
+     "probe_bits_per_nt": 0.6557563871042588,
+     "pool_bits_per_nt_mean": 1.8452629017907134,
+     "z": 1.8472042534666566
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 81,
+     "positions": 19,
+     "probe_bits_per_nt": 0.07802972743310314,
+     "pool_bits_per_nt_mean": 2.0817759380444723,
+     "z": 2.7481722573569796
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 109,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 81,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [
+    81
+   ],
+   "fresh_offset": 109
+  },
+  {
+   "probe_id": 50,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 11,
+     "n_pool": 200,
+     "p_chance": 0.05472636815920398,
+     "offset": 0,
+     "positions": 23,
+     "probe_bits_per_nt": 0.570641470284736,
+     "pool_bits_per_nt_mean": 1.994906318374158,
+     "z": 1.9072252661140519
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 117,
+     "positions": 23,
+     "probe_bits_per_nt": 0.002513501170497659,
+     "pool_bits_per_nt_mean": 1.938463031049955,
+     "z": 2.879942998427842
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 0,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 36
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 117,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [
+    117,
+    140,
+    98,
+    79
+   ],
+   "fresh_offset": 0
+  },
+  {
+   "probe_id": 51,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 110,
+     "positions": 19,
+     "probe_bits_per_nt": 0.28172128210153574,
+     "pool_bits_per_nt_mean": 1.8760671308075698,
+     "z": 2.634570978333019
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 74,
+     "positions": 18,
+     "probe_bits_per_nt": 0.014615965788081832,
+     "pool_bits_per_nt_mean": 1.9608302786303344,
+     "z": 2.7173539611573396
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 110,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 40
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 74,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [
+    74,
+    179,
+    38,
+    129
+   ],
+   "fresh_offset": 110
+  },
+  {
+   "probe_id": 52,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 85,
+     "positions": 18,
+     "probe_bits_per_nt": 0.3065490622503443,
+     "pool_bits_per_nt_mean": 1.9036042696737376,
+     "z": 2.447607772141983
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 170,
+     "positions": 18,
+     "probe_bits_per_nt": 0.002669647813439705,
+     "pool_bits_per_nt_mean": 2.030363172242983,
+     "z": 2.8291827288065337
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 42,
+     "offset": 85,
+     "n_generated_nt": 54,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 42,
+     "offset": 170,
+     "n_generated_nt": 54,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    170,
+    110,
+    130,
+    96
+   ],
+   "fresh_offset": 85
+  },
+  {
+   "probe_id": 53,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 2,
+     "positions": 19,
+     "probe_bits_per_nt": 0.35330039858361423,
+     "pool_bits_per_nt_mean": 1.917869446783997,
+     "z": 2.1490900172687555
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 13,
+     "positions": 18,
+     "probe_bits_per_nt": 0.004808676928329615,
+     "pool_bits_per_nt_mean": 1.9959548053085205,
+     "z": 2.6794832844376173
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 2,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 13,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 37
+    }
+   },
+   "train_offsets": [
+    13,
+    67,
+    128,
+    40
+   ],
+   "fresh_offset": 2
+  },
+  {
+   "probe_id": 54,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 134,
+     "positions": 15,
+     "probe_bits_per_nt": 0.0056998111181443935,
+     "pool_bits_per_nt_mean": 1.8587374799566663,
+     "z": 2.9071566467725916
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 74,
+     "positions": 16,
+     "probe_bits_per_nt": 0.002802148937589524,
+     "pool_bits_per_nt_mean": 1.9317466194151656,
+     "z": 2.797425203089641
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 134,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 74,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [
+    74,
+    50,
+    142,
+    10
+   ],
+   "fresh_offset": 134
+  },
+  {
+   "probe_id": 55,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 7,
+     "positions": 17,
+     "probe_bits_per_nt": 0.03056521633873005,
+     "pool_bits_per_nt_mean": 1.8502176632214138,
+     "z": 2.7554311133759004
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 144,
+     "positions": 17,
+     "probe_bits_per_nt": 0.008550589766657596,
+     "pool_bits_per_nt_mean": 1.9735360460847429,
+     "z": 2.564439212996125
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 41,
+     "offset": 7,
+     "n_generated_nt": 55,
+     "exact": false,
+     "hamming_nt": 8
+    },
+    "train": {
+     "k_revealed_nt": 41,
+     "offset": 144,
+     "n_generated_nt": 55,
+     "exact": false,
+     "hamming_nt": 14
+    }
+   },
+   "train_offsets": [
+    144,
+    70,
+    64,
+    95
+   ],
+   "fresh_offset": 7
+  },
+  {
+   "probe_id": 56,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 86,
+     "positions": 20,
+     "probe_bits_per_nt": 0.2364401937910468,
+     "pool_bits_per_nt_mean": 1.87307119960727,
+     "z": 2.5553839073158517
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 74,
+     "positions": 20,
+     "probe_bits_per_nt": 0.004709777351413052,
+     "pool_bits_per_nt_mean": 1.9954257451484363,
+     "z": 2.8406177521637423
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 86,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 74,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 30
+    }
+   },
+   "train_offsets": [
+    74,
+    173,
+    35,
+    160
+   ],
+   "fresh_offset": 86
+  },
+  {
+   "probe_id": 57,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 104,
+     "positions": 19,
+     "probe_bits_per_nt": 0.31724265060077617,
+     "pool_bits_per_nt_mean": 1.8785694695732178,
+     "z": 2.4420615989970926
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 76,
+     "positions": 19,
+     "probe_bits_per_nt": 0.007753560167978224,
+     "pool_bits_per_nt_mean": 2.0800504335573713,
+     "z": 2.730273984897972
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 104,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 28
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 76,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 29
+    }
+   },
+   "train_offsets": [
+    76,
+    34,
+    68,
+    60
+   ],
+   "fresh_offset": 104
+  },
+  {
+   "probe_id": 58,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 106,
+     "positions": 18,
+     "probe_bits_per_nt": 0.2166499805974386,
+     "pool_bits_per_nt_mean": 1.8412663588040032,
+     "z": 2.578392133563809
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 133,
+     "positions": 17,
+     "probe_bits_per_nt": 0.0084606162467235,
+     "pool_bits_per_nt_mean": 2.154433959741023,
+     "z": 2.888519164241676
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 106,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 20
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 133,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 20
+    }
+   },
+   "train_offsets": [
+    133,
+    109,
+    5,
+    188
+   ],
+   "fresh_offset": 106
+  },
+  {
+   "probe_id": 59,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 160,
+     "positions": 20,
+     "probe_bits_per_nt": 0.27352548713096675,
+     "pool_bits_per_nt_mean": 1.8466831211974193,
+     "z": 2.495409628467251
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 62,
+     "positions": 20,
+     "probe_bits_per_nt": 0.010043213378410047,
+     "pool_bits_per_nt_mean": 2.010798888484095,
+     "z": 2.9052579815967268
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 160,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 41
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 62,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 43
+    }
+   },
+   "train_offsets": [
+    62,
+    23,
+    13,
+    153
+   ],
+   "fresh_offset": 160
+  },
+  {
+   "probe_id": 60,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 67,
+     "positions": 18,
+     "probe_bits_per_nt": 0.16629505580451212,
+     "pool_bits_per_nt_mean": 1.9646009000601714,
+     "z": 2.5810249530531495
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 189,
+     "positions": 18,
+     "probe_bits_per_nt": 0.022023918280925522,
+     "pool_bits_per_nt_mean": 1.9360480236864261,
+     "z": 2.7459318917238367
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 67,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 38
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 189,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    189,
+    58,
+    156,
+    4
+   ],
+   "fresh_offset": 67
+  },
+  {
+   "probe_id": 61,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 181,
+     "positions": 16,
+     "probe_bits_per_nt": 0.4100346335802373,
+     "pool_bits_per_nt_mean": 1.9255933560990963,
+     "z": 2.061252634968882
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 174,
+     "positions": 16,
+     "probe_bits_per_nt": 0.007360873739107645,
+     "pool_bits_per_nt_mean": 1.9789601239588979,
+     "z": 2.7499082115563898
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 181,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 21
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 174,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 13
+    }
+   },
+   "train_offsets": [
+    174,
+    39,
+    73,
+    126
+   ],
+   "fresh_offset": 181
+  },
+  {
+   "probe_id": 62,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 144,
+     "positions": 20,
+     "probe_bits_per_nt": 0.19245849809889065,
+     "pool_bits_per_nt_mean": 1.8617769956433812,
+     "z": 2.6984968943362175
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 3,
+     "positions": 20,
+     "probe_bits_per_nt": 0.005126740187223272,
+     "pool_bits_per_nt_mean": 1.8390294159007934,
+     "z": 2.6804238295721863
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 144,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 13
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 3,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 24
+    }
+   },
+   "train_offsets": [
+    3,
+    38,
+    48,
+    176
+   ],
+   "fresh_offset": 144
+  },
+  {
+   "probe_id": 63,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 153,
+     "positions": 19,
+     "probe_bits_per_nt": 0.15638712982725939,
+     "pool_bits_per_nt_mean": 1.973419110133917,
+     "z": 2.5674011115625404
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 147,
+     "positions": 20,
+     "probe_bits_per_nt": 0.00038709600210687286,
+     "pool_bits_per_nt_mean": 1.9133330362451313,
+     "z": 2.8439717245431426
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 153,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 4
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 147,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 1
+    }
+   },
+   "train_offsets": [
+    147,
+    59,
+    14,
+    92
+   ],
+   "fresh_offset": 153
+  },
+  {
+   "probe_id": 64,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 187,
+     "positions": 18,
+     "probe_bits_per_nt": 0.22692051571851282,
+     "pool_bits_per_nt_mean": 1.8238092468777918,
+     "z": 2.463400101126011
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 30,
+     "positions": 18,
+     "probe_bits_per_nt": 0.0016670469490860822,
+     "pool_bits_per_nt_mean": 2.015355108593147,
+     "z": 2.8294493625571326
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 187,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 40
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 30,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 27
+    }
+   },
+   "train_offsets": [
+    30,
+    34,
+    76,
+    182
+   ],
+   "fresh_offset": 187
+  },
+  {
+   "probe_id": 65,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 5,
+     "positions": 19,
+     "probe_bits_per_nt": 0.2517183031058828,
+     "pool_bits_per_nt_mean": 2.0130378673504397,
+     "z": 2.3093167225457982
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 82,
+     "positions": 18,
+     "probe_bits_per_nt": 0.018006494720239602,
+     "pool_bits_per_nt_mean": 1.8779182933512721,
+     "z": 2.85437629947037
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 5,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 30
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 82,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 30
+    }
+   },
+   "train_offsets": [
+    82,
+    0,
+    167,
+    138
+   ],
+   "fresh_offset": 5
+  },
+  {
+   "probe_id": 66,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 89,
+     "positions": 18,
+     "probe_bits_per_nt": 0.3102753295099386,
+     "pool_bits_per_nt_mean": 1.9342404901740229,
+     "z": 2.300056481204781
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 31,
+     "positions": 18,
+     "probe_bits_per_nt": 0.0033838776011497146,
+     "pool_bits_per_nt_mean": 2.024408956837309,
+     "z": 2.7398180482853234
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 89,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 27
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 31,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [
+    31,
+    130,
+    163,
+    134
+   ],
+   "fresh_offset": 89
+  },
+  {
+   "probe_id": 67,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 176,
+     "positions": 21,
+     "probe_bits_per_nt": 0.22996455413439304,
+     "pool_bits_per_nt_mean": 1.9757001728873973,
+     "z": 2.38642725261729
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 141,
+     "positions": 22,
+     "probe_bits_per_nt": 0.0010109816360929368,
+     "pool_bits_per_nt_mean": 1.8629294772269172,
+     "z": 2.863894075692928
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 176,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 31
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 141,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [
+    141,
+    22,
+    137,
+    161
+   ],
+   "fresh_offset": 176
+  },
+  {
+   "probe_id": 68,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 50,
+     "positions": 18,
+     "probe_bits_per_nt": 0.21451040895636872,
+     "pool_bits_per_nt_mean": 1.924019298824808,
+     "z": 2.665658537489111
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 162,
+     "positions": 19,
+     "probe_bits_per_nt": 0.002201447145896137,
+     "pool_bits_per_nt_mean": 1.876887484376892,
+     "z": 2.833710832928988
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 50,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 162,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    162,
+    10,
+    60,
+    54
+   ],
+   "fresh_offset": 50
+  },
+  {
+   "probe_id": 69,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 114,
+     "positions": 18,
+     "probe_bits_per_nt": 0.2218476387969784,
+     "pool_bits_per_nt_mean": 1.8557936857871493,
+     "z": 2.6241016574457188
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 78,
+     "positions": 18,
+     "probe_bits_per_nt": 0.006713101042644924,
+     "pool_bits_per_nt_mean": 2.0111091612623584,
+     "z": 2.8290125809197195
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 114,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 14
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 78,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 15
+    }
+   },
+   "train_offsets": [
+    78,
+    183,
+    101,
+    15
+   ],
+   "fresh_offset": 114
+  },
+  {
+   "probe_id": 70,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 110,
+     "positions": 20,
+     "probe_bits_per_nt": 0.06595296759217967,
+     "pool_bits_per_nt_mean": 1.8201392170037736,
+     "z": 2.8341667116495413
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 88,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0004710280305067201,
+     "pool_bits_per_nt_mean": 1.95904602726134,
+     "z": 2.9164071578008124
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 110,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 88,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    88,
+    151,
+    176,
+    192
+   ],
+   "fresh_offset": 110
+  },
+  {
+   "probe_id": 71,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 100,
+     "positions": 20,
+     "probe_bits_per_nt": 0.08141173433947316,
+     "pool_bits_per_nt_mean": 1.932270237826735,
+     "z": 2.7771573157686236
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 47,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0013278440518548543,
+     "pool_bits_per_nt_mean": 2.0184465536345773,
+     "z": 2.8236024804185216
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 100,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 47,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 12
+    }
+   },
+   "train_offsets": [
+    47,
+    34,
+    155,
+    143
+   ],
+   "fresh_offset": 100
+  },
+  {
+   "probe_id": 72,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 4,
+     "n_pool": 200,
+     "p_chance": 0.01990049751243781,
+     "offset": 21,
+     "positions": 18,
+     "probe_bits_per_nt": 0.49268244025872165,
+     "pool_bits_per_nt_mean": 1.8243197720498245,
+     "z": 2.082505219086925
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 149,
+     "positions": 19,
+     "probe_bits_per_nt": 0.01852068611928677,
+     "pool_bits_per_nt_mean": 1.8787228890339083,
+     "z": 2.923321961311354
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 21,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 27
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 149,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    149,
+    8,
+    71,
+    85
+   ],
+   "fresh_offset": 21
+  },
+  {
+   "probe_id": 73,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 67,
+     "positions": 17,
+     "probe_bits_per_nt": 0.19447251063662377,
+     "pool_bits_per_nt_mean": 1.9774854966732476,
+     "z": 2.4891460923066515
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 180,
+     "positions": 18,
+     "probe_bits_per_nt": 0.008471531867421327,
+     "pool_bits_per_nt_mean": 2.0460775451275754,
+     "z": 2.6797285548876406
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 67,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 10
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 180,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 9
+    }
+   },
+   "train_offsets": [
+    180,
+    153,
+    35,
+    138
+   ],
+   "fresh_offset": 67
+  },
+  {
+   "probe_id": 74,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 182,
+     "positions": 21,
+     "probe_bits_per_nt": 0.34880944193223007,
+     "pool_bits_per_nt_mean": 1.9208528373518843,
+     "z": 2.3506121702100233
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 4,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0054391970453341884,
+     "pool_bits_per_nt_mean": 1.8985554421028945,
+     "z": 2.690624136410474
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 182,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 4,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 41
+    }
+   },
+   "train_offsets": [
+    4,
+    138,
+    63,
+    35
+   ],
+   "fresh_offset": 182
+  },
+  {
+   "probe_id": 75,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 83,
+     "positions": 20,
+     "probe_bits_per_nt": 0.18264940586112788,
+     "pool_bits_per_nt_mean": 1.860477501001805,
+     "z": 2.6059593877478195
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 75,
+     "positions": 20,
+     "probe_bits_per_nt": 0.00374520673274049,
+     "pool_bits_per_nt_mean": 2.0146488393450004,
+     "z": 2.7921169694762895
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 83,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 41
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 75,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    75,
+    51,
+    160,
+    115
+   ],
+   "fresh_offset": 83
+  },
+  {
+   "probe_id": 76,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 100,
+     "positions": 20,
+     "probe_bits_per_nt": 0.38707216843148234,
+     "pool_bits_per_nt_mean": 1.8917017291435188,
+     "z": 2.335842720700624
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 26,
+     "positions": 20,
+     "probe_bits_per_nt": 0.007699189805540684,
+     "pool_bits_per_nt_mean": 1.8939238618201046,
+     "z": 2.725262918343672
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 100,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 39
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 26,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 41
+    }
+   },
+   "train_offsets": [
+    26,
+    49,
+    135,
+    55
+   ],
+   "fresh_offset": 100
+  },
+  {
+   "probe_id": 77,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 9,
+     "positions": 17,
+     "probe_bits_per_nt": 0.13044232106655457,
+     "pool_bits_per_nt_mean": 1.882301175160877,
+     "z": 2.75834350120165
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 102,
+     "positions": 17,
+     "probe_bits_per_nt": 0.0036885613428408455,
+     "pool_bits_per_nt_mean": 1.9899965512793056,
+     "z": 2.8222814775274188
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 9,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 21
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 102,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 23
+    }
+   },
+   "train_offsets": [
+    102,
+    169,
+    25,
+    81
+   ],
+   "fresh_offset": 9
+  },
+  {
+   "probe_id": 78,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 84,
+     "positions": 19,
+     "probe_bits_per_nt": 0.27975766651898354,
+     "pool_bits_per_nt_mean": 1.9480199053435172,
+     "z": 2.441226723613338
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 10,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0017249224397811649,
+     "pool_bits_per_nt_mean": 1.8799057636347312,
+     "z": 2.641598438642581
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 84,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 10,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    10,
+    148,
+    34,
+    138
+   ],
+   "fresh_offset": 84
+  },
+  {
+   "probe_id": 79,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 173,
+     "positions": 18,
+     "probe_bits_per_nt": 0.16987610733210542,
+     "pool_bits_per_nt_mean": 1.9030830822393876,
+     "z": 2.557914358363902
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 121,
+     "positions": 18,
+     "probe_bits_per_nt": 0.002690838948485596,
+     "pool_bits_per_nt_mean": 1.990475464134097,
+     "z": 2.804266378599676
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 173,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 32
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 121,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    121,
+    124,
+    110,
+    62
+   ],
+   "fresh_offset": 173
+  },
+  {
+   "probe_id": 80,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 9,
+     "positions": 21,
+     "probe_bits_per_nt": 0.25573296511439103,
+     "pool_bits_per_nt_mean": 1.8703538561010067,
+     "z": 2.6441193140351205
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 52,
+     "positions": 20,
+     "probe_bits_per_nt": 0.004880475494749485,
+     "pool_bits_per_nt_mean": 2.18726227442406,
+     "z": 2.793301013349021
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 9,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 25
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 52,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 27
+    }
+   },
+   "train_offsets": [
+    52,
+    143,
+    9,
+    5
+   ],
+   "fresh_offset": 9
+  },
+  {
+   "probe_id": 81,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 4,
+     "n_pool": 200,
+     "p_chance": 0.01990049751243781,
+     "offset": 28,
+     "positions": 17,
+     "probe_bits_per_nt": 0.437152950367423,
+     "pool_bits_per_nt_mean": 1.8567856778757994,
+     "z": 2.131273181846398
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 42,
+     "positions": 17,
+     "probe_bits_per_nt": 0.01313235705382698,
+     "pool_bits_per_nt_mean": 1.9567391726620602,
+     "z": 2.6894779960884176
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 28,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 9
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 42,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 8
+    }
+   },
+   "train_offsets": [
+    42,
+    80,
+    69,
+    85
+   ],
+   "fresh_offset": 28
+  },
+  {
+   "probe_id": 82,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 91,
+     "positions": 20,
+     "probe_bits_per_nt": 0.2861265727795067,
+     "pool_bits_per_nt_mean": 1.885631621983528,
+     "z": 2.462452458248088
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 143,
+     "positions": 21,
+     "probe_bits_per_nt": 0.0065278370926180555,
+     "pool_bits_per_nt_mean": 1.9149941364019856,
+     "z": 2.9141791715007557
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 91,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 29
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 143,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [
+    143,
+    130,
+    91,
+    176
+   ],
+   "fresh_offset": 91
+  },
+  {
+   "probe_id": 83,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 142,
+     "positions": 21,
+     "probe_bits_per_nt": 0.2929261298906047,
+     "pool_bits_per_nt_mean": 1.9635171862393321,
+     "z": 2.4516869086621518
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 182,
+     "positions": 22,
+     "probe_bits_per_nt": 0.007435089484300387,
+     "pool_bits_per_nt_mean": 1.876473631591199,
+     "z": 2.8985318472056796
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 142,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 27
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 182,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 23
+    }
+   },
+   "train_offsets": [
+    182,
+    171,
+    88,
+    104
+   ],
+   "fresh_offset": 142
+  },
+  {
+   "probe_id": 84,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 162,
+     "positions": 20,
+     "probe_bits_per_nt": 0.32863860363551434,
+     "pool_bits_per_nt_mean": 1.9820550472893592,
+     "z": 2.39106064505328
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 65,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0033678765994057036,
+     "pool_bits_per_nt_mean": 2.013771466181451,
+     "z": 2.8168440011638873
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 162,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 39
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 65,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    65,
+    0,
+    66,
+    20
+   ],
+   "fresh_offset": 162
+  },
+  {
+   "probe_id": 85,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 8,
+     "positions": 21,
+     "probe_bits_per_nt": 0.2909904496133739,
+     "pool_bits_per_nt_mean": 1.9165483269715802,
+     "z": 2.2010538089703577
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 75,
+     "positions": 21,
+     "probe_bits_per_nt": 0.0024387370504014875,
+     "pool_bits_per_nt_mean": 2.028696857111502,
+     "z": 2.788019726869045
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 8,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 75,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 31
+    }
+   },
+   "train_offsets": [
+    75,
+    40,
+    59,
+    96
+   ],
+   "fresh_offset": 8
+  },
+  {
+   "probe_id": 86,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 180,
+     "positions": 21,
+     "probe_bits_per_nt": 0.3034210925612084,
+     "pool_bits_per_nt_mean": 1.898305290846752,
+     "z": 2.378652584955842
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 150,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0013217430659612005,
+     "pool_bits_per_nt_mean": 1.8134394390181126,
+     "z": 2.818720873744213
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 180,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 150,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    150,
+    152,
+    69,
+    28
+   ],
+   "fresh_offset": 180
+  },
+  {
+   "probe_id": 87,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 185,
+     "positions": 20,
+     "probe_bits_per_nt": 0.18844388849864124,
+     "pool_bits_per_nt_mean": 1.918619180958328,
+     "z": 2.414633278779378
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 155,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0014869726740690927,
+     "pool_bits_per_nt_mean": 1.8829941742159837,
+     "z": 2.7890719991091975
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 185,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 155,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 1
+    }
+   },
+   "train_offsets": [
+    155,
+    58,
+    166,
+    113
+   ],
+   "fresh_offset": 185
+  },
+  {
+   "probe_id": 88,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 6,
+     "n_pool": 200,
+     "p_chance": 0.029850746268656716,
+     "offset": 182,
+     "positions": 21,
+     "probe_bits_per_nt": 0.5508325507036544,
+     "pool_bits_per_nt_mean": 2.000427255770219,
+     "z": 2.039209762380707
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 134,
+     "positions": 21,
+     "probe_bits_per_nt": 0.008012688951299184,
+     "pool_bits_per_nt_mean": 2.089038969217754,
+     "z": 2.789456562914806
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 182,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 30
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 134,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    134,
+    169,
+    4,
+    103
+   ],
+   "fresh_offset": 182
+  },
+  {
+   "probe_id": 89,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 12,
+     "n_pool": 200,
+     "p_chance": 0.05970149253731343,
+     "offset": 174,
+     "positions": 21,
+     "probe_bits_per_nt": 0.676895425616417,
+     "pool_bits_per_nt_mean": 2.0012733249016748,
+     "z": 1.8065177080751165
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 64,
+     "positions": 20,
+     "probe_bits_per_nt": 0.06080609368406277,
+     "pool_bits_per_nt_mean": 1.9328653929229036,
+     "z": 2.6319529117082507
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 174,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 64,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [
+    64,
+    126,
+    153,
+    52
+   ],
+   "fresh_offset": 174
+  },
+  {
+   "probe_id": 90,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 22,
+     "positions": 19,
+     "probe_bits_per_nt": 0.3028469201611095,
+     "pool_bits_per_nt_mean": 1.8274768428009178,
+     "z": 2.3069767008476405
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 141,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0013718724858160026,
+     "pool_bits_per_nt_mean": 2.0591334199959355,
+     "z": 2.9255939250973038
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 22,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 30
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 141,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [
+    141,
+    168,
+    56,
+    4
+   ],
+   "fresh_offset": 22
+  },
+  {
+   "probe_id": 91,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 84,
+     "positions": 18,
+     "probe_bits_per_nt": 0.16221181092967626,
+     "pool_bits_per_nt_mean": 1.8177367493834373,
+     "z": 2.687410171507211
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 33,
+     "positions": 17,
+     "probe_bits_per_nt": 0.006090809305456732,
+     "pool_bits_per_nt_mean": 1.9554424021694456,
+     "z": 2.742340684513721
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 84,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 20
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 33,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 26
+    }
+   },
+   "train_offsets": [
+    33,
+    117,
+    155,
+    53
+   ],
+   "fresh_offset": 84
+  },
+  {
+   "probe_id": 92,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 149,
+     "positions": 15,
+     "probe_bits_per_nt": 0.2134854405529901,
+     "pool_bits_per_nt_mean": 1.9490451487471667,
+     "z": 2.638595716419593
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 32,
+     "positions": 15,
+     "probe_bits_per_nt": 0.0026652093320154585,
+     "pool_bits_per_nt_mean": 1.8938687898706612,
+     "z": 2.8153808956222686
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 149,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 30
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 32,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 37
+    }
+   },
+   "train_offsets": [
+    32,
+    131,
+    152,
+    46
+   ],
+   "fresh_offset": 149
+  },
+  {
+   "probe_id": 93,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 111,
+     "positions": 17,
+     "probe_bits_per_nt": 0.1573293741625287,
+     "pool_bits_per_nt_mean": 2.0475005162374984,
+     "z": 2.6499275363107913
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 140,
+     "positions": 17,
+     "probe_bits_per_nt": 0.0336267126776143,
+     "pool_bits_per_nt_mean": 1.9258357460562163,
+     "z": 2.718254935299687
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 111,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 28
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 140,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 12
+    }
+   },
+   "train_offsets": [
+    140,
+    40,
+    148,
+    92
+   ],
+   "fresh_offset": 111
+  },
+  {
+   "probe_id": 94,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 31,
+     "n_pool": 200,
+     "p_chance": 0.15422885572139303,
+     "offset": 65,
+     "positions": 21,
+     "probe_bits_per_nt": 0.8284656640113278,
+     "pool_bits_per_nt_mean": 1.9076586564814357,
+     "z": 1.477720138082168
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 85,
+     "positions": 21,
+     "probe_bits_per_nt": 0.018428033673512294,
+     "pool_bits_per_nt_mean": 2.0574850959671536,
+     "z": 2.7967173890491748
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 65,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 37
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 85,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [
+    85,
+    103,
+    138,
+    89
+   ],
+   "fresh_offset": 65
+  },
+  {
+   "probe_id": 95,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 16,
+     "positions": 19,
+     "probe_bits_per_nt": 0.45316515228791104,
+     "pool_bits_per_nt_mean": 1.8362462936090076,
+     "z": 2.1103143402121396
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 149,
+     "positions": 18,
+     "probe_bits_per_nt": 0.02477981421423082,
+     "pool_bits_per_nt_mean": 1.9101731101753407,
+     "z": 2.873086987029462
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 16,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 149,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 27
+    }
+   },
+   "train_offsets": [
+    149,
+    51,
+    15,
+    91
+   ],
+   "fresh_offset": 16
+  },
+  {
+   "probe_id": 96,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 59,
+     "positions": 17,
+     "probe_bits_per_nt": 0.270054530754528,
+     "pool_bits_per_nt_mean": 1.913416353240625,
+     "z": 2.5283112636408056
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 6,
+     "positions": 17,
+     "probe_bits_per_nt": 0.0061277821510414944,
+     "pool_bits_per_nt_mean": 1.9014042752743532,
+     "z": 2.77106762104181
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 59,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 18
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 6,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 17
+    }
+   },
+   "train_offsets": [
+    6,
+    157,
+    115,
+    63
+   ],
+   "fresh_offset": 59
+  },
+  {
+   "probe_id": 97,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 131,
+     "positions": 19,
+     "probe_bits_per_nt": 0.07635952014191333,
+     "pool_bits_per_nt_mean": 1.8204117037814134,
+     "z": 2.7302809978088467
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 62,
+     "positions": 19,
+     "probe_bits_per_nt": 0.007999500745124096,
+     "pool_bits_per_nt_mean": 1.8891160325909797,
+     "z": 2.9015809226819647
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 131,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 19
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 62,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 16
+    }
+   },
+   "train_offsets": [
+    62,
+    116,
+    149,
+    137
+   ],
+   "fresh_offset": 131
+  },
+  {
+   "probe_id": 98,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 123,
+     "positions": 18,
+     "probe_bits_per_nt": 0.21383148381517042,
+     "pool_bits_per_nt_mean": 1.8735871382018376,
+     "z": 2.4842561457121253
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 147,
+     "positions": 19,
+     "probe_bits_per_nt": 0.01030793725978647,
+     "pool_bits_per_nt_mean": 1.9508030801827523,
+     "z": 2.815083171816834
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 123,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 40
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 147,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 42
+    }
+   },
+   "train_offsets": [
+    147,
+    55,
+    174,
+    58
+   ],
+   "fresh_offset": 123
+  },
+  {
+   "probe_id": 99,
+   "repetitions": 4,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 40,
+     "positions": 19,
+     "probe_bits_per_nt": 0.17996513076554144,
+     "pool_bits_per_nt_mean": 1.8368221432441982,
+     "z": 2.5853700873352494
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 127,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0051784802140786915,
+     "pool_bits_per_nt_mean": 1.859436766551903,
+     "z": 3.03817425245636
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 40,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 2
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 127,
+     "n_generated_nt": 50,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    127,
+    40,
+    113,
+    173
+   ],
+   "fresh_offset": 40
+  },
+  {
+   "probe_id": 100,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 133,
+     "positions": 15,
+     "probe_bits_per_nt": 0.10631002669988994,
+     "pool_bits_per_nt_mean": 1.860813335287245,
+     "z": 2.7640936313309528
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 83,
+     "positions": 15,
+     "probe_bits_per_nt": 0.0011208568193062003,
+     "pool_bits_per_nt_mean": 1.964204219799327,
+     "z": 2.806732892834998
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 133,
+     "n_generated_nt": 50,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 83,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 5
+    }
+   },
+   "train_offsets": [
+    83,
+    108,
+    60,
+    33,
+    13,
+    2,
+    179,
+    180,
+    51,
+    47,
+    78,
+    135,
+    85,
+    41,
+    110,
+    92
+   ],
+   "fresh_offset": 133
+  },
+  {
+   "probe_id": 101,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 62,
+     "positions": 22,
+     "probe_bits_per_nt": 0.01862191241958626,
+     "pool_bits_per_nt_mean": 1.8821877848529767,
+     "z": 2.84780568118618
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 177,
+     "positions": 22,
+     "probe_bits_per_nt": 0.0008946157283279002,
+     "pool_bits_per_nt_mean": 1.9155196636165193,
+     "z": 2.7412440010866055
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 62,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 2
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 177,
+     "n_generated_nt": 50,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    177,
+    13,
+    120,
+    80,
+    155,
+    66,
+    3,
+    47,
+    55,
+    107,
+    17,
+    92,
+    131,
+    13,
+    159,
+    173
+   ],
+   "fresh_offset": 62
+  },
+  {
+   "probe_id": 102,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 176,
+     "positions": 21,
+     "probe_bits_per_nt": 0.3485841031575921,
+     "pool_bits_per_nt_mean": 1.9293073626993922,
+     "z": 2.2604372895986704
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 166,
+     "positions": 20,
+     "probe_bits_per_nt": 0.00025005281399494064,
+     "pool_bits_per_nt_mean": 1.8421115845573153,
+     "z": 2.941402897886645
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 176,
+     "n_generated_nt": 50,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 166,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 1
+    }
+   },
+   "train_offsets": [
+    166,
+    162,
+    151,
+    188,
+    148,
+    154,
+    128,
+    109,
+    143,
+    162,
+    43,
+    83,
+    69,
+    111,
+    148,
+    31
+   ],
+   "fresh_offset": 176
+  },
+  {
+   "probe_id": 103,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 151,
+     "positions": 19,
+     "probe_bits_per_nt": 0.06396241680727982,
+     "pool_bits_per_nt_mean": 1.9672137978788005,
+     "z": 2.5968046588604556
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 87,
+     "positions": 19,
+     "probe_bits_per_nt": 0.008200182654351216,
+     "pool_bits_per_nt_mean": 2.079923867600259,
+     "z": 3.0203144959218093
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 151,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 87,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    87,
+    154,
+    9,
+    117,
+    1,
+    86,
+    154,
+    32,
+    60,
+    164,
+    19,
+    26,
+    117,
+    190,
+    131,
+    81
+   ],
+   "fresh_offset": 151
+  },
+  {
+   "probe_id": 104,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 36,
+     "positions": 16,
+     "probe_bits_per_nt": 0.18495291371283698,
+     "pool_bits_per_nt_mean": 2.061401130959547,
+     "z": 2.5888187949753663
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 46,
+     "positions": 16,
+     "probe_bits_per_nt": 0.003539561637180819,
+     "pool_bits_per_nt_mean": 1.93179253668007,
+     "z": 2.849716848005977
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 36,
+     "n_generated_nt": 52,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 46,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    46,
+    91,
+    63,
+    73,
+    186,
+    54,
+    48,
+    80,
+    127,
+    112,
+    53,
+    192,
+    149,
+    4,
+    33,
+    111
+   ],
+   "fresh_offset": 36
+  },
+  {
+   "probe_id": 105,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 3,
+     "n_pool": 200,
+     "p_chance": 0.014925373134328358,
+     "offset": 11,
+     "positions": 17,
+     "probe_bits_per_nt": 0.352548144426737,
+     "pool_bits_per_nt_mean": 1.8397281819447753,
+     "z": 2.1902174323082355
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 98,
+     "positions": 17,
+     "probe_bits_per_nt": 0.0036787089437396035,
+     "pool_bits_per_nt_mean": 2.0358515979168805,
+     "z": 2.847619814337921
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 11,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 19
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 98,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 16
+    }
+   },
+   "train_offsets": [
+    98,
+    15,
+    97,
+    158,
+    52,
+    23,
+    93,
+    76,
+    123,
+    134,
+    5,
+    190,
+    142,
+    111,
+    37,
+    185
+   ],
+   "fresh_offset": 11
+  },
+  {
+   "probe_id": 106,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 122,
+     "positions": 19,
+     "probe_bits_per_nt": 0.010441157318069529,
+     "pool_bits_per_nt_mean": 1.953386297104611,
+     "z": 2.8621528628007256
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 3,
+     "positions": 19,
+     "probe_bits_per_nt": 0.003436568863015233,
+     "pool_bits_per_nt_mean": 1.9395643581345758,
+     "z": 2.847304255448383
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 122,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 3,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    3,
+    153,
+    38,
+    45,
+    119,
+    180,
+    8,
+    10,
+    6,
+    129,
+    2,
+    72,
+    184,
+    127,
+    44,
+    60
+   ],
+   "fresh_offset": 122
+  },
+  {
+   "probe_id": 107,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 60,
+     "positions": 20,
+     "probe_bits_per_nt": 0.3300516331513662,
+     "pool_bits_per_nt_mean": 1.9094600988123205,
+     "z": 2.375036226245394
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 115,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0002607328982024446,
+     "pool_bits_per_nt_mean": 2.12567364567239,
+     "z": 2.810379015068088
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 60,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 33
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 115,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [
+    115,
+    44,
+    191,
+    123,
+    50,
+    102,
+    46,
+    86,
+    112,
+    187,
+    84,
+    183,
+    60,
+    118,
+    138,
+    8
+   ],
+   "fresh_offset": 60
+  },
+  {
+   "probe_id": 108,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 107,
+     "positions": 18,
+     "probe_bits_per_nt": 0.059901144590153256,
+     "pool_bits_per_nt_mean": 1.884211815814461,
+     "z": 2.8538892987470987
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 59,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0005148693070352114,
+     "pool_bits_per_nt_mean": 1.8689323186888402,
+     "z": 2.8398189475692233
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 41,
+     "offset": 107,
+     "n_generated_nt": 55,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 41,
+     "offset": 59,
+     "n_generated_nt": 55,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    59,
+    5,
+    70,
+    142,
+    143,
+    53,
+    75,
+    166,
+    42,
+    76,
+    116,
+    129,
+    97,
+    32,
+    65,
+    127
+   ],
+   "fresh_offset": 107
+  },
+  {
+   "probe_id": 109,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 113,
+     "positions": 19,
+     "probe_bits_per_nt": 0.028506413722378898,
+     "pool_bits_per_nt_mean": 1.8480331462217277,
+     "z": 2.9051101849097702
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 179,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0010397173886844387,
+     "pool_bits_per_nt_mean": 1.9564064610368916,
+     "z": 2.687941930156287
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 113,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 179,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    179,
+    141,
+    79,
+    42,
+    162,
+    54,
+    110,
+    11,
+    85,
+    34,
+    78,
+    192,
+    162,
+    62,
+    84,
+    12
+   ],
+   "fresh_offset": 113
+  },
+  {
+   "probe_id": 110,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 11,
+     "positions": 20,
+     "probe_bits_per_nt": 0.15857723407646845,
+     "pool_bits_per_nt_mean": 2.0491063161047207,
+     "z": 2.647454032426765
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 159,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0012540954142459613,
+     "pool_bits_per_nt_mean": 1.8172686066958437,
+     "z": 2.849230103487879
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 11,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 5
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 159,
+     "n_generated_nt": 50,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    159,
+    84,
+    10,
+    137,
+    136,
+    151,
+    52,
+    108,
+    9,
+    65,
+    129,
+    103,
+    107,
+    155,
+    97,
+    117
+   ],
+   "fresh_offset": 11
+  },
+  {
+   "probe_id": 111,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 69,
+     "positions": 21,
+     "probe_bits_per_nt": 0.2325593633364337,
+     "pool_bits_per_nt_mean": 2.1464027230900316,
+     "z": 2.6683471287525924
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 185,
+     "positions": 21,
+     "probe_bits_per_nt": 0.0018595466162367254,
+     "pool_bits_per_nt_mean": 1.8957377093006031,
+     "z": 2.7101086655651487
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 69,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 41
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 185,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    185,
+    88,
+    36,
+    139,
+    110,
+    130,
+    82,
+    3,
+    18,
+    97,
+    4,
+    49,
+    163,
+    164,
+    126,
+    100
+   ],
+   "fresh_offset": 69
+  },
+  {
+   "probe_id": 112,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 6,
+     "positions": 18,
+     "probe_bits_per_nt": 0.032020627409661696,
+     "pool_bits_per_nt_mean": 2.004225889806964,
+     "z": 2.867134491500025
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 90,
+     "positions": 18,
+     "probe_bits_per_nt": 0.0009782499399702813,
+     "pool_bits_per_nt_mean": 2.0339846356027453,
+     "z": 2.971788450907142
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 6,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 27
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 90,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 23
+    }
+   },
+   "train_offsets": [
+    90,
+    129,
+    174,
+    183,
+    52,
+    116,
+    110,
+    1,
+    133,
+    36,
+    38,
+    31,
+    145,
+    79,
+    104,
+    8
+   ],
+   "fresh_offset": 6
+  },
+  {
+   "probe_id": 113,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 167,
+     "positions": 19,
+     "probe_bits_per_nt": 0.2972135923254442,
+     "pool_bits_per_nt_mean": 2.0007049628923186,
+     "z": 2.326034163673522
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 176,
+     "positions": 18,
+     "probe_bits_per_nt": 0.0005234575130488652,
+     "pool_bits_per_nt_mean": 2.086341203678493,
+     "z": 2.8140885436607923
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 167,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 24
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 176,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    176,
+    103,
+    18,
+    170,
+    38,
+    148,
+    73,
+    52,
+    90,
+    159,
+    173,
+    110,
+    30,
+    160,
+    189,
+    101
+   ],
+   "fresh_offset": 167
+  },
+  {
+   "probe_id": 114,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 185,
+     "positions": 21,
+     "probe_bits_per_nt": 0.19657634543934566,
+     "pool_bits_per_nt_mean": 1.7993698455691225,
+     "z": 2.521948419041559
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 52,
+     "positions": 21,
+     "probe_bits_per_nt": 0.011332474802331698,
+     "pool_bits_per_nt_mean": 1.9679548804967384,
+     "z": 2.8826042451304974
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 185,
+     "n_generated_nt": 53,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 52,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 43
+    }
+   },
+   "train_offsets": [
+    52,
+    133,
+    142,
+    174,
+    154,
+    89,
+    159,
+    38,
+    96,
+    8,
+    102,
+    180,
+    117,
+    179,
+    90,
+    80
+   ],
+   "fresh_offset": 185
+  },
+  {
+   "probe_id": 115,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 126,
+     "positions": 20,
+     "probe_bits_per_nt": 0.17918784935517887,
+     "pool_bits_per_nt_mean": 1.8516870517877635,
+     "z": 2.6144172449868313
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 57,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0009966125124445406,
+     "pool_bits_per_nt_mean": 1.9336364844462128,
+     "z": 2.944758084584172
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 126,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 3
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 57,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 3
+    }
+   },
+   "train_offsets": [
+    57,
+    30,
+    176,
+    70,
+    24,
+    158,
+    124,
+    124,
+    135,
+    40,
+    150,
+    138,
+    74,
+    105,
+    190,
+    67
+   ],
+   "fresh_offset": 126
+  },
+  {
+   "probe_id": 116,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 170,
+     "positions": 18,
+     "probe_bits_per_nt": 0.06757335810835946,
+     "pool_bits_per_nt_mean": 1.8259822111787378,
+     "z": 2.807862906921631
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 142,
+     "positions": 18,
+     "probe_bits_per_nt": 0.0028861739008237187,
+     "pool_bits_per_nt_mean": 1.9514527252291751,
+     "z": 2.7834264548873118
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 170,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 42
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 142,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [
+    142,
+    27,
+    80,
+    1,
+    79,
+    174,
+    161,
+    147,
+    107,
+    80,
+    58,
+    40,
+    51,
+    172,
+    98,
+    16
+   ],
+   "fresh_offset": 170
+  },
+  {
+   "probe_id": 117,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 108,
+     "positions": 18,
+     "probe_bits_per_nt": 0.11016134559661891,
+     "pool_bits_per_nt_mean": 1.9702778246028845,
+     "z": 2.5380618726828277
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 115,
+     "positions": 18,
+     "probe_bits_per_nt": 0.0018975318124609792,
+     "pool_bits_per_nt_mean": 2.0478734969765138,
+     "z": 2.724711762430483
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 108,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 115,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 19
+    }
+   },
+   "train_offsets": [
+    115,
+    112,
+    71,
+    111,
+    115,
+    39,
+    148,
+    129,
+    155,
+    83,
+    34,
+    119,
+    177,
+    25,
+    51,
+    37
+   ],
+   "fresh_offset": 108
+  },
+  {
+   "probe_id": 118,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 179,
+     "positions": 18,
+     "probe_bits_per_nt": 0.1216246645505276,
+     "pool_bits_per_nt_mean": 1.9201227004366133,
+     "z": 2.716192859684
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 41,
+     "positions": 18,
+     "probe_bits_per_nt": 0.011118504160182924,
+     "pool_bits_per_nt_mean": 1.9533675508850195,
+     "z": 3.030746622071532
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 179,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 29
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 41,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 25
+    }
+   },
+   "train_offsets": [
+    41,
+    32,
+    163,
+    159,
+    171,
+    51,
+    67,
+    142,
+    186,
+    68,
+    108,
+    173,
+    73,
+    29,
+    161,
+    100
+   ],
+   "fresh_offset": 179
+  },
+  {
+   "probe_id": 119,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 23,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0556350211930532,
+     "pool_bits_per_nt_mean": 1.925441502027541,
+     "z": 2.5939029528263093
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 91,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0006421482952712073,
+     "pool_bits_per_nt_mean": 2.009267974483186,
+     "z": 3.024485378427537
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 23,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 29
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 91,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 28
+    }
+   },
+   "train_offsets": [
+    91,
+    187,
+    89,
+    103,
+    131,
+    144,
+    141,
+    65,
+    130,
+    103,
+    23,
+    18,
+    172,
+    101,
+    84,
+    110
+   ],
+   "fresh_offset": 23
+  },
+  {
+   "probe_id": 120,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 37,
+     "positions": 18,
+     "probe_bits_per_nt": 0.06710398176157538,
+     "pool_bits_per_nt_mean": 1.9967113945506134,
+     "z": 2.744916721424311
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 15,
+     "positions": 18,
+     "probe_bits_per_nt": 0.000856970907119536,
+     "pool_bits_per_nt_mean": 1.878575862225718,
+     "z": 2.7811443668910902
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 37,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 16
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 15,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 16
+    }
+   },
+   "train_offsets": [
+    15,
+    190,
+    153,
+    120,
+    106,
+    185,
+    191,
+    82,
+    73,
+    69,
+    171,
+    129,
+    89,
+    159,
+    67,
+    20
+   ],
+   "fresh_offset": 37
+  },
+  {
+   "probe_id": 121,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 91,
+     "positions": 21,
+     "probe_bits_per_nt": 0.29849454746173604,
+     "pool_bits_per_nt_mean": 2.002210675561929,
+     "z": 2.435832149048365
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 137,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0012650908169079054,
+     "pool_bits_per_nt_mean": 1.9449686851900645,
+     "z": 2.8727903147969616
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 91,
+     "n_generated_nt": 50,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 137,
+     "n_generated_nt": 50,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    137,
+    14,
+    184,
+    138,
+    165,
+    16,
+    87,
+    27,
+    156,
+    169,
+    18,
+    26,
+    102,
+    125,
+    190,
+    111
+   ],
+   "fresh_offset": 91
+  },
+  {
+   "probe_id": 122,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 59,
+     "positions": 17,
+     "probe_bits_per_nt": 0.09171466630270679,
+     "pool_bits_per_nt_mean": 1.8900952717521475,
+     "z": 2.7165694390318227
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 31,
+     "positions": 16,
+     "probe_bits_per_nt": 0.0003383925841444473,
+     "pool_bits_per_nt_mean": 2.0317099758729675,
+     "z": 2.672790248689899
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 59,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 28
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 31,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 31
+    }
+   },
+   "train_offsets": [
+    31,
+    5,
+    118,
+    29,
+    93,
+    55,
+    103,
+    131,
+    174,
+    39,
+    81,
+    165,
+    7,
+    42,
+    116,
+    169
+   ],
+   "fresh_offset": 59
+  },
+  {
+   "probe_id": 123,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 113,
+     "positions": 20,
+     "probe_bits_per_nt": 0.19175083812645252,
+     "pool_bits_per_nt_mean": 1.922714668021689,
+     "z": 2.606786963576815
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 69,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0027323058471978123,
+     "pool_bits_per_nt_mean": 1.9263624263346362,
+     "z": 2.9228659915431208
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 113,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 69,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    69,
+    47,
+    92,
+    43,
+    106,
+    171,
+    92,
+    100,
+    86,
+    76,
+    74,
+    5,
+    172,
+    153,
+    149,
+    16
+   ],
+   "fresh_offset": 113
+  },
+  {
+   "probe_id": 124,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 53,
+     "positions": 20,
+     "probe_bits_per_nt": 0.15462220424956682,
+     "pool_bits_per_nt_mean": 2.176460904698052,
+     "z": 2.8757071644505077
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 169,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0002582042617118558,
+     "pool_bits_per_nt_mean": 2.123295477252526,
+     "z": 3.0283358253873
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 53,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 169,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    169,
+    154,
+    54,
+    1,
+    189,
+    90,
+    57,
+    39,
+    94,
+    96,
+    162,
+    110,
+    157,
+    31,
+    171,
+    95
+   ],
+   "fresh_offset": 53
+  },
+  {
+   "probe_id": 125,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 124,
+     "positions": 18,
+     "probe_bits_per_nt": 0.14386359060887668,
+     "pool_bits_per_nt_mean": 1.951829564832606,
+     "z": 2.5173064822178013
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 170,
+     "positions": 20,
+     "probe_bits_per_nt": 0.000188736582922133,
+     "pool_bits_per_nt_mean": 1.9547284294103888,
+     "z": 2.6451271222374837
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 124,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 1
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 170,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [
+    170,
+    133,
+    162,
+    135,
+    62,
+    54,
+    171,
+    39,
+    174,
+    45,
+    51,
+    45,
+    8,
+    1,
+    11,
+    105
+   ],
+   "fresh_offset": 124
+  },
+  {
+   "probe_id": 126,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 135,
+     "positions": 21,
+     "probe_bits_per_nt": 0.19230647577339868,
+     "pool_bits_per_nt_mean": 1.975865293280238,
+     "z": 2.362029927390154
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 153,
+     "positions": 22,
+     "probe_bits_per_nt": 0.0004657555855732731,
+     "pool_bits_per_nt_mean": 1.9443217673291293,
+     "z": 2.8879629484196987
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 135,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 32
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 153,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    153,
+    42,
+    92,
+    139,
+    6,
+    157,
+    88,
+    2,
+    92,
+    37,
+    119,
+    82,
+    1,
+    114,
+    88,
+    19
+   ],
+   "fresh_offset": 135
+  },
+  {
+   "probe_id": 127,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 61,
+     "positions": 19,
+     "probe_bits_per_nt": 0.09584014976720533,
+     "pool_bits_per_nt_mean": 1.9149582168521022,
+     "z": 2.54871815102127
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 107,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0007045953779974293,
+     "pool_bits_per_nt_mean": 2.0944839329774125,
+     "z": 3.155485548602629
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 61,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 107,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    107,
+    158,
+    33,
+    179,
+    51,
+    95,
+    74,
+    5,
+    176,
+    107,
+    128,
+    186,
+    163,
+    184,
+    128,
+    41
+   ],
+   "fresh_offset": 61
+  },
+  {
+   "probe_id": 128,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 135,
+     "positions": 19,
+     "probe_bits_per_nt": 0.15143147601348006,
+     "pool_bits_per_nt_mean": 1.9192645365386758,
+     "z": 2.4693716375365313
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 89,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0009144929022671787,
+     "pool_bits_per_nt_mean": 1.9621237175657102,
+     "z": 2.809773286412399
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 135,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 31
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 89,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 32
+    }
+   },
+   "train_offsets": [
+    89,
+    139,
+    42,
+    0,
+    16,
+    5,
+    125,
+    179,
+    116,
+    184,
+    1,
+    25,
+    135,
+    15,
+    108,
+    11
+   ],
+   "fresh_offset": 135
+  },
+  {
+   "probe_id": 129,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 86,
+     "positions": 20,
+     "probe_bits_per_nt": 0.11779654823739999,
+     "pool_bits_per_nt_mean": 2.0173230875802175,
+     "z": 2.777858614233495
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 33,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0007069175187296324,
+     "pool_bits_per_nt_mean": 1.964868456838878,
+     "z": 2.8007298185265403
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 86,
+     "n_generated_nt": 52,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 33,
+     "n_generated_nt": 52,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    33,
+    67,
+    21,
+    166,
+    66,
+    108,
+    4,
+    119,
+    40,
+    144,
+    90,
+    151,
+    78,
+    69,
+    32,
+    163
+   ],
+   "fresh_offset": 86
+  },
+  {
+   "probe_id": 130,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 163,
+     "positions": 20,
+     "probe_bits_per_nt": 0.2133413607213715,
+     "pool_bits_per_nt_mean": 2.130309225543927,
+     "z": 2.6319512937298217
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 106,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0033503371342937416,
+     "pool_bits_per_nt_mean": 1.8820681939121393,
+     "z": 2.672028386233226
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 163,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 9
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 106,
+     "n_generated_nt": 53,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    106,
+    150,
+    3,
+    75,
+    113,
+    176,
+    111,
+    4,
+    140,
+    91,
+    86,
+    150,
+    9,
+    134,
+    97,
+    110
+   ],
+   "fresh_offset": 163
+  },
+  {
+   "probe_id": 131,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 11,
+     "positions": 19,
+     "probe_bits_per_nt": 0.3505845824136643,
+     "pool_bits_per_nt_mean": 1.8875931488378819,
+     "z": 2.3448093305999804
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 176,
+     "positions": 19,
+     "probe_bits_per_nt": 0.00028524894424747507,
+     "pool_bits_per_nt_mean": 1.865448021052053,
+     "z": 2.743255387800113
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 11,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 42
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 176,
+     "n_generated_nt": 52,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    176,
+    179,
+    132,
+    132,
+    48,
+    127,
+    83,
+    149,
+    182,
+    89,
+    36,
+    27,
+    154,
+    152,
+    87,
+    179
+   ],
+   "fresh_offset": 11
+  },
+  {
+   "probe_id": 132,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 20,
+     "positions": 19,
+     "probe_bits_per_nt": 0.12113200308178006,
+     "pool_bits_per_nt_mean": 1.8632262910207178,
+     "z": 2.596868812309794
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 35,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0019060171905709376,
+     "pool_bits_per_nt_mean": 1.931150479936073,
+     "z": 2.8210985605702232
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 20,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 1
+    },
+    "train": {
+     "k_revealed_nt": 45,
+     "offset": 35,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 1
+    }
+   },
+   "train_offsets": [
+    35,
+    169,
+    119,
+    26,
+    49,
+    52,
+    145,
+    55,
+    137,
+    164,
+    2,
+    12,
+    132,
+    15,
+    176,
+    142
+   ],
+   "fresh_offset": 20
+  },
+  {
+   "probe_id": 133,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 153,
+     "positions": 17,
+     "probe_bits_per_nt": 0.2801244597941848,
+     "pool_bits_per_nt_mean": 1.817889181940118,
+     "z": 2.3914258611862986
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 132,
+     "positions": 17,
+     "probe_bits_per_nt": 0.004687799419130712,
+     "pool_bits_per_nt_mean": 2.046438332853386,
+     "z": 2.807477306496611
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 153,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 132,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    132,
+    24,
+    112,
+    30,
+    117,
+    128,
+    169,
+    172,
+    151,
+    63,
+    155,
+    160,
+    4,
+    29,
+    22,
+    13
+   ],
+   "fresh_offset": 153
+  },
+  {
+   "probe_id": 134,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 117,
+     "positions": 21,
+     "probe_bits_per_nt": 0.25545042972949344,
+     "pool_bits_per_nt_mean": 1.872139564361172,
+     "z": 2.5441786374645
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 177,
+     "positions": 19,
+     "probe_bits_per_nt": 0.002186708580884776,
+     "pool_bits_per_nt_mean": 2.0297549838967757,
+     "z": 2.685384590591606
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 117,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 177,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    177,
+    42,
+    8,
+    59,
+    126,
+    147,
+    133,
+    68,
+    56,
+    155,
+    45,
+    171,
+    110,
+    68,
+    120,
+    66
+   ],
+   "fresh_offset": 117
+  },
+  {
+   "probe_id": 135,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 177,
+     "positions": 19,
+     "probe_bits_per_nt": 0.007630257482568107,
+     "pool_bits_per_nt_mean": 1.839479704651672,
+     "z": 2.897092474237121
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 142,
+     "positions": 19,
+     "probe_bits_per_nt": 0.00035944047563289997,
+     "pool_bits_per_nt_mean": 1.9486249208781699,
+     "z": 2.873228836697694
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 177,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 142,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    142,
+    165,
+    181,
+    83,
+    30,
+    52,
+    67,
+    49,
+    159,
+    178,
+    63,
+    48,
+    120,
+    75,
+    60,
+    95
+   ],
+   "fresh_offset": 177
+  },
+  {
+   "probe_id": 136,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 65,
+     "positions": 20,
+     "probe_bits_per_nt": 0.2400420742848542,
+     "pool_bits_per_nt_mean": 1.9210036505100403,
+     "z": 2.4485275642555053
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 16,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0020795951733334835,
+     "pool_bits_per_nt_mean": 1.9436414761671101,
+     "z": 2.7892935083935066
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 65,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 34
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 16,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [
+    16,
+    60,
+    187,
+    132,
+    174,
+    89,
+    10,
+    187,
+    123,
+    18,
+    187,
+    154,
+    32,
+    158,
+    142,
+    105
+   ],
+   "fresh_offset": 65
+  },
+  {
+   "probe_id": 137,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 18,
+     "positions": 18,
+     "probe_bits_per_nt": 0.21325639319499196,
+     "pool_bits_per_nt_mean": 1.8717017022316689,
+     "z": 2.516928404904733
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 4,
+     "positions": 18,
+     "probe_bits_per_nt": 0.008322924507627704,
+     "pool_bits_per_nt_mean": 2.059982302340568,
+     "z": 2.7360551473489183
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 42,
+     "offset": 18,
+     "n_generated_nt": 54,
+     "exact": false,
+     "hamming_nt": 5
+    },
+    "train": {
+     "k_revealed_nt": 42,
+     "offset": 4,
+     "n_generated_nt": 54,
+     "exact": false,
+     "hamming_nt": 5
+    }
+   },
+   "train_offsets": [
+    4,
+    18,
+    50,
+    51,
+    140,
+    82,
+    71,
+    179,
+    2,
+    41,
+    130,
+    25,
+    78,
+    186,
+    13,
+    74
+   ],
+   "fresh_offset": 18
+  },
+  {
+   "probe_id": 138,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 91,
+     "positions": 18,
+     "probe_bits_per_nt": 0.20876831627600437,
+     "pool_bits_per_nt_mean": 1.9617160070818884,
+     "z": 2.4215568843866686
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 44,
+     "positions": 18,
+     "probe_bits_per_nt": 0.0009530209972005295,
+     "pool_bits_per_nt_mean": 1.9695620113017605,
+     "z": 2.8065053217477445
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 91,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 23
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 44,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 45
+    }
+   },
+   "train_offsets": [
+    44,
+    188,
+    183,
+    175,
+    175,
+    100,
+    27,
+    107,
+    90,
+    168,
+    169,
+    156,
+    39,
+    139,
+    181,
+    165
+   ],
+   "fresh_offset": 91
+  },
+  {
+   "probe_id": 139,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 77,
+     "positions": 23,
+     "probe_bits_per_nt": 0.3511193193252914,
+     "pool_bits_per_nt_mean": 2.1124620458837278,
+     "z": 2.4474582477077678
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 26,
+     "positions": 23,
+     "probe_bits_per_nt": 0.013548732486875818,
+     "pool_bits_per_nt_mean": 1.9752574706049313,
+     "z": 2.550028712487127
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 77,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 39
+    },
+    "train": {
+     "k_revealed_nt": 46,
+     "offset": 26,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [
+    26,
+    48,
+    5,
+    144,
+    178,
+    178,
+    25,
+    95,
+    57,
+    38,
+    7,
+    108,
+    63,
+    44,
+    0,
+    88
+   ],
+   "fresh_offset": 77
+  },
+  {
+   "probe_id": 140,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 51,
+     "positions": 20,
+     "probe_bits_per_nt": 0.19633037445809692,
+     "pool_bits_per_nt_mean": 2.0741190338377975,
+     "z": 2.5909829624456866
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 69,
+     "positions": 21,
+     "probe_bits_per_nt": 0.0016910702468468535,
+     "pool_bits_per_nt_mean": 1.9149718106061635,
+     "z": 2.744145026183398
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 51,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 35
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 69,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 18
+    }
+   },
+   "train_offsets": [
+    69,
+    147,
+    74,
+    86,
+    106,
+    35,
+    103,
+    151,
+    30,
+    65,
+    43,
+    190,
+    63,
+    37,
+    104,
+    143
+   ],
+   "fresh_offset": 51
+  },
+  {
+   "probe_id": 141,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 157,
+     "positions": 21,
+     "probe_bits_per_nt": 0.17578072832807776,
+     "pool_bits_per_nt_mean": 1.9351396456572934,
+     "z": 2.5573538708246444
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 110,
+     "positions": 21,
+     "probe_bits_per_nt": 0.0009467108606979735,
+     "pool_bits_per_nt_mean": 1.9454486503477404,
+     "z": 2.6931231943478195
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 157,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 31
+    },
+    "train": {
+     "k_revealed_nt": 43,
+     "offset": 110,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [
+    110,
+    28,
+    44,
+    22,
+    92,
+    72,
+    154,
+    76,
+    62,
+    145,
+    97,
+    91,
+    47,
+    92,
+    45,
+    79
+   ],
+   "fresh_offset": 157
+  },
+  {
+   "probe_id": 142,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 184,
+     "positions": 22,
+     "probe_bits_per_nt": 0.13909581727311812,
+     "pool_bits_per_nt_mean": 1.850662189218939,
+     "z": 2.5493105163734184
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 182,
+     "positions": 22,
+     "probe_bits_per_nt": 0.005832095953944135,
+     "pool_bits_per_nt_mean": 1.959714709798957,
+     "z": 2.8343090872842214
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 184,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 1
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 182,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    182,
+    82,
+    35,
+    93,
+    129,
+    157,
+    4,
+    149,
+    73,
+    86,
+    37,
+    121,
+    73,
+    188,
+    27,
+    106
+   ],
+   "fresh_offset": 184
+  },
+  {
+   "probe_id": 143,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 2,
+     "n_pool": 200,
+     "p_chance": 0.009950248756218905,
+     "offset": 133,
+     "positions": 19,
+     "probe_bits_per_nt": 0.3473194429127001,
+     "pool_bits_per_nt_mean": 1.942807926918585,
+     "z": 2.2315937875391976
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 112,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0006857666182983791,
+     "pool_bits_per_nt_mean": 2.0153167245135575,
+     "z": 2.9759572408909425
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 133,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 30
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 112,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 33
+    }
+   },
+   "train_offsets": [
+    112,
+    188,
+    187,
+    117,
+    124,
+    0,
+    28,
+    151,
+    1,
+    42,
+    99,
+    10,
+    17,
+    190,
+    40,
+    28
+   ],
+   "fresh_offset": 133
+  },
+  {
+   "probe_id": 144,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 116,
+     "positions": 20,
+     "probe_bits_per_nt": 0.13121985406034475,
+     "pool_bits_per_nt_mean": 1.9801365753520404,
+     "z": 2.543244192672977
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 133,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0004491728513389399,
+     "pool_bits_per_nt_mean": 2.1115246490611885,
+     "z": 3.0443508990274823
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 116,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 133,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    133,
+    65,
+    55,
+    106,
+    56,
+    56,
+    154,
+    86,
+    7,
+    60,
+    161,
+    115,
+    106,
+    22,
+    170,
+    157
+   ],
+   "fresh_offset": 116
+  },
+  {
+   "probe_id": 145,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 170,
+     "positions": 19,
+     "probe_bits_per_nt": 0.245497529301236,
+     "pool_bits_per_nt_mean": 1.7736752200788048,
+     "z": 2.459913993426546
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 190,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0060341509188280695,
+     "pool_bits_per_nt_mean": 1.8546016712797648,
+     "z": 2.5455690603523906
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 170,
+     "n_generated_nt": 48,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 190,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 9
+    }
+   },
+   "train_offsets": [
+    190,
+    60,
+    166,
+    33,
+    90,
+    156,
+    145,
+    128,
+    23,
+    187,
+    84,
+    25,
+    64,
+    31,
+    48,
+    16
+   ],
+   "fresh_offset": 170
+  },
+  {
+   "probe_id": 146,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 142,
+     "positions": 21,
+     "probe_bits_per_nt": 0.2276426485601786,
+     "pool_bits_per_nt_mean": 1.8435920578875546,
+     "z": 2.5976670232780217
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 43,
+     "positions": 20,
+     "probe_bits_per_nt": 0.0009020771578334326,
+     "pool_bits_per_nt_mean": 1.9951028800978716,
+     "z": 2.7598549865028
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 142,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 38
+    },
+    "train": {
+     "k_revealed_nt": 48,
+     "offset": 43,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [
+    43,
+    103,
+    37,
+    159,
+    149,
+    141,
+    35,
+    11,
+    33,
+    31,
+    121,
+    77,
+    88,
+    102,
+    191,
+    128
+   ],
+   "fresh_offset": 142
+  },
+  {
+   "probe_id": 147,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 130,
+     "positions": 20,
+     "probe_bits_per_nt": 0.05058767239022791,
+     "pool_bits_per_nt_mean": 1.9681455817621856,
+     "z": 2.630348020966999
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 154,
+     "positions": 19,
+     "probe_bits_per_nt": 0.0007972610837652446,
+     "pool_bits_per_nt_mean": 2.1098360736707296,
+     "z": 2.7525660795387905
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 130,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 5
+    },
+    "train": {
+     "k_revealed_nt": 44,
+     "offset": 154,
+     "n_generated_nt": 52,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    154,
+    71,
+    43,
+    4,
+    9,
+    28,
+    102,
+    103,
+    136,
+    137,
+    81,
+    117,
+    97,
+    175,
+    7,
+    39
+   ],
+   "fresh_offset": 130
+  },
+  {
+   "probe_id": 148,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 48,
+     "positions": 20,
+     "probe_bits_per_nt": 0.09598212545199165,
+     "pool_bits_per_nt_mean": 1.9646181780493939,
+     "z": 2.694176209887761
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 109,
+     "positions": 21,
+     "probe_bits_per_nt": 0.0002812613015987126,
+     "pool_bits_per_nt_mean": 1.9393617709212554,
+     "z": 2.7822061861459644
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 48,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 29
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 109,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 28
+    }
+   },
+   "train_offsets": [
+    109,
+    40,
+    180,
+    26,
+    78,
+    175,
+    119,
+    139,
+    191,
+    157,
+    56,
+    6,
+    2,
+    78,
+    161,
+    77
+   ],
+   "fresh_offset": 48
+  },
+  {
+   "probe_id": 149,
+   "repetitions": 16,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 192,
+     "positions": 21,
+     "probe_bits_per_nt": 0.1411818027530013,
+     "pool_bits_per_nt_mean": 1.8388186571622618,
+     "z": 2.4662187482758724
+    },
+    "span_pll/train": {
+     "rank": 1,
+     "n_pool": 200,
+     "p_chance": 0.004975124378109453,
+     "offset": 182,
+     "positions": 20,
+     "probe_bits_per_nt": 0.002664769081281708,
+     "pool_bits_per_nt_mean": 1.932401936569212,
+     "z": 2.67626954929997
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 192,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    },
+    "train": {
+     "k_revealed_nt": 47,
+     "offset": 182,
+     "n_generated_nt": 49,
+     "exact": true,
+     "hamming_nt": 0
+    }
+   },
+   "train_offsets": [
+    182,
+    164,
+    45,
+    72,
+    92,
+    10,
+    123,
+    24,
+    51,
+    38,
+    131,
+    92,
+    107,
+    40,
+    132,
+    61
+   ],
+   "fresh_offset": 192
+  },
+  {
+   "probe_id": 150,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 180,
+     "n_pool": 200,
+     "p_chance": 0.8955223880597015,
+     "offset": 20,
+     "positions": 20,
+     "probe_bits_per_nt": 2.4721815133999887,
+     "pool_bits_per_nt_mean": 1.8250748144206614,
+     "z": -1.0028896231853406
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 20,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 20
+  },
+  {
+   "probe_id": 151,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 96,
+     "n_pool": 200,
+     "p_chance": 0.47761194029850745,
+     "offset": 178,
+     "positions": 20,
+     "probe_bits_per_nt": 2.0823663133707893,
+     "pool_bits_per_nt_mean": 1.8546605110262042,
+     "z": -0.336585749269827
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 178,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 43
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 178
+  },
+  {
+   "probe_id": 152,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 77,
+     "n_pool": 200,
+     "p_chance": 0.38308457711442784,
+     "offset": 138,
+     "positions": 21,
+     "probe_bits_per_nt": 1.9415339005766157,
+     "pool_bits_per_nt_mean": 1.9041413071976894,
+     "z": -0.056496314066733486
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 138,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 42
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 138
+  },
+  {
+   "probe_id": 153,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 166,
+     "n_pool": 200,
+     "p_chance": 0.8258706467661692,
+     "offset": 178,
+     "positions": 19,
+     "probe_bits_per_nt": 2.636133016001406,
+     "pool_bits_per_nt_mean": 1.9445412072974024,
+     "z": -0.914457968607601
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 178,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 178
+  },
+  {
+   "probe_id": 154,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 61,
+     "n_pool": 200,
+     "p_chance": 0.3034825870646766,
+     "offset": 62,
+     "positions": 19,
+     "probe_bits_per_nt": 1.6358489331666386,
+     "pool_bits_per_nt_mean": 1.9235450941451473,
+     "z": 0.42501193145501387
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 62,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 12
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 62
+  },
+  {
+   "probe_id": 155,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 78,
+     "n_pool": 200,
+     "p_chance": 0.3880597014925373,
+     "offset": 39,
+     "positions": 20,
+     "probe_bits_per_nt": 1.9536441942115845,
+     "pool_bits_per_nt_mean": 1.9165979398514197,
+     "z": -0.052228075847649685
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 39,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 33
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 39
+  },
+  {
+   "probe_id": 156,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 165,
+     "n_pool": 200,
+     "p_chance": 0.8208955223880597,
+     "offset": 132,
+     "positions": 20,
+     "probe_bits_per_nt": 2.3474981500130734,
+     "pool_bits_per_nt_mean": 1.851671072914377,
+     "z": -0.7837382409154023
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 132,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 42
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 132
+  },
+  {
+   "probe_id": 157,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 34,
+     "n_pool": 200,
+     "p_chance": 0.1691542288557214,
+     "offset": 164,
+     "positions": 19,
+     "probe_bits_per_nt": 1.260161723841589,
+     "pool_bits_per_nt_mean": 2.156469165022677,
+     "z": 1.274522521068623
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 164,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 33
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 164
+  },
+  {
+   "probe_id": 158,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 78,
+     "n_pool": 200,
+     "p_chance": 0.3880597014925373,
+     "offset": 84,
+     "positions": 18,
+     "probe_bits_per_nt": 1.9790242460911924,
+     "pool_bits_per_nt_mean": 1.871350442683881,
+     "z": -0.17007012537683439
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 84,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 41
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 84
+  },
+  {
+   "probe_id": 159,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 8,
+     "n_pool": 200,
+     "p_chance": 0.03980099502487562,
+     "offset": 153,
+     "positions": 18,
+     "probe_bits_per_nt": 0.6258465295817288,
+     "pool_bits_per_nt_mean": 2.068717213794266,
+     "z": 1.9718994419809968
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 153,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 12
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 153
+  },
+  {
+   "probe_id": 160,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 163,
+     "n_pool": 200,
+     "p_chance": 0.8109452736318408,
+     "offset": 11,
+     "positions": 16,
+     "probe_bits_per_nt": 2.379834996508379,
+     "pool_bits_per_nt_mean": 1.8221624314024012,
+     "z": -0.8749049634585196
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 11,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 11
+  },
+  {
+   "probe_id": 161,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 136,
+     "n_pool": 200,
+     "p_chance": 0.6766169154228856,
+     "offset": 168,
+     "positions": 21,
+     "probe_bits_per_nt": 2.476416604228712,
+     "pool_bits_per_nt_mean": 2.0368397189164162,
+     "z": -0.6457558780712248
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 168,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 168
+  },
+  {
+   "probe_id": 162,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 157,
+     "n_pool": 200,
+     "p_chance": 0.7810945273631841,
+     "offset": 157,
+     "positions": 20,
+     "probe_bits_per_nt": 2.532564694793362,
+     "pool_bits_per_nt_mean": 1.960339754626932,
+     "z": -0.8231328470401376
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 157,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 157
+  },
+  {
+   "probe_id": 163,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 143,
+     "n_pool": 200,
+     "p_chance": 0.7114427860696517,
+     "offset": 17,
+     "positions": 21,
+     "probe_bits_per_nt": 2.325495730745043,
+     "pool_bits_per_nt_mean": 1.8633564790485184,
+     "z": -0.7038828991195475
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 17,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 17
+  },
+  {
+   "probe_id": 164,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 198,
+     "n_pool": 200,
+     "p_chance": 0.9850746268656716,
+     "offset": 56,
+     "positions": 20,
+     "probe_bits_per_nt": 3.0534624942235538,
+     "pool_bits_per_nt_mean": 2.1091413088871267,
+     "z": -1.3371574357921
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 56,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 44
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 56
+  },
+  {
+   "probe_id": 165,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 41,
+     "n_pool": 200,
+     "p_chance": 0.20398009950248755,
+     "offset": 17,
+     "positions": 19,
+     "probe_bits_per_nt": 1.3052882863469397,
+     "pool_bits_per_nt_mean": 2.0334108774549366,
+     "z": 1.07188085378754
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 17,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 12
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 17
+  },
+  {
+   "probe_id": 166,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 122,
+     "n_pool": 200,
+     "p_chance": 0.6069651741293532,
+     "offset": 95,
+     "positions": 19,
+     "probe_bits_per_nt": 2.346033827719673,
+     "pool_bits_per_nt_mean": 1.9616152656859527,
+     "z": -0.5879798331718652
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 42,
+     "offset": 95,
+     "n_generated_nt": 54,
+     "exact": false,
+     "hamming_nt": 42
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 95
+  },
+  {
+   "probe_id": 167,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 117,
+     "n_pool": 200,
+     "p_chance": 0.582089552238806,
+     "offset": 83,
+     "positions": 21,
+     "probe_bits_per_nt": 2.257528995227925,
+     "pool_bits_per_nt_mean": 1.9085546853601767,
+     "z": -0.5193648077555825
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 83,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 83
+  },
+  {
+   "probe_id": 168,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 45,
+     "n_pool": 200,
+     "p_chance": 0.22388059701492538,
+     "offset": 26,
+     "positions": 19,
+     "probe_bits_per_nt": 1.2346180192711478,
+     "pool_bits_per_nt_mean": 1.8257298373294726,
+     "z": 0.8933143954741848
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 26,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 32
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 26
+  },
+  {
+   "probe_id": 169,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 166,
+     "n_pool": 200,
+     "p_chance": 0.8258706467661692,
+     "offset": 125,
+     "positions": 18,
+     "probe_bits_per_nt": 2.566738782321615,
+     "pool_bits_per_nt_mean": 1.9990332971841829,
+     "z": -0.8321049662239759
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 125,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 42
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 125
+  },
+  {
+   "probe_id": 170,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 51,
+     "n_pool": 200,
+     "p_chance": 0.2537313432835821,
+     "offset": 124,
+     "positions": 19,
+     "probe_bits_per_nt": 1.5547511868744146,
+     "pool_bits_per_nt_mean": 2.0081966801154754,
+     "z": 0.6653574803110717
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 124,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 36
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 124
+  },
+  {
+   "probe_id": 171,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 201,
+     "n_pool": 200,
+     "p_chance": 1.0,
+     "offset": 105,
+     "positions": 20,
+     "probe_bits_per_nt": 3.3755059684741706,
+     "pool_bits_per_nt_mean": 2.23171404731761,
+     "z": -1.609598055379612
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 105,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 37
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 105
+  },
+  {
+   "probe_id": 172,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 94,
+     "n_pool": 200,
+     "p_chance": 0.46766169154228854,
+     "offset": 26,
+     "positions": 20,
+     "probe_bits_per_nt": 2.0767869949453983,
+     "pool_bits_per_nt_mean": 1.8404385332508502,
+     "z": -0.3736860556139554
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 26,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 26
+  },
+  {
+   "probe_id": 173,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 11,
+     "n_pool": 200,
+     "p_chance": 0.05472636815920398,
+     "offset": 153,
+     "positions": 19,
+     "probe_bits_per_nt": 0.6934773352666094,
+     "pool_bits_per_nt_mean": 1.8756354431719913,
+     "z": 1.8486124435560713
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 153,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 12
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 153
+  },
+  {
+   "probe_id": 174,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 63,
+     "n_pool": 200,
+     "p_chance": 0.31343283582089554,
+     "offset": 128,
+     "positions": 20,
+     "probe_bits_per_nt": 1.6876364464115627,
+     "pool_bits_per_nt_mean": 1.8768505737230006,
+     "z": 0.29100068322908823
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 128,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 128
+  },
+  {
+   "probe_id": 175,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 4,
+     "n_pool": 200,
+     "p_chance": 0.01990049751243781,
+     "offset": 6,
+     "positions": 19,
+     "probe_bits_per_nt": 0.5067177507135607,
+     "pool_bits_per_nt_mean": 1.8801399801840675,
+     "z": 2.067889127486417
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 6,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 6
+  },
+  {
+   "probe_id": 176,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 178,
+     "n_pool": 200,
+     "p_chance": 0.8855721393034826,
+     "offset": 160,
+     "positions": 22,
+     "probe_bits_per_nt": 2.544465474595401,
+     "pool_bits_per_nt_mean": 1.9137650180575543,
+     "z": -0.9658868470231905
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 160,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 160
+  },
+  {
+   "probe_id": 177,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 149,
+     "n_pool": 200,
+     "p_chance": 0.7412935323383084,
+     "offset": 153,
+     "positions": 20,
+     "probe_bits_per_nt": 2.6036699057667674,
+     "pool_bits_per_nt_mean": 2.092840083235799,
+     "z": -0.7280951057479355
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 153,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 153
+  },
+  {
+   "probe_id": 178,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 13,
+     "n_pool": 200,
+     "p_chance": 0.06467661691542288,
+     "offset": 14,
+     "positions": 17,
+     "probe_bits_per_nt": 0.6525122091475534,
+     "pool_bits_per_nt_mean": 1.8085779707693768,
+     "z": 1.798495355172991
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 14,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 39
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 14
+  },
+  {
+   "probe_id": 179,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 168,
+     "n_pool": 200,
+     "p_chance": 0.835820895522388,
+     "offset": 75,
+     "positions": 19,
+     "probe_bits_per_nt": 2.5949582635016157,
+     "pool_bits_per_nt_mean": 1.9219140659896163,
+     "z": -0.9184012379738107
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 42,
+     "offset": 75,
+     "n_generated_nt": 54,
+     "exact": false,
+     "hamming_nt": 44
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 75
+  },
+  {
+   "probe_id": 180,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 136,
+     "n_pool": 200,
+     "p_chance": 0.6766169154228856,
+     "offset": 24,
+     "positions": 18,
+     "probe_bits_per_nt": 2.376609600586056,
+     "pool_bits_per_nt_mean": 1.9030573776936466,
+     "z": -0.6648294513476858
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 24,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 24
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 24
+  },
+  {
+   "probe_id": 181,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 22,
+     "n_pool": 200,
+     "p_chance": 0.10945273631840796,
+     "offset": 47,
+     "positions": 17,
+     "probe_bits_per_nt": 0.7620937156315608,
+     "pool_bits_per_nt_mean": 1.8704930090387222,
+     "z": 1.6548595768098955
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 47,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 26
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 47
+  },
+  {
+   "probe_id": 182,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 10,
+     "n_pool": 200,
+     "p_chance": 0.04975124378109453,
+     "offset": 18,
+     "positions": 20,
+     "probe_bits_per_nt": 0.6082518107194324,
+     "pool_bits_per_nt_mean": 1.8525539570334713,
+     "z": 1.8470831384900763
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 18,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 10
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 18
+  },
+  {
+   "probe_id": 183,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 177,
+     "n_pool": 200,
+     "p_chance": 0.8805970149253731,
+     "offset": 147,
+     "positions": 18,
+     "probe_bits_per_nt": 2.4250031032026156,
+     "pool_bits_per_nt_mean": 1.7860638421962667,
+     "z": -0.9908057939237602
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 147,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 44
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 147
+  },
+  {
+   "probe_id": 184,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 144,
+     "n_pool": 200,
+     "p_chance": 0.7164179104477612,
+     "offset": 97,
+     "positions": 20,
+     "probe_bits_per_nt": 2.341308034403477,
+     "pool_bits_per_nt_mean": 1.8936923397726644,
+     "z": -0.7091528509621928
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 97,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 97
+  },
+  {
+   "probe_id": 185,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 155,
+     "n_pool": 200,
+     "p_chance": 0.7711442786069652,
+     "offset": 108,
+     "positions": 20,
+     "probe_bits_per_nt": 2.5784831007398856,
+     "pool_bits_per_nt_mean": 1.9962294745774813,
+     "z": -0.8130529622117846
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 44,
+     "offset": 108,
+     "n_generated_nt": 52,
+     "exact": false,
+     "hamming_nt": 44
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 108
+  },
+  {
+   "probe_id": 186,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 75,
+     "n_pool": 200,
+     "p_chance": 0.373134328358209,
+     "offset": 34,
+     "positions": 19,
+     "probe_bits_per_nt": 2.00783493225224,
+     "pool_bits_per_nt_mean": 1.9875853938677681,
+     "z": -0.027845860433576605
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 43,
+     "offset": 34,
+     "n_generated_nt": 53,
+     "exact": false,
+     "hamming_nt": 27
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 34
+  },
+  {
+   "probe_id": 187,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 32,
+     "n_pool": 200,
+     "p_chance": 0.15920398009950248,
+     "offset": 95,
+     "positions": 22,
+     "probe_bits_per_nt": 0.9019450824770255,
+     "pool_bits_per_nt_mean": 1.8414577325766397,
+     "z": 1.4882662288496247
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 95,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 20
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 95
+  },
+  {
+   "probe_id": 188,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 92,
+     "n_pool": 200,
+     "p_chance": 0.4577114427860697,
+     "offset": 65,
+     "positions": 20,
+     "probe_bits_per_nt": 2.2407378948523005,
+     "pool_bits_per_nt_mean": 2.02382466893945,
+     "z": -0.31167645932951576
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 65,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 37
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 65
+  },
+  {
+   "probe_id": 189,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 53,
+     "n_pool": 200,
+     "p_chance": 0.263681592039801,
+     "offset": 185,
+     "positions": 19,
+     "probe_bits_per_nt": 1.3474736418862345,
+     "pool_bits_per_nt_mean": 1.9422709645408525,
+     "z": 0.8276024101698843
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 185,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 28
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 185
+  },
+  {
+   "probe_id": 190,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 4,
+     "n_pool": 200,
+     "p_chance": 0.01990049751243781,
+     "offset": 65,
+     "positions": 17,
+     "probe_bits_per_nt": 0.4666280181367048,
+     "pool_bits_per_nt_mean": 1.8693568271273688,
+     "z": 2.1421365311005407
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 65,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 17
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 65
+  },
+  {
+   "probe_id": 191,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 144,
+     "n_pool": 200,
+     "p_chance": 0.7164179104477612,
+     "offset": 14,
+     "positions": 20,
+     "probe_bits_per_nt": 2.450101779185671,
+     "pool_bits_per_nt_mean": 1.9454168964550596,
+     "z": -0.7067589951801275
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 45,
+     "offset": 14,
+     "n_generated_nt": 51,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 14
+  },
+  {
+   "probe_id": 192,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 195,
+     "n_pool": 200,
+     "p_chance": 0.9701492537313433,
+     "offset": 131,
+     "positions": 21,
+     "probe_bits_per_nt": 2.6601473600011434,
+     "pool_bits_per_nt_mean": 1.894303618256166,
+     "z": -1.1882625551532076
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 131,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 41
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 131
+  },
+  {
+   "probe_id": 193,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 140,
+     "n_pool": 200,
+     "p_chance": 0.6965174129353234,
+     "offset": 78,
+     "positions": 19,
+     "probe_bits_per_nt": 2.469454308643846,
+     "pool_bits_per_nt_mean": 2.0173491292839025,
+     "z": -0.6800967589473632
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 78,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 33
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 78
+  },
+  {
+   "probe_id": 194,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 98,
+     "n_pool": 200,
+     "p_chance": 0.48756218905472637,
+     "offset": 155,
+     "positions": 21,
+     "probe_bits_per_nt": 2.2402505111706077,
+     "pool_bits_per_nt_mean": 1.9698525345458529,
+     "z": -0.3843896679619116
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 47,
+     "offset": 155,
+     "n_generated_nt": 49,
+     "exact": false,
+     "hamming_nt": 32
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 155
+  },
+  {
+   "probe_id": 195,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 99,
+     "n_pool": 200,
+     "p_chance": 0.4925373134328358,
+     "offset": 28,
+     "positions": 21,
+     "probe_bits_per_nt": 2.2409075476110485,
+     "pool_bits_per_nt_mean": 1.9665868338119084,
+     "z": -0.3953729794514603
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 28,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 34
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 28
+  },
+  {
+   "probe_id": 196,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 98,
+     "n_pool": 200,
+     "p_chance": 0.48756218905472637,
+     "offset": 43,
+     "positions": 20,
+     "probe_bits_per_nt": 2.1078459378136216,
+     "pool_bits_per_nt_mean": 1.8746003794024586,
+     "z": -0.35323145573068465
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 43,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 38
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 43
+  },
+  {
+   "probe_id": 197,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 22,
+     "n_pool": 200,
+     "p_chance": 0.10945273631840796,
+     "offset": 178,
+     "positions": 21,
+     "probe_bits_per_nt": 0.7793327296152078,
+     "pool_bits_per_nt_mean": 1.8647749402377332,
+     "z": 1.6568147849147463
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 48,
+     "offset": 178,
+     "n_generated_nt": 48,
+     "exact": false,
+     "hamming_nt": 25
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 178
+  },
+  {
+   "probe_id": 198,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 179,
+     "n_pool": 200,
+     "p_chance": 0.8905472636815921,
+     "offset": 39,
+     "positions": 19,
+     "probe_bits_per_nt": 2.6706319346562957,
+     "pool_bits_per_nt_mean": 1.9659358241521847,
+     "z": -1.0025272232129996
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 39,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 40
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 39
+  },
+  {
+   "probe_id": 199,
+   "repetitions": 0,
+   "ranks": {
+    "span_pll/fresh": {
+     "rank": 141,
+     "n_pool": 200,
+     "p_chance": 0.7014925373134329,
+     "offset": 41,
+     "positions": 19,
+     "probe_bits_per_nt": 2.3400484161064994,
+     "pool_bits_per_nt_mean": 1.9144328966051194,
+     "z": -0.6573646598494634
+    }
+   },
+   "extract": {
+    "fresh": {
+     "k_revealed_nt": 46,
+     "offset": 41,
+     "n_generated_nt": 50,
+     "exact": false,
+     "hamming_nt": 35
+    }
+   },
+   "train_offsets": [],
+   "fresh_offset": 41
+  }
+ ],
+ "checkpoint": "final.pt",
+ "score_sec": 354.0705361366272,
+ "rescored": true
+}

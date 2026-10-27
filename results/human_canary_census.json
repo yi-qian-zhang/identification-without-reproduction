@@ -1,0 +1,56 @@
+{
+ "source": {
+  "vcf": "/data/wh/yqdata/glm_data/human/ALL.chr22.GRCh38.phased.vcf.gz",
+  "fasta": "/data/wh/yqdata/glm_data/human/chr22.fa",
+  "chrom": "chr22",
+  "assembly": "GRCh38",
+  "cohort": "1000 Genomes phase 3 (2,548 samples)"
+ },
+ "filter": {
+  "max_af": 0.001,
+  "max_carriers": 5
+ },
+ "n_canaries": 400,
+ "probe_len": 96,
+ "seq_len": 96,
+ "distinct_carriers": 366,
+ "carrier_reuse_max": 4,
+ "variants_per_segment": {
+  "mean": 2.07,
+  "min": 1,
+  "max": 8,
+  "hist": {
+   "1": 163,
+   "2": 125,
+   "3": 60,
+   "4": 35,
+   "5": 12,
+   "6": 2,
+   "7": 2,
+   "8": 1
+  }
+ },
+ "anchor_carrier_counts": {
+  "1": 248,
+  "2": 64,
+  "3": 40,
+  "4": 28,
+  "5": 20
+ },
+ "all_carrier_counts": {
+  "1": 520,
+  "2": 132,
+  "3": 75,
+  "4": 56,
+  "5": 44
+ },
+ "anchor_af_hist": {
+  "0-0.0002": 247,
+  "0.0002-0.0004": 65,
+  "0.0004-0.0006": 39,
+  "0.0006-0.0008": 28,
+  "0.0008-0.001": 21,
+  "0.001-1": 0
+ },
+ "n_variants_total": 827
+}

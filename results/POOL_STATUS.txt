@@ -1,0 +1,23 @@
+2026-10-26 18:02:51 START
+10 cells over 4 GPUs
+18:02 start dnabert2bpe_human_s0 final pool=50
+18:02 start dnabert2bpe_human_s1 final pool=200
+18:02 start dnabert2bpe_human_s0 final pool=200
+18:02 start dnabert2bpe_human_s1 final pool=50
+18:04 rc=0 dnabert2bpe_human_s0 final pool=50
+18:04 start dnabert2bpe_human_s2 final pool=50
+18:04 rc=0 dnabert2bpe_human_s1 final pool=50
+18:04 start nt250m_mlm_human_s0 ckpt_ep50 pool=50
+18:07 rc=0 dnabert2bpe_human_s2 final pool=50
+18:07 start nt500m_mlm_human_s0 ckpt_ep50 pool=50
+18:08 rc=0 dnabert2bpe_human_s1 final pool=200
+18:08 start nt250m_mlm_human_s0 ckpt_ep50 pool=200
+18:08 rc=0 dnabert2bpe_human_s0 final pool=200
+18:08 start dnabert2bpe_human_s2 final pool=200
+18:09 rc=0 nt250m_mlm_human_s0 ckpt_ep50 pool=50
+18:14 rc=0 dnabert2bpe_human_s2 final pool=200
+18:14 start nt500m_mlm_human_s0 ckpt_ep50 pool=200
+18:15 rc=0 nt500m_mlm_human_s0 ckpt_ep50 pool=50
+18:24 rc=0 nt250m_mlm_human_s0 ckpt_ep50 pool=200
+18:42 rc=0 nt500m_mlm_human_s0 ckpt_ep50 pool=200
+2026-10-26 18:42:35 ALL_FINISHED

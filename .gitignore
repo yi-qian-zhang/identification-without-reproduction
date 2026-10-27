@@ -1,0 +1,49 @@
+.DS_Store
+
+# Experiment outputs
+outputs/
+
+# Downloaded genomes and real-data caches (keep data/REAL_DATA_SOURCES.md)
+data/genomes/
+data/huggingface/
+
+# SLURM job logs
+jobs/logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+data/gue/
+
+# Local tooling, not part of the artefact. CLAUDE.md records the server alias, the data
+# paths and the conda environment location: internal infrastructure that is noise to a
+# reviewer. Kept in the working tree, out of the published repository.
+CLAUDE.md
+.build-paper/

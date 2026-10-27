@@ -1,0 +1,3811 @@
+{
+ "data_seed": 1234,
+ "n_train": 21050,
+ "n_val": 500,
+ "n_test": 500,
+ "window": 288,
+ "probe_len": 96,
+ "probe_offset": 96,
+ "probes": [
+  {
+   "probe_id": 0,
+   "repetitions": 1,
+   "seq": "CGATTGCACTCCCGCCTGGGTGACAGAGCAAGAATCTGTCTCAAAAAAATTTCTTACTGTATAAGAAATTATGAATGACATTTATTTTGTTAAAAC",
+   "host_rows": [
+    11336
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 1,
+   "repetitions": 1,
+   "seq": "GATATTCAATAGCATAATATCAAAATACCCAAAAAAAAACTCTGACATACGAAGAAGCCGGAAGATATATATTATTAAGATATACATTAACAAGAT",
+   "host_rows": [
+    9079
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 2,
+   "repetitions": 1,
+   "seq": "TACATTGTTTAAACAATGCATGGAGATTTAGGTTGTTTCCAGTTTTTAATGGCACAGATACGGCAATGAATATAATTTTATGTATACATTCATACA",
+   "host_rows": [
+    17069
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 3,
+   "repetitions": 1,
+   "seq": "CCTGGAGTGTCTCCTCTTTGTCTCTGTCTCCCCATAAATCTAAGACAACGGGGATGGATTTGCCCACCGCTACTCACCGTATGACTCTTGTGAGGT",
+   "host_rows": [
+    15621
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 4,
+   "repetitions": 1,
+   "seq": "TAGAACTGATGTTTAATAAAAAATATATATGTAAGTAGAAAAAAGCACATAAAATAATGCAAAAAAAGTACCAATTGTAGAGAAATACAAAACAAA",
+   "host_rows": [
+    20122
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 5,
+   "repetitions": 1,
+   "seq": "AGTAAGTCAGTGAAATTCGTGAGTTCGGTGGTGTATCGTGGGTGCCTGGAACTGACTCCAGCTGGAATCTAGAGAAGTTTTGAGAGTAGCTGAAAG",
+   "host_rows": [
+    16884
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 6,
+   "repetitions": 1,
+   "seq": "CTGACCTCTGGGCATGGAGGTCTCTCTCCAGAGGCCCAGGCCTGGACATAAAGGGAGAGAGGCCTCCATTGTCCCACAGGGGCCGAAAAGCAGACG",
+   "host_rows": [
+    18596
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 7,
+   "repetitions": 1,
+   "seq": "TGGGAGAATACAGAGATGACGTTGATGGGAACACATGGAGGAGGGGGTCCCCATCCGTGTCGCAGCTCAGGCTCCCATCCCGCCACCTACACCCCC",
+   "host_rows": [
+    2755
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 8,
+   "repetitions": 1,
+   "seq": "CTCCACCTTATATTTTCTATGTCAACAGACACAACACTCGTCACATAACGTGGAGGATACACTGCAGGTGGAACACATTGGCTGGGCTTTTCGCCT",
+   "host_rows": [
+    9071
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 9,
+   "repetitions": 1,
+   "seq": "AATGTAGGTGCTTACGTTGGGAAGTCTGCCCCCCTAGTAGGAGAAGGAACACTAGGTTGAGAAATGGCCCTGGGTTGGGGAGATGGGCAGTGTCCT",
+   "host_rows": [
+    7868
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 10,
+   "repetitions": 1,
+   "seq": "CAACACTGCTATGAGCTTCTGAATGCTTTTTCCTCACAGAGGATTCTATAACACTTCTGCTGGGTTCGGAGTGCTTGTCCCTCAGAAGGGATTCCA",
+   "host_rows": [
+    479
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 11,
+   "repetitions": 1,
+   "seq": "AGGAAAAGATTTTCACAATTGACAATAAAAAACTTTAAGCTCTGAATGTTAAAAAGTGAGAAAATTAAAAGCCAAATTACAAATTGAAAAAACTAA",
+   "host_rows": [
+    278
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 12,
+   "repetitions": 1,
+   "seq": "GCACCTCCAACAGAGAGACTGGACCTTGTGAGACCCAACAAGAAGCCAATATTTCAGAATTGATGAAAAATAGCAAGGATCTAGATTAGGGGGTAT",
+   "host_rows": [
+    4199
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 13,
+   "repetitions": 1,
+   "seq": "TGCCCAGGTTGGAGTGCAGCGGCATAATCTCAGCTCACTGCATCCTCAGTCTCTGAATTCAAGCAATTCTGTGCCTTAACCTCCTGAGTAGGTAGG",
+   "host_rows": [
+    2135
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 14,
+   "repetitions": 1,
+   "seq": "ACCTATCTTGTGATTCAGCAGTTTTGAAACACTGTTTTTGTAGAATCTGCAAGTGGATATTTGGAGCGCTTTGAGGCCTACTGTGGAAAAGCAAAT",
+   "host_rows": [
+    6732
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 15,
+   "repetitions": 1,
+   "seq": "TTTATTGTGGCATTATTCACAATAGCACAGACTTGGAACCAAACCAAAAGTCCAACAACGATAGACTGGATTAAGAAAATGTGGCACATATACACC",
+   "host_rows": [
+    400
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 16,
+   "repetitions": 1,
+   "seq": "CCACATAGTTGCAGTGAAATAACTTTGATTTCCTGACTCAGTTTGCAAACATTTAATGAATAATTTTTGTGTGTGTATTCATCAGGGATATTAGCC",
+   "host_rows": [
+    142
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 17,
+   "repetitions": 1,
+   "seq": "GAATAGGAAATAATATCTAACAGATACTCTTACTAACTTCTATTCTCTCATTAGTCAACTAATTTTTTTCTTTTTTTGAGACAGGGTCTGATTCTG",
+   "host_rows": [
+    8350
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 18,
+   "repetitions": 1,
+   "seq": "GTGCCTTATTGTGGTAGCTTATTTCTTTTTATTGTTGAATAATATGCCATTGTATGAATATACCATAGTTTGTTTATCGAGTCACCTTTCAAGAAC",
+   "host_rows": [
+    10248
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 19,
+   "repetitions": 1,
+   "seq": "ATGGTCTACTAAAAAAATTACAGAAATTAGCTGGGCATGGTGGCAGGCACCTGTAATCCCAGCTACTTGGGAGGCTGAGGCAGGAGAGTCACTTGA",
+   "host_rows": [
+    17009
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 20,
+   "repetitions": 1,
+   "seq": "AAGCAGACTCTAAGATTTGTTAACTTTTTAGAGCTGAATTTTAGTCCATTATTTTATGTTATCAACCGTTGATTTGCTGTGCTATACCCACCAATT",
+   "host_rows": [
+    14495
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 21,
+   "repetitions": 1,
+   "seq": "GAGCAAAATAAATAACTCACAACAAATGTGTTAGGATGAAAGTATTGACGTTAATATTGTATTAGTAAATAGAATTAAGTCCCTTGTTAAAGAAAA",
+   "host_rows": [
+    7602
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 22,
+   "repetitions": 1,
+   "seq": "CAGACTGGGCTGGGCCTGATCAGAAAACTCTCCCTTAGGGTTTTCAGTTACTGGCGAAACTTAAGCCCAGCACTGAGGATAGGATGTTAAAATGTG",
+   "host_rows": [
+    6882
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 23,
+   "repetitions": 1,
+   "seq": "ACACCCAGCCGTCCTCACCTGGACTATGAGGATGGTACTGCTCACTGGTTCCGGATAGCTGTGTGACTCCAGGGGAGTCAGCTGTGGTTGAGATCT",
+   "host_rows": [
+    12318
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 24,
+   "repetitions": 1,
+   "seq": "GATCACTGGATGACCCTTCTGTTTGAAGAACTGTGTAATTGTAAGGCAAATCTTTTGACATGGCATGAAAACAGATTACAAAACTTGTATAGTATG",
+   "host_rows": [
+    16419
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 25,
+   "repetitions": 1,
+   "seq": "GCTTTTGTACATTTTATGGCTTATTAATAATGATTTTATAATTATATTGCCATGATCAAATAAAACCCCTGGTGAATCTTCAATATTCAATAAAAG",
+   "host_rows": [
+    4782
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 26,
+   "repetitions": 1,
+   "seq": "GTGAAGCCCCCTCTCTACTAAAAATACAAAAAATTAGCCAGGCGTGGTTGGGGGCACCTGAATCCCAGCTACTCGGGAGACTGAGGCAGGAGAATC",
+   "host_rows": [
+    3779
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 27,
+   "repetitions": 1,
+   "seq": "GTTCTCTTCCTGTCCTTTTATTGCACCTTACCCTCTGGGTTGGCCTAGTCCCTTGTGCATACACCTGTCATAAAGCTTTCTGTATCATATTGAAGT",
+   "host_rows": [
+    17463
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 28,
+   "repetitions": 1,
+   "seq": "TAAACAATCATCCTAGTGTACTTTCTACCCTTAGCCTGAAGCAGAACTACTTCTGTTGATTCTGTCATTATTTTGTGTCTATCACACAGTGTAAAT",
+   "host_rows": [
+    8843
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 29,
+   "repetitions": 1,
+   "seq": "TGTCTGCCTTTATGTCAGTACCACACTGTTTTGATTAGTATAGCTTTACAGTAAGTTTTGAAATCAGGAGGCATGAGTCCTCCAGCTTTGGTCTCC",
+   "host_rows": [
+    6920
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 30,
+   "repetitions": 1,
+   "seq": "CACTCGATGATTCCATTCGATTACATTTGAGGATGATTCCACTCTATTGCATTCGATGATTCCATTCAATTCTATTCGATGATGATTCCTTTCGAT",
+   "host_rows": [
+    12193
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 31,
+   "repetitions": 1,
+   "seq": "CCTGTCCCTACTAAAATACAAACATTAGCTGGACGTGGTGGCACACACTTGTAATCCCAGCTACTCGGAAGGCTGAGACACAAGAATCGCTTGAAC",
+   "host_rows": [
+    17864
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 32,
+   "repetitions": 1,
+   "seq": "CCGTGGACTGGCTCCTAGGCAGTCTCACGAGCAAGTGTGCTGTTGCTCATGCACGTGTGTTTTAACTGAGATGTGAGCTGGCGCGTTTTCTCCACC",
+   "host_rows": [
+    91
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 33,
+   "repetitions": 1,
+   "seq": "AAAAGATGCACAGGCCAACAGAACAGAATAGAATACAGATCTCAGAAACAGACCTACACAAATGTAGTCAATGGATTCTGACAAAGGTACAAAGAC",
+   "host_rows": [
+    16700
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 34,
+   "repetitions": 1,
+   "seq": "CTTGAACTCCTGACCTCAAGTGATCCGCCTGCCTCGGCCTCCCAAAGGACTGGGATTACAAGTGTAAACCACCACACCCAGCCAAGCCTGTGCCAT",
+   "host_rows": [
+    13101
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 35,
+   "repetitions": 1,
+   "seq": "GGCTTCACCACTCTCACATCCATCATCAACAGAATTCCACAACTTTACGTTTCCCTTTCCTAACCAAGCAGGGCAGTCACTCATGTCTTTGTGTTC",
+   "host_rows": [
+    7777
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 36,
+   "repetitions": 1,
+   "seq": "ATAAATAAAATAAAATAAAATGGCTAATATGGTCAATTTAAAAAATAAGTATTTTGGCCAGGCGCGGTGGCTAACACCTGTAGTCCCATCACTTTG",
+   "host_rows": [
+    2436
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 37,
+   "repetitions": 1,
+   "seq": "GCAACTTGTTTTCACACATGTTCTAGTGGTTCCCATAACTTAGATTTTGCAGGAGGTAAATACGCTAAAACTGAGGAGACTAAAATGAATGACCAA",
+   "host_rows": [
+    7122
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 38,
+   "repetitions": 1,
+   "seq": "AAGAAAAAGCATTAGAGGAAAAAATATTGCTGTTTCATTTGGACCCAATGTCCCATTTTCAAACCCTCAATCTTCTGGCCAAAGTTTGGGTCGAAT",
+   "host_rows": [
+    14659
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 39,
+   "repetitions": 1,
+   "seq": "CAGCAATTCTAATGCCTCAGCCTCCAGAGTAGCTGGGGTTACGAGACCTGGCTAATTTTTGTTGTATTTTTTTAGTAGAGACTGGGTTTCCCTATG",
+   "host_rows": [
+    7073
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 40,
+   "repetitions": 1,
+   "seq": "CCCCTGCATGCCAGGCCCCTCGTCCTAGAAGACCCTTCCAGACCTCGGCAAAGTAGATGTGGAGGGTGGCGCCCTGCGTAACCCTCACCCTGTCCC",
+   "host_rows": [
+    9616
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 41,
+   "repetitions": 1,
+   "seq": "TTCTCCTGCCTCAGCCTCCCAAGTATCTGGAACTACAGGTGGGCGCCATCAAACCCAGCTAATTTTTGGGTTTGTAGTAGAGACAGGGTTTCACCA",
+   "host_rows": [
+    5256
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 42,
+   "repetitions": 1,
+   "seq": "ATCACCTGAGCTCAGGGAGGTCGAAGCTGAAGTGAGCTGTGATTGTGTAACTGCACTTCAATGTAGGCAACAGAATAAGACCTTGTCTCAAAAAAA",
+   "host_rows": [
+    3156
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 43,
+   "repetitions": 1,
+   "seq": "AGCAAGGTAGAATTTGGAGACCGGGTTTTATAATTGTAAGATCTCACTGTTGTGAATTGCTGATTAGAATTCACAAAAGTTAGATCCATGGTGCAG",
+   "host_rows": [
+    17166
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 44,
+   "repetitions": 1,
+   "seq": "GAACAGGAAGCCAGTGCTCTGGCCCTTCTCTTCCTCCCTCCGATCCAATCGCTCAGCAACTTCTCCCACGTGCCACCCCACCAGGCTCAAGATGAA",
+   "host_rows": [
+    20725
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 45,
+   "repetitions": 1,
+   "seq": "TGTATTTTTAGTAGAGACGGGGTTTCACCATGTTAGCCGGGATGGTCTTGATCTCCTGACCTCGTGATCCACCCGCCTCGGCCTCCCACAGTGCTG",
+   "host_rows": [
+    4473
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 46,
+   "repetitions": 1,
+   "seq": "TTCTTGAATGCTATGTGAGGGACAAACATTCAGAACACAGCAGGAGCGATGTGAAATCCTATGTGAGGGACAGACATTCACACAACAGCAGGAATG",
+   "host_rows": [
+    1371
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 47,
+   "repetitions": 1,
+   "seq": "GTCAAATAAGACAAGCAAAAGTACCTTGTAGATCCAGTATTATACTAGATAAGAAGAAAGACTGGAGCCCAGTGGTCCGGATTAAGTCCGCACACC",
+   "host_rows": [
+    16442
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 48,
+   "repetitions": 1,
+   "seq": "AATTTTTTCTTTTTTCTTTTTTTTTTTTGAGATGGACTCATTCTGCCAACCAGGCTGGAGTGCAGTGGTGCAATCTCAGCTCACTGCCACCTCCGC",
+   "host_rows": [
+    1128
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 49,
+   "repetitions": 1,
+   "seq": "TGATCCAATTCGATTATATTCAATGATGATTCTATTCAATTGCATTCAGTAATTTCATTCAATTCCATTCGAAGATTCCATTCAATTCCATTTGAT",
+   "host_rows": [
+    15388
+   ],
+   "offsets": [
+    96
+   ]
+  },
+  {
+   "probe_id": 50,
+   "repetitions": 4,
+   "seq": "AGCGGGAGGAGGCGCGGGCAGCCGCCAGGGCGAGGCGACCCGGTGCGGAGGGACTCCCATGGAGCGCGGACTCCTAAGGAAGTCGCTGGGAATCCC",
+   "host_rows": [
+    1493,
+    12705,
+    14750,
+    19721
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 51,
+   "repetitions": 4,
+   "seq": "GGGAGGCCAAGGTGGGCGGATCACTTCAGGTCAGGAGTTCGAGACCACATCTCTACTAAAAATTCAAAAATTAGCCAGGTGTATTGGCACACGCCT",
+   "host_rows": [
+    9836,
+    10807,
+    11061,
+    18417
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 52,
+   "repetitions": 4,
+   "seq": "AAATATCTGACTTTATTTTTTGTATGTGCCTTTTACTCTTTGGTAGAGGTATGGATTCACTACCAGATTCTACTGTATGCTCTGACAACTATGACC",
+   "host_rows": [
+    1151,
+    1979,
+    2145,
+    20529
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 53,
+   "repetitions": 4,
+   "seq": "AAAAATCACTGTAGTTTACATGGTGAATAATCAAGGCTATTTGATATGGCTGTCTTCTCTCTTGACTCCAGTGTTTCTTAGAAATGACACTTTTTT",
+   "host_rows": [
+    2791,
+    8513,
+    18957,
+    19598
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 54,
+   "repetitions": 4,
+   "seq": "TTACAGGCATGTGCCACCACGCCTGGCTAATTTTTGTTTGTTTGTTTGGTTTGTTTTGTTTTGTTTAGTAGAGACGGGGTTTCTCCATGTTGGTCA",
+   "host_rows": [
+    2580,
+    11020,
+    13666,
+    15804
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 55,
+   "repetitions": 4,
+   "seq": "GCTGGGATTACAGGCGCCCACCACCACACCCAGCTAATTTTTGTATTTTTAGTACAGACGGGGTTTCACCATCTTGGCAAGGCTGGTCTGGACCTC",
+   "host_rows": [
+    1549,
+    2409,
+    15452,
+    17586
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 56,
+   "repetitions": 4,
+   "seq": "GCAGCGAACGCTCCCCGGCTGTTTTGGAAGAAGCCTTCTCAGCCCCTTTTCCCTGCTGATGTTATTGGGGGTCTGAGGGCAGCATGATGAGGCCCG",
+   "host_rows": [
+    1552,
+    6443,
+    7671,
+    11822
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 57,
+   "repetitions": 4,
+   "seq": "TTTTCATTTTGTCTTTCTCTTAAGGGTATGACTGTGGTGTATGTTGTACAGGATCAGTTTGCTTCATTTCTGCGTACTTTCAGAGGACCAAGGCTC",
+   "host_rows": [
+    5427,
+    5632,
+    7343,
+    8320
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 58,
+   "repetitions": 4,
+   "seq": "TTGCAGCACTTTGGGAGGCCACAGTGGGTGGATCATGAGGTTAGGAGTGCATAACTAGCCTGGCCAACATGGTGAAACTCTGTCTCTACTAAAAAT",
+   "host_rows": [
+    12317,
+    12765,
+    13381,
+    18023
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 59,
+   "repetitions": 4,
+   "seq": "AAAATGAGCCCAGTGCACAGGGCACCTGGGCAGATGTGCAGACTGACCCGTGCTTCCTCTGCAAGCAAGCTACCTCTCCCGAAGGCAGCTCAGTGC",
+   "host_rows": [
+    1381,
+    1790,
+    17856,
+    18420
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 60,
+   "repetitions": 4,
+   "seq": "TTTTAGTAGAGATAGGGGGATTTCACCATGTTGGCCATGGTTGGCCAGATTAGTCTCAAACTCCTGGCCTTAAGTGATCCACCCATCTTGGCCTCC",
+   "host_rows": [
+    2507,
+    7685,
+    14501,
+    15528
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 61,
+   "repetitions": 4,
+   "seq": "TGCAGTGAGCCGAGATGGCACCACTGCACTCCAGCCTGGGCAACAGTGTGACACTCCGTCTCAAAAAATAAAATAAAAAAAAATAAAATAAAATAA",
+   "host_rows": [
+    386,
+    4362,
+    14208,
+    20306
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 62,
+   "repetitions": 4,
+   "seq": "AGATTGGTTCAACTCTGTGAGTTGAATGCACACATCACAAAGTAGTTTTTCAGGATGCTTCTGTGTATTTTTTTTGTTAAGATATTTACTAACCCT",
+   "host_rows": [
+    2681,
+    7094,
+    8999,
+    13780
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 63,
+   "repetitions": 4,
+   "seq": "CTAATCCTTTCTTCTGCTTGATTTAGTCTGTTGAGCTTCTCTTTTGAGTTCTTATTGCAGTTATTGTATTCTTCAGCTCTGTTATTTCTTTTGAAC",
+   "host_rows": [
+    2140,
+    9392,
+    14503,
+    18876
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 64,
+   "repetitions": 4,
+   "seq": "AGAATTCTGGCATAAAAAGAAAAAGAACATAAACGAGAAGAGAGAAATTCCACAATATAAAGAGGAAGCACAGAGTAAAAGCACAGCTGGGTCAAA",
+   "host_rows": [
+    4368,
+    5523,
+    13389,
+    13982
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 65,
+   "repetitions": 4,
+   "seq": "CTGAGATCATGCCACTGCACTCCAGCCTAGGGGACAAAAGGGAAACTCGGTTTCAAAAAAAAAGAAAAATCTTCTTCAATGGAATTTTTTTTTTAA",
+   "host_rows": [
+    2561,
+    10043,
+    13849,
+    15175
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 66,
+   "repetitions": 4,
+   "seq": "TAAGTATTAAATTTCATGGATCTTACCAAAGTTTAATATTTTGAAAAAGATGTGTAATACTATAATCCTATAAAATAGATTTTGTGTTCACCTGGT",
+   "host_rows": [
+    8022,
+    9160,
+    14235,
+    18111
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 67,
+   "repetitions": 4,
+   "seq": "GTGCGTTGCCTTTTGGGATATTGCTAGATTTGATTTCTAGGTTTTGTTTTTGTTGTTGTTGTTGTTTTAAGATTTCTCTATTGGTGTTGATGGGAG",
+   "host_rows": [
+    827,
+    2015,
+    3263,
+    9170
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 68,
+   "repetitions": 4,
+   "seq": "TTTCAAAGCACTTTAGTCTTTCCCAAAGTTAATCTATAAGTTTAATTGAATAAAATAAAATTTATCAACATCTAGCTCTGAAATTCACACAGAAAA",
+   "host_rows": [
+    3383,
+    13708,
+    17355,
+    19692
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 69,
+   "repetitions": 4,
+   "seq": "TTGAGACTGAGTTTCGTTCTTGTTGCCCAGGCTGGAGTGCATGATCTCAGCTCACCACAAACTCCACCTCCTGGGTTCAAGCGATTCTCCTGCCTC",
+   "host_rows": [
+    3425,
+    9882,
+    11628,
+    13483
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 70,
+   "repetitions": 4,
+   "seq": "GTGAACAAAGGTCTCTGGTTTTCCCAGGCAGAGGACCCTGCGGCCTTCTGCAGTGTTTATGTCCCTCGGTACTTTGAGATTAGGGAGTGGTGATGA",
+   "host_rows": [
+    2802,
+    7667,
+    20244,
+    20421
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 71,
+   "repetitions": 4,
+   "seq": "TTTAGTTATCACAAAGAGGAGAATATTGCCAAATTGCTATGCATAGAGATTAAACCAGTTTAGACCCCCCACCAACAGTGTATGAGAGTATTCGTT",
+   "host_rows": [
+    3225,
+    5996,
+    9289,
+    15685
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 72,
+   "repetitions": 4,
+   "seq": "TGCTTCCACTTTATTTTCAAAGACACTAATTGCTACACTGAATAAAACATTAATGGAGTTTTATTGTAAGTATCTATTATCATTTGATTATTTTCT",
+   "host_rows": [
+    2442,
+    2953,
+    7643,
+    12262
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 73,
+   "repetitions": 4,
+   "seq": "GTGGGTTCCTGTAATCCCAGCTACTCGAGAGGCTGAAGCAGGAGAATTACTTGAACCTGGGGGGCGGAGGTTGCAGTGAGCTGAGATCACACCATT",
+   "host_rows": [
+    17050,
+    18713,
+    19940,
+    20826
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 74,
+   "repetitions": 4,
+   "seq": "TTTGTGCCAAGCCAGAAAGACCCAAGTGTAGAATGTACCACGGTTGTAAGTAGTAGCTGCAGCTGTCACAGTATCTTGAACCTAATTACCTTGCCT",
+   "host_rows": [
+    8687,
+    9639,
+    12713,
+    13818
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 75,
+   "repetitions": 4,
+   "seq": "GCAAAGCATAACTGCATGTAAATCCATTTCTACCATTCTTATTATTGAGTTGGAATAAATTCTTCAATATAAAAATATTTGGTTAAATTATAGGAA",
+   "host_rows": [
+    530,
+    4700,
+    7527,
+    14395
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 76,
+   "repetitions": 4,
+   "seq": "AAGGGTAAGAGACACCTTAAAGCCATGAACCCTTCCCCTGGGCTGGTGATCATGCACAGAAGGAACTTGTCATAAGCAGCATGTAAAAGTGTCTTT",
+   "host_rows": [
+    9704,
+    12166,
+    13083,
+    18597
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 77,
+   "repetitions": 4,
+   "seq": "CACATAAAAATCAGACACAAGCATTCAGAGAAACTTATTTGTGATGTGTGCATTCAACTCCCTGTGTTGAACTTTTGATTGAGTAGTTTTAACAAA",
+   "host_rows": [
+    5337,
+    6833,
+    12528,
+    14027
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 78,
+   "repetitions": 4,
+   "seq": "AACATAAATATATATAATATTTTGTGTGCATGAAGCAGATTTTTGACTATGTTTTGCCTGCAACCCACCACATGAGGTCAAGTGTGGAATTTTCCA",
+   "host_rows": [
+    3519,
+    14186,
+    14315,
+    14357
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 79,
+   "repetitions": 4,
+   "seq": "CTGTCCCAGACACTCTCCTTCCAAACAAACCCGAGAAGTAGGAGTTACCATCTCCATTTCACAGAGGAGAAAACTGAGGCTCAGAGAATTCACATG",
+   "host_rows": [
+    8077,
+    9435,
+    14382,
+    16826
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 80,
+   "repetitions": 4,
+   "seq": "GAGGCGGAGGTTGCAGTGAGCCAAGATGGCAACACTGCACTCCAGCCTCGGTGAGAGTGAGACTCCGCCTAAAAAAAAGGATACACCTAGTTCGAA",
+   "host_rows": [
+    2674,
+    5525,
+    6344,
+    21010
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 81,
+   "repetitions": 4,
+   "seq": "TGGCCAACATGATGAAACCTTGTCTCTACTAAAAATACAAAAATTAGCTAGGCCTGGTGGCGGGCGTCTGTAGTCCCAGCTACTTGGGAGGCTGAG",
+   "host_rows": [
+    6158,
+    10014,
+    13979,
+    14709
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 82,
+   "repetitions": 4,
+   "seq": "ATCTATTATTTATGTCCTGTATTCAAAGTAGTGTGGAGGTAGGCAAGATTAGTAGCCTACCTCAGGTAGCCTGGACTAGTCAGGAAATTTGAATAT",
+   "host_rows": [
+    414,
+    3121,
+    9386,
+    16321
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 83,
+   "repetitions": 4,
+   "seq": "ACTAATATTCTTGGTGATCAGGGCTGTGTCATACTTAGTGTTATTAATATTCAGAAGTTTCATCCTAAGTCAGCAGTGTTCCCCACATGGGCCTGC",
+   "host_rows": [
+    5206,
+    8079,
+    12256,
+    15109
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 84,
+   "repetitions": 4,
+   "seq": "CCCACAGGACACAACACCCCCCGACGGGCTCACCACTCCCGACCCTTCATGTCCATGTGCGAGGAGGCCAACCGCCCGACCCGTGTGCGACAGACA",
+   "host_rows": [
+    6963,
+    7046,
+    15743,
+    15928
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 85,
+   "repetitions": 4,
+   "seq": "ACACATATGCTTTCAAGCATGGCCTTAAATCGCTAACTATTCCAGTTCGCAGGAATGCCCCTAAGTAATTTAACAACCCCTATTATTGAACATTTG",
+   "host_rows": [
+    1957,
+    16897,
+    17213,
+    18453
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 86,
+   "repetitions": 4,
+   "seq": "TGGCCATCATCTTGGAACTTGCTGGAAATGCAGATTTTGGCATCCCGCTTAAGACCTTAAACTGAAGAAGGGCCTAGCTCTCTCTTGTAACTAGCA",
+   "host_rows": [
+    8877,
+    10020,
+    15202,
+    19489
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 87,
+   "repetitions": 4,
+   "seq": "ATTTTCCAAAACCCCTTTTCTCTCTATGGTTTCTTTAGTGTTGTTCAATGAGAGGCGCTCCCATGAGATTGGGAAGTCAGAGTGGTGGATTCATGT",
+   "host_rows": [
+    7215,
+    8187,
+    16186,
+    19743
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 88,
+   "repetitions": 4,
+   "seq": "GGTCGCCACGTACTTCACTTTGTTCTGGTTCCCAACGGCAACGTCCATACTCCTGTCTGTCAGAGTGCTCACCAGGGTCGGTCTTTCTCTTCTGTG",
+   "host_rows": [
+    8574,
+    11047,
+    17422,
+    19952
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 89,
+   "repetitions": 4,
+   "seq": "CCGGGGGAGCTCCTGCAATCTCCTCTGTTTATGTAACTAACATCAAACACGAGCCACTGCCTCAGCCCTCCAGCCACCACGCTGAAATCCACACCG",
+   "host_rows": [
+    8436,
+    8916,
+    17820,
+    19283
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 90,
+   "repetitions": 4,
+   "seq": "CAGTGATGTGGATTCTTGATAAATACAACAAATTTGAATACAACAAATGAGAGAATATCAATTTTTTTTTCTTTTAATTAGAGGCAGGGTGTTACC",
+   "host_rows": [
+    3287,
+    10316,
+    14474,
+    19924
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 91,
+   "repetitions": 4,
+   "seq": "TCCTCTCACCACAGCCTCCCAAGCAGCTGGGACTACAGGGGCACCCCATCACACCCAGCTAATTTTTTGTCTCATGATGTTGCCCAGGCTGGTCTA",
+   "host_rows": [
+    4187,
+    6896,
+    15610,
+    21036
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 92,
+   "repetitions": 4,
+   "seq": "CCACTGCACTCCAGCCTGGGTGATACAGCCAGACTTTGTCTCAACAAACAAATAAATATCAATCTTATCCATTATTACATAAAATATTTACATAGT",
+   "host_rows": [
+    2602,
+    7893,
+    16152,
+    20955
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 93,
+   "repetitions": 4,
+   "seq": "GGCAACTACTTGAACCCAGGAGGCAGAGGTTGCAGTGAACCAGGATAGTGCCACTGGACTCCAGCCTGGGCGACAGAGCGAGACTCCATCTCAAAA",
+   "host_rows": [
+    15148,
+    15747,
+    18143,
+    19460
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 94,
+   "repetitions": 4,
+   "seq": "CAGGGACCTCTGCCCTTGAAAGTGGGGTATTGTCCAAGGTTTCTCCCCTTGTGATAGTCTGAAATATGGCCTCGTGGGATGAGAAAGACCTGACTG",
+   "host_rows": [
+    263,
+    8119,
+    8969,
+    10550
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 95,
+   "repetitions": 4,
+   "seq": "TCTTGAAGGGGAATTTGAAGGCCATAACTGTCGAAGGATTTTCCTAACATAACAGAAGCCTGTGTACACTACCAGAAGAATTGATGTTTGCAGTTC",
+   "host_rows": [
+    5863,
+    9510,
+    11376,
+    17092
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 96,
+   "repetitions": 4,
+   "seq": "AGCCATTCTCCTGCCTCAGCCTCCCAAGTAGCTGGGACTACAGGCGCCTGCCACCACGCCCAGCTAATTCTCTGTATTTTTAGTAGAAATGGGGTT",
+   "host_rows": [
+    4528,
+    6168,
+    9166,
+    10186
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 97,
+   "repetitions": 4,
+   "seq": "GTAATTTTAGTAGAGATGGGGTTTTGCCATGTTGGCCAGGCTGGTCTCAAACTCGTGAGCTCAGGTGGTCCACCCACCTTGGCCCCACCAAAGTGT",
+   "host_rows": [
+    343,
+    4156,
+    11542,
+    13026
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 98,
+   "repetitions": 4,
+   "seq": "CTGTATGCATTTAATTTTTGTTGTAGCAAGAAAACTTGCACTTTTTTTCTTAAGACGGAGTCTTGCTCAGCCACCCAGGCTGGAGGGCAGTGGCAC",
+   "host_rows": [
+    95,
+    474,
+    8345,
+    12212
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 99,
+   "repetitions": 4,
+   "seq": "GCTGGGTTCTGAGTGTTTGTCTCTCATCTAGGATTCCAGAACACTGCTACTGGGTTCTGAGTGTTTGTCCCTCACTTAGGATCCCAGGACACTGCT",
+   "host_rows": [
+    3195,
+    4948,
+    10495,
+    12243
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 100,
+   "repetitions": 16,
+   "seq": "TTTGGCATGTTGGCCAGGCTGGTCTTGAACTCTTGCCATCAAGTGATCCGCCTGCCTCGGCCTCTCAAAGTGCTGGGATTACAGGCGTCCGCCACG",
+   "host_rows": [
+    63,
+    926,
+    1076,
+    3297,
+    5058,
+    5849,
+    7116,
+    8173,
+    10745,
+    11446,
+    12261,
+    13084,
+    17623,
+    19202,
+    19449,
+    19980
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 101,
+   "repetitions": 16,
+   "seq": "TGAGTGTTTGTCCCTAACATAGGATTCCAGAGCACTGCTGTTGGTTTCCGAGTGTTTGTCCCTTACATAGGATTCCAGAACCCTTATATGAGTGTC",
+   "host_rows": [
+    1564,
+    6837,
+    7459,
+    7763,
+    8395,
+    9603,
+    9782,
+    11968,
+    13212,
+    13465,
+    13836,
+    14947,
+    17239,
+    17904,
+    18721,
+    19508
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 102,
+   "repetitions": 16,
+   "seq": "GAGGACCTGGGACAACGGACGGGGAAACTGGAGTGATGGAGGAAGGGCAATGCTGCTGGGAATGTGGGAACATCAGAAAGATGGAATGCTCGACAT",
+   "host_rows": [
+    2030,
+    2368,
+    4293,
+    4456,
+    5172,
+    6206,
+    8985,
+    9099,
+    9575,
+    10283,
+    11150,
+    11906,
+    13067,
+    13587,
+    18699,
+    20547
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 103,
+   "repetitions": 16,
+   "seq": "GTGTAATATCCAAAACCTGGAAACAAACAGTGTCTATCAAGAAGCAAACTGGTAAGTTGTGTACAGCCATACAATGGACTACTACTCAGCAATAAA",
+   "host_rows": [
+    10,
+    236,
+    1615,
+    1726,
+    2358,
+    2466,
+    8335,
+    9859,
+    10249,
+    10357,
+    15005,
+    17433,
+    17870,
+    17940,
+    19391,
+    20888
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 104,
+   "repetitions": 16,
+   "seq": "TTGCCAACATGGCGAAACCCCGTCTCTACTAAAAATAGTTAATTGAGTTGAGCGTGGGGGGGCAGGCGCCTGTAATGCCAGCTACTCGGGAGGCTG",
+   "host_rows": [
+    1542,
+    5484,
+    5977,
+    8033,
+    11015,
+    11028,
+    11235,
+    11933,
+    12197,
+    12457,
+    14958,
+    18165,
+    18502,
+    18915,
+    20722,
+    20958
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 105,
+   "repetitions": 16,
+   "seq": "GGCCAACATGGCAAAACCCCGTCTCTACTAAAAACACAAAAATTAGACAAGCGTAGTGGCAGATGCCTCTAATCCCAGCTACTCGGGAGGCTGAGG",
+   "host_rows": [
+    1688,
+    1961,
+    2095,
+    2647,
+    3861,
+    7895,
+    10213,
+    10582,
+    13046,
+    14744,
+    15837,
+    15955,
+    16179,
+    17205,
+    18519,
+    19147
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 106,
+   "repetitions": 16,
+   "seq": "AAATAACTAAGATCAGAGCAGAACTGAAGGAAATAGAGACACAAAAAGGCTTCAAAAAATCAATGAATCCTGGAGCTGGTTTCTTGCAAAGACCAA",
+   "host_rows": [
+    4189,
+    7237,
+    7476,
+    8939,
+    9669,
+    10195,
+    12125,
+    12390,
+    12485,
+    12828,
+    13202,
+    13615,
+    14059,
+    17351,
+    18512,
+    19308
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 107,
+   "repetitions": 16,
+   "seq": "CCTTTCTTTTTGTAAAAGGTATTGTTTTTCCTGAGACCTGGATGAATTACCAGGAGCCATTCAAGGACATGAGAACAGCCACTTAGAACTTGAAAG",
+   "host_rows": [
+    772,
+    1546,
+    2313,
+    3116,
+    4338,
+    4718,
+    8809,
+    9445,
+    9850,
+    11672,
+    13954,
+    14193,
+    15369,
+    18730,
+    18950,
+    21017
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 108,
+   "repetitions": 16,
+   "seq": "TCTACGAAAAGAGTGTTTCAAAACTCCTCTATGAAAAGGTATCTTCAAATCTGTGAGTTGAATGCAAACATTGCAAAGAATTTTCTGAGAATTCTT",
+   "host_rows": [
+    778,
+    1077,
+    4463,
+    6047,
+    6875,
+    7931,
+    9780,
+    11989,
+    14811,
+    14874,
+    15507,
+    16772,
+    17666,
+    18267,
+    18959,
+    19229
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 109,
+   "repetitions": 16,
+   "seq": "GTCAGGCCTCAGGGAGAGAAGTTTCACTGACATGAGTGAATAAGATATTATTAAGTTGCATTGATTCTCTCAGGTTTGATTTGACCCTCTGTTTAA",
+   "host_rows": [
+    1694,
+    2654,
+    3498,
+    5282,
+    6888,
+    8844,
+    10790,
+    12564,
+    15277,
+    15733,
+    16016,
+    16060,
+    18137,
+    18881,
+    19056,
+    20640
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 110,
+   "repetitions": 16,
+   "seq": "CATTCATCTCACAGCATTAAAACTTCCTTTTGATTGGAGCAGTTTTGAGACACCCTTTTTGTAGAATCTGCAAGTGGACATTTGGAGCGCTATGTG",
+   "host_rows": [
+    176,
+    329,
+    798,
+    3217,
+    4595,
+    6831,
+    6845,
+    9110,
+    9440,
+    11214,
+    11725,
+    12518,
+    14434,
+    15033,
+    15922,
+    18574
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 111,
+   "repetitions": 16,
+   "seq": "ATTCCCCAAGGCTGGGCAGCCATGGGATCAGCTTGTGCAGTGCCAGCTCGCTGTATGACCTTGGGCAGCTCCACCCTTCCTGGTCACCGCAGGCCT",
+   "host_rows": [
+    4815,
+    5170,
+    7930,
+    10175,
+    11066,
+    11103,
+    12715,
+    13014,
+    13905,
+    14310,
+    14411,
+    14911,
+    15220,
+    15602,
+    17405,
+    20469
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 112,
+   "repetitions": 16,
+   "seq": "GCTTGAACCTGGGAGGCAGAAATTGCAGTGAGCCCAGACTGCACCATTTCCCTCCAGCCTGGGGGGGACAAGAGCAAGATTCCATCTCCAAAAAAA",
+   "host_rows": [
+    196,
+    852,
+    962,
+    4539,
+    6446,
+    9526,
+    9694,
+    11971,
+    12248,
+    12684,
+    14364,
+    14531,
+    14661,
+    14703,
+    17202,
+    17947
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 113,
+   "repetitions": 16,
+   "seq": "CTTCAAAACTTGAGTGTTTTTTTTTCTCAACAAGCATGTTCTTAAAAACAGTAAACAATGTTCATTCATTATTTGATGATACTAACTTTGCGTGAT",
+   "host_rows": [
+    494,
+    1645,
+    3929,
+    4038,
+    4791,
+    5692,
+    7807,
+    9145,
+    10418,
+    14037,
+    16665,
+    16692,
+    16961,
+    17449,
+    18492,
+    20302
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 114,
+   "repetitions": 16,
+   "seq": "AGTTATCACATAATTGCATAGCATCTAGAATCAAATCAACTAATACATGGCCAAGTCAAAAGAAAATGAAGTAATCTTTGGGTTGGCCTTTTAGTT",
+   "host_rows": [
+    2317,
+    2622,
+    3746,
+    4034,
+    5359,
+    5541,
+    7298,
+    7770,
+    10073,
+    11619,
+    11884,
+    13050,
+    13757,
+    15795,
+    16252,
+    16525
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 115,
+   "repetitions": 16,
+   "seq": "CCATGTTAGCCAGGATGGTATGGATCTCCTGCCCTCGTGATCTGCCCATCTCAGCCTCCAAAAGTCCTGGGATACAGGCTTGAGCAACCACACCTG",
+   "host_rows": [
+    244,
+    484,
+    527,
+    875,
+    2962,
+    3689,
+    3869,
+    5458,
+    10084,
+    10589,
+    12833,
+    15749,
+    18112,
+    19696,
+    20328,
+    20779
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 116,
+   "repetitions": 16,
+   "seq": "GTATATAAAGAACACTTACACCTCAGAAACTTGACAAAAACAAAGAGAACAGCCACAGTGGCTCATGCCTGTAATACCAGCACTTTGAGAGACTGA",
+   "host_rows": [
+    849,
+    1037,
+    2563,
+    2706,
+    5656,
+    6657,
+    7514,
+    10581,
+    11845,
+    15393,
+    16260,
+    18222,
+    18255,
+    18263,
+    18372,
+    18523
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 117,
+   "repetitions": 16,
+   "seq": "CCTCATGATCCGCCCGCCTCAGCCTCCCAAAGTGCTAGGATTACAGGCATGAACCACCGCGCCCAGCACCCCAGTGGGACATTTTCTATCAAATCC",
+   "host_rows": [
+    2151,
+    2708,
+    3363,
+    3906,
+    4992,
+    7692,
+    7739,
+    9713,
+    10140,
+    16279,
+    16573,
+    16578,
+    18103,
+    19657,
+    19967,
+    20782
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 118,
+   "repetitions": 16,
+   "seq": "AATCACTTGAATCTGGGAGTTGGGAGCTGCAGTGAGCCAAGATCATGTTATTGTACTCCAGCCTAGGGACAAGAGCAAAACTCCATCTCCAAAAAA",
+   "host_rows": [
+    1710,
+    1966,
+    2401,
+    2782,
+    3683,
+    4496,
+    5014,
+    6244,
+    9926,
+    12961,
+    16355,
+    17223,
+    17660,
+    19819,
+    20052,
+    20759
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 119,
+   "repetitions": 16,
+   "seq": "CAGCCACAGTTAAGGACATGAACAACAGCCTTTAAAGTAGAATTTGTTCTAGGGTCTATTATGTGGGAGATATTTCTAGTTGTTACCTCTTGTATT",
+   "host_rows": [
+    4220,
+    6289,
+    6721,
+    7634,
+    7672,
+    8196,
+    8868,
+    12386,
+    12517,
+    12903,
+    14182,
+    14567,
+    18011,
+    18114,
+    18198,
+    20543
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 120,
+   "repetitions": 16,
+   "seq": "TCACTCTGTTGTTTAGGCTAGAGTGCAGTGGTGTGATCGTGACTTACCACAGCCTCAACCTCCCAGGCTCAAGCCTCCCAACTAGCTGGGACTGCA",
+   "host_rows": [
+    2174,
+    5600,
+    6606,
+    8152,
+    8940,
+    9059,
+    12012,
+    14337,
+    14498,
+    15472,
+    15577,
+    16149,
+    16429,
+    17466,
+    19497,
+    20047
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 121,
+   "repetitions": 16,
+   "seq": "TCCTGGTCTGCAGCAACTCACCAGCAGGTAGGGAAAGAAGCAGGGAGCCATGACTGTACCCTGAGAGGGCCGTGACAGAGCCAGGTGGGAAAGGCA",
+   "host_rows": [
+    1159,
+    3186,
+    5768,
+    11162,
+    12718,
+    14452,
+    14566,
+    14636,
+    15899,
+    16714,
+    16844,
+    17767,
+    17880,
+    18031,
+    20453,
+    20796
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 122,
+   "repetitions": 16,
+   "seq": "TTTTCTGTGATTTTTAAATCAGGGAGGAAAAATTAATTCAGTCTAAACTTTTAATGTTTCTTCCACAAGAAGTATCCTCATGGCTATTTTGTTATT",
+   "host_rows": [
+    1070,
+    1997,
+    3344,
+    5623,
+    6002,
+    6587,
+    7277,
+    10614,
+    11286,
+    12798,
+    14029,
+    16831,
+    17281,
+    17521,
+    18015,
+    20513
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 123,
+   "repetitions": 16,
+   "seq": "GACAACAAACACACAAAGTAAATATATAGAATTTCAGATGTGGATAAACGCTTAGGAAAAAAACAAAATGAGATAAGGGGGATGAGAATGCCCAGG",
+   "host_rows": [
+    1144,
+    3902,
+    4378,
+    5339,
+    6017,
+    8440,
+    8945,
+    11740,
+    12126,
+    14789,
+    15021,
+    15554,
+    15797,
+    17263,
+    18769,
+    19757
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 124,
+   "repetitions": 16,
+   "seq": "ACAAAAATCACAAGCATTCTTATACACCAACAACAGACAAACAGAGAGTCAATCATGAGTTAACTCCCATTCACAATTGCTTCAAAGAGAATAAAA",
+   "host_rows": [
+    2936,
+    3042,
+    4541,
+    5044,
+    5748,
+    7443,
+    9929,
+    10831,
+    11482,
+    12805,
+    15286,
+    15505,
+    16421,
+    18476,
+    19820,
+    20437
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 125,
+   "repetitions": 16,
+   "seq": "AGGGAACAGGGTGTAAGCCATGAGGGGAGGGGCTTGGGAAGGTGGGGACGGGCCGCTGGAGGCCATGGGCCGGCGTCTTGGTGTGGCAGCTTCCAC",
+   "host_rows": [
+    614,
+    2201,
+    3406,
+    6157,
+    6660,
+    7808,
+    8076,
+    9201,
+    9726,
+    14376,
+    15432,
+    16139,
+    16232,
+    16264,
+    20456,
+    20637
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 126,
+   "repetitions": 16,
+   "seq": "GCCAATATGGTGAGACCCTGCCTCTACTAAAAAAAATACAAAAATTAGACGGGCTTGGGGCGCGAGTCTGTAGTCCCAGCTTCTAGGGAGGCTGAG",
+   "host_rows": [
+    797,
+    1187,
+    1215,
+    5727,
+    9371,
+    9799,
+    9862,
+    10702,
+    13729,
+    13764,
+    14885,
+    15366,
+    15893,
+    17804,
+    19376,
+    20378
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 127,
+   "repetitions": 16,
+   "seq": "GGGGCTGGTGAGGGTTTTAAGACCCACACCTAGGTGAGCAGTGTGGGACAGAAAAAAGGGCACAGGCAGGGCCATGGGGAATGAGCCCATAACTGT",
+   "host_rows": [
+    97,
+    105,
+    2068,
+    5861,
+    6267,
+    8160,
+    10081,
+    12682,
+    12732,
+    14104,
+    14433,
+    15124,
+    15703,
+    16655,
+    18249,
+    18498
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 128,
+   "repetitions": 16,
+   "seq": "TTTCCTTGTTTGCTATGGTAACATGTCATTCCTGTTTTTCCATCTCTGCTTTTCTGATCCCTTAGACTCTGGCTGTCAGAGAGGAGAACTATGAAC",
+   "host_rows": [
+    584,
+    2636,
+    3799,
+    4916,
+    5109,
+    5546,
+    7881,
+    8063,
+    9122,
+    9417,
+    9736,
+    10628,
+    12987,
+    14919,
+    17380,
+    20728
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 129,
+   "repetitions": 16,
+   "seq": "CCAGCAGCAGTGTTCTGATACCCTATGTCAGGGACAAACACTCAGAACACAGCCACTGTGTTCTGGAATCCTATCAGAAGGAAAACACTCAGAAAC",
+   "host_rows": [
+    2044,
+    2212,
+    7154,
+    8690,
+    9180,
+    11026,
+    11027,
+    11530,
+    12856,
+    13146,
+    13668,
+    14507,
+    16225,
+    18404,
+    19261,
+    19419
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 130,
+   "repetitions": 16,
+   "seq": "ATTTGTTCTGCACATATACCATTGAGGGTAGAAGCTGAATTTTGCTTAAGATTATGTTTATACTACTTAACATTGTGCCAGATACTGAGTAAATAC",
+   "host_rows": [
+    986,
+    2391,
+    3965,
+    4294,
+    5572,
+    5922,
+    8275,
+    8578,
+    8749,
+    9418,
+    9665,
+    13255,
+    15481,
+    15583,
+    16015,
+    20794
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 131,
+   "repetitions": 16,
+   "seq": "AGAGGAGGAACAAAGGAGTGATTCTGGTTTCATAAAATAACTTATACAGTTGGCCTCCCTTAAGTTGTGCGTGTCACTGGCAGCTGTTTATTGAGC",
+   "host_rows": [
+    537,
+    1527,
+    2852,
+    5225,
+    6000,
+    6534,
+    6738,
+    6841,
+    8692,
+    9260,
+    9793,
+    11038,
+    13496,
+    15762,
+    18750,
+    18994
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 132,
+   "repetitions": 16,
+   "seq": "CAGAATTTAAACTAAAAAGCAGTGAACAAGTCAAAGATAATAATTCATGATAACATAAGTTTTATGTTACAGTGTAAATTCCAAAAGAAGCCATAG",
+   "host_rows": [
+    1509,
+    2906,
+    6124,
+    6579,
+    7293,
+    8689,
+    9275,
+    9333,
+    10548,
+    11778,
+    15345,
+    16230,
+    16753,
+    17052,
+    17308,
+    19335
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 133,
+   "repetitions": 16,
+   "seq": "CACGCCATTCTCCTGGCTCAGCCTCCCGAGTAGCTGGGACTACAGGTGTCCGCCACCATGTCCAACTAACTTTTTGTATTTTTAGTAGAGATGGGG",
+   "host_rows": [
+    1188,
+    3067,
+    3409,
+    3486,
+    3688,
+    8499,
+    9337,
+    11712,
+    11973,
+    12497,
+    13601,
+    14751,
+    15466,
+    15993,
+    18262,
+    18278
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 134,
+   "repetitions": 16,
+   "seq": "TCCATTCCATTCGAGTCCATTCCATTCCATTCCCTTCCATTCCTTTTGGTTCCATTCAATTCCATTCCTTTCCATTTGAGTCCATTAAATTCCATT",
+   "host_rows": [
+    1263,
+    1741,
+    3494,
+    3670,
+    4030,
+    4215,
+    5564,
+    5857,
+    8565,
+    9678,
+    13007,
+    16526,
+    17585,
+    17714,
+    18080,
+    20953
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 135,
+   "repetitions": 16,
+   "seq": "GCTCCTGGGTCTAACCAGCAACCCCAGACAGGCCCTGGGACCACGCATGAACCCTTGCTCTGCCTAAGAGAAAGCTACCTGGCTCCTGCTCACATT",
+   "host_rows": [
+    424,
+    1137,
+    2032,
+    4593,
+    7308,
+    7542,
+    8169,
+    10067,
+    11044,
+    13853,
+    14211,
+    15195,
+    15521,
+    17652,
+    17985,
+    19853
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 136,
+   "repetitions": 16,
+   "seq": "GTGATGAAGGCAGTACCCTCGTGACTACAGTGTCTTGTTTCTTCTGTCATTAACACGTCTTCATTAATTCTTCATTGTTTCTTTCTCATGGCTGTA",
+   "host_rows": [
+    964,
+    1237,
+    1262,
+    2569,
+    4391,
+    6860,
+    7718,
+    8051,
+    11316,
+    11707,
+    12817,
+    13188,
+    13365,
+    13507,
+    13540,
+    13693
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 137,
+   "repetitions": 16,
+   "seq": "GGGCCAGGCACAGTGGCTCCTGCTTGTAATCCCAACAGTTTGGGAGGCTGAGGCAAGCGAATCACTTGAGGTTAGGAGTTCGAGACCAGCCTGGCC",
+   "host_rows": [
+    629,
+    1490,
+    1764,
+    5682,
+    6361,
+    8295,
+    9125,
+    13307,
+    13973,
+    18875,
+    18909,
+    19126,
+    19238,
+    19447,
+    19785,
+    20679
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 138,
+   "repetitions": 16,
+   "seq": "TATTGTGTTACATGCCCCATAGGGGGGTGACCATAATCACTGTAATGATACAACCCTGATGTGACAAATGACTGGCACCCTTAGAACTTTTTTTTC",
+   "host_rows": [
+    1792,
+    1882,
+    3005,
+    4042,
+    5492,
+    6540,
+    9975,
+    13242,
+    13517,
+    16148,
+    16633,
+    17318,
+    17578,
+    17999,
+    20505,
+    21038
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 139,
+   "repetitions": 16,
+   "seq": "ATGACTACCCCAGGGGCCTGGGTGGGAGTGGCTGTAAGCAGCAGTTGGCCCATTGCCCCCTTTCCTTCTGCCCTCGTGGTCCTTGAGCAGTTGTGT",
+   "host_rows": [
+    73,
+    476,
+    566,
+    3026,
+    3605,
+    7774,
+    8600,
+    9077,
+    10607,
+    12642,
+    14044,
+    18182,
+    18924,
+    19702,
+    20258,
+    20821
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 140,
+   "repetitions": 16,
+   "seq": "AGGAAAGACAGAATGCCCACACATTCCCTGCCGTTCCCGGCTCCAGCCATGGAGGAAGCGGGGCTCAGAGGACATTGCACCAGACAGGTCTTGTTT",
+   "host_rows": [
+    620,
+    2092,
+    7284,
+    7392,
+    7756,
+    8740,
+    9012,
+    9022,
+    9196,
+    11985,
+    13311,
+    14304,
+    14983,
+    16553,
+    17038,
+    20404
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 141,
+   "repetitions": 16,
+   "seq": "CTGGGATGCCACAGGAGGGAGGTTTCTTTTGGGGGCTGTACCACTGTGAGAGGAGTTTGTAGAGCTTGCATGCAATGATAAAGCCCAACATCTTCA",
+   "host_rows": [
+    138,
+    762,
+    3199,
+    4128,
+    4526,
+    4798,
+    4809,
+    5915,
+    7914,
+    9133,
+    10585,
+    13893,
+    15129,
+    15276,
+    18763,
+    19299
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 142,
+   "repetitions": 16,
+   "seq": "GGCGTGAGAGCTCTGCCCGGCTGCTCTCAAAGCCCAGGCGGCTGCCCATAAACCCTTGCGTGTGCAGTATGCGGCCCACCTCTGGTACGTGGGCCG",
+   "host_rows": [
+    717,
+    2859,
+    4564,
+    5158,
+    5759,
+    5958,
+    5968,
+    7882,
+    9080,
+    11654,
+    12510,
+    12835,
+    14724,
+    20289,
+    20481,
+    21046
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 143,
+   "repetitions": 16,
+   "seq": "TAAAAGCAACAGGACTTCTTGTTTGGATTAATTAGAATGTCATGTTAACATGCTGAAATGCCCAGCAGCAAATCACTTTGATGTTGACCACTGTTG",
+   "host_rows": [
+    3124,
+    3905,
+    5864,
+    6366,
+    10757,
+    12991,
+    13002,
+    15061,
+    15547,
+    15704,
+    15802,
+    18580,
+    18993,
+    19409,
+    19705,
+    19865
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 144,
+   "repetitions": 16,
+   "seq": "TAATTGGATAAAGAGTCAAGACCCATCAGTGTGCTGTATTCAGGAAACACACGTCACGTGCAGAGACACATATAGGCTCAAAATAAAAGGATGGAG",
+   "host_rows": [
+    2470,
+    4225,
+    4991,
+    5666,
+    5893,
+    6061,
+    10376,
+    10444,
+    11471,
+    12525,
+    12608,
+    13183,
+    13731,
+    15873,
+    19142,
+    19159
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 145,
+   "repetitions": 16,
+   "seq": "AACCCAAAAGTCAGTACCAAGAAGAGTCAATTTATTAGTTTTCTAAAACAAAAAAAAATCAAAGTCACCAAAAAAGAGCAATGTCCAAGAAAACAT",
+   "host_rows": [
+    730,
+    1616,
+    3148,
+    3865,
+    4253,
+    6898,
+    7727,
+    8165,
+    11035,
+    12661,
+    13343,
+    14377,
+    14630,
+    14729,
+    15979,
+    17723
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 146,
+   "repetitions": 16,
+   "seq": "AAAGAACTCTATTGCAACAAGTTTCCAAATCAAAGTGGGAAAGAGGAAGATTAGGTTAAGCATTAGGTCGTCAGGTACGTAGGACAGCTAATACCA",
+   "host_rows": [
+    2094,
+    4041,
+    4235,
+    4796,
+    6118,
+    7145,
+    7908,
+    11486,
+    11683,
+    12898,
+    13991,
+    14028,
+    14198,
+    14932,
+    18334,
+    20965
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 147,
+   "repetitions": 16,
+   "seq": "GTGAATAATGCTGCAGTAAACATACCTGTGCATGTGTCTTTATAGCAGTATGATTTTAGTCCTTTGGTTATACACCCAATAATCAGATGGCTGGGT",
+   "host_rows": [
+    1553,
+    2055,
+    2332,
+    3787,
+    5591,
+    6458,
+    7168,
+    9101,
+    9823,
+    10882,
+    10925,
+    16443,
+    16568,
+    16746,
+    17115,
+    19931
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 148,
+   "repetitions": 16,
+   "seq": "CCAGCCAGCCAAGCCAGCCAAGCCAGCCAAGCAAACAAGCCAGCCAAGACAGCCAAGCCAACAAGCCACCTAAGCCAGCCAAGATACCCAGCTAGC",
+   "host_rows": [
+    1217,
+    3068,
+    3281,
+    4802,
+    4859,
+    4978,
+    7161,
+    9723,
+    10884,
+    11911,
+    13163,
+    13906,
+    16803,
+    17808,
+    17816,
+    20115
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 149,
+   "repetitions": 16,
+   "seq": "GACTGGCTATGGGGCTGCTCCTGAATGCTGTGCCTGGCGTGCAGGTGCGGTGGGGAGGAGTGTTTGTTGGAAGATGCTGAATGGGCAAGAGGCAGA",
+   "host_rows": [
+    1738,
+    1766,
+    2726,
+    3654,
+    5211,
+    5989,
+    7582,
+    9396,
+    11753,
+    12219,
+    14840,
+    15835,
+    16406,
+    18682,
+    18907,
+    20817
+   ],
+   "offsets": [
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96,
+    96
+   ]
+  },
+  {
+   "probe_id": 150,
+   "repetitions": 0,
+   "seq": "CGAGATAACCAGCTCCTGCTTTGAGCCCAACAGCCAGATGGTGAAGTGTAACCCGAGACATGGCAAGTACATGGCCTGCTGTATGCTCTACTAGGG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 151,
+   "repetitions": 0,
+   "seq": "AGTCTTACGATTGGGCCTCATTGTTTAAGGGAGTATCTGCTTTTGGACAATGAACTTCACGTGTGTTTCTCTGTTTTTATCTTCCCCTTTAGGGAT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 152,
+   "repetitions": 0,
+   "seq": "CAGCCCTCATGGAATTGTTTGGTGTGGACCCACTGAGATTCTGAACTGTGTCCCCTTTCCCTCTGCCCTTCTCTGGGGCCAGATTCTGAGCTCTCC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 153,
+   "repetitions": 0,
+   "seq": "CCCGCCCCAGCCTGATTCCTGCCTTACCCAGGAGGAGGGTGCCTGGCCTCAGTACCCAGGGTGGCATGACTGGGCTAAGTGGACACCGAGCTTCAT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 154,
+   "repetitions": 0,
+   "seq": "CTGTCTAGATTTTATGTGAAGATATTTCCTTTTCTACTGTAGGCCACATAGCTCTCAACATGTCCACTTGCAGATTCTATGAAAAAAAATTTTCCA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 155,
+   "repetitions": 0,
+   "seq": "TCTGCGCCGTGGCCAGGATACTGCCCCAAGACTTTTTGTTGTTGTTGACACAGTTTTACTGTGTCGCCCAGGCTGGAGTGCTGTGGCATGATGGCG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 156,
+   "repetitions": 0,
+   "seq": "TCTGTTTTTCTCATCGCATGGGGACAGTGATTCTCACGTTGAGACCAGGAAGACCAGGAAAGACTTAAAAAACCCTCCTTCAGGGACCATCCACGT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 157,
+   "repetitions": 0,
+   "seq": "GGACCTCAAGTGATCCACTCACCTTGGCCTCCCAAAGTGTTGGGATTAAAGGTGTGAGCCACCACACCCAGTCTACACCTCATTTATTTAATTTAA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 158,
+   "repetitions": 0,
+   "seq": "TCAAAGCAGTCAAAATGTCCACTTGTAGATTCTGAAAAAAGAGTGTTTTAAACATTCTATATCAAAGGAAAAGTTCAACTCTATGAGATTAATGCA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 159,
+   "repetitions": 0,
+   "seq": "AGGCGCCCGCCACCATGCCCGGCTAATTTTTTGTATTTTTAGTAGAGATGGGGTTTCACCATGTTAGCCAGGATGATCTCGATCTGACCCTGTGAT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 160,
+   "repetitions": 0,
+   "seq": "TGGAAAAGCCAATCTTTAAATATATCCTTAATAAAAACTCTCTCCTACGTAGTAAAAGCATCATCTAAACAGCAGCTCCAACCAAGAAAAAAAAAA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 161,
+   "repetitions": 0,
+   "seq": "TTCTCAAAATTCTCATTATAAGTCAGAGAAATAATATAAAAGCTCAAGGTATATACTGAATTCAAGTTGAATGCAACAGTATACTTGGATTTGTTC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 162,
+   "repetitions": 0,
+   "seq": "GATTCCCAGCTGTTGTGCCGAAATGGATTACACTGAGAATCCCAGCTGTACAGCTTTTCAGAAGCAGCATTCATGGTGGATTTGGTGTACTATACA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 163,
+   "repetitions": 0,
+   "seq": "TAGCTATATAACGTCAAGTTAGCAGGCCCAGATAACACATTTCAGTGATGAACAACTAAGTGCCAGATTCTAGGCTGCTGTTTTTACGTGAGTTAT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 164,
+   "repetitions": 0,
+   "seq": "TAGGCCGGTGAACAGTAGGCTCGAGCTTAGGTTTGAAAGGTGAGGTGAAAGAAATCGGCAAAGGGAACCACGGCGCAGATCTCGGGTTCCTTTGCT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 165,
+   "repetitions": 0,
+   "seq": "TCGAACTGGCCACCTCAGGTGATCTGCCCACCTCTTCCTCCCAAAGTGTTGGGATGACAGGCGTGAGCCATTGCGCCCGACCAGTTACGTTGTTTT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 166,
+   "repetitions": 0,
+   "seq": "ATAAACCTCTGTCAAAATTTATTTCACTTATTCCTGAGGAAATCAGTAAGTGGGGAAGCTGGTTCCAAGAACAAGTAAAAAAAAAATTACAGATTT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 167,
+   "repetitions": 0,
+   "seq": "ATGCAGTAGCGTGAGTCCACTTGGTTGGACTCCAAAGCTCGCTGCAGCAGCAACCTCCTGGCTTCAAGGAATCCTCCCACCCTAGCCTCCTGAGTA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 168,
+   "repetitions": 0,
+   "seq": "TGAGGGACAAGCGTTCGGAATCCAGCATTATTGTTCTAGAATCCTTTGGGAGGACAAACACTCCGAACCCAGTCCCAGTGTTCTAGAATCCTTTAT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 169,
+   "repetitions": 0,
+   "seq": "GTAAAAAGGCTGTTTTGTTTTTTAAAAATTATTCATGTGTTCACTGGAATAGCACCTATAACTTCCTTCAAGAACTTTTTCTTTACATTCACAACT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 170,
+   "repetitions": 0,
+   "seq": "ATATAATATCCTTCTTTATCTTTTGCAATTGTTTTTGACGTAAAGTTTGTTTTGTCTGATATTAGTATAACAACCCAAGCTCTCTTTTGGTTACTG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 171,
+   "repetitions": 0,
+   "seq": "TTTCCGTTCTCCCTTTCAGCTCTCTCTCACCCGGTTCTTCTCATCCCCATTCCTCTTCCTGTTCTGCAGCCAGCTGTGCTGGGTCGAGGGCTCAAG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 172,
+   "repetitions": 0,
+   "seq": "AGGATTCCAGAAGACTGCTACAAGGTCTGAATATTTTTCCCTCACAAAAGATTGTACAATGCTCCTACTGAGTTCTGTTAGTTTGTCCTCAGAAAA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 173,
+   "repetitions": 0,
+   "seq": "TCTTTTTTTTTTTTTTTTTTTTTGTTTGAGACGGAGTCTCACTCTGTCACCCAAGCGGGAATGCAGTGATGCGATCTCCGCTCACTGCAAGCTGCA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 174,
+   "repetitions": 0,
+   "seq": "AAGAAAGTTTAATTGTTCTAGATAGAAGATAAAAAAAATTCCATTAAGTCTAAGCCTAACTACCTTTTTAGTTTTTTCTTTGTTTTTGAGACAGAG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 175,
+   "repetitions": 0,
+   "seq": "CTGTGAGATGAATGCACACATCACAAAGAAGTTTCTCAAAATGCTTCTATCTAGTATTTATGTGAAGATATTTCCTTTTCCACAGTAGGCCTCAAA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 176,
+   "repetitions": 0,
+   "seq": "TGGAAGTTGTAGAATGGCGTGTGTGCTTACTCATTTCATGAGATGATACTCTCATTGAACTGTCGGGAGTGGAAGGGTGCGCTGGGACGTGAAGGA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 177,
+   "repetitions": 0,
+   "seq": "AGACCCCAGCTCAGGGAATCTGGTCTCGGTCATCACTCCCAGGGGACTACAGGGCCCCAGGACGGCACACATTCAGGCCCAGGAGAGCTCCCCACA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 178,
+   "repetitions": 0,
+   "seq": "CTCCTGAACTCATGATCCACCCGCCTCGGCCTCCCAAAGTGCTGGGATCACAGGCGTGAGCCACCGCGCCCGGCCGAAAATGTTTACTTTTAAAAG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 179,
+   "repetitions": 0,
+   "seq": "GGCCCAGCACCCCACAAAACCCAAAGTGCTCAGCGTCTAGGATCTGTTAATGGGGCAGAGAAGTGGATGTTCTTTTCCTGGTTCAAAGGTAGAAAC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 180,
+   "repetitions": 0,
+   "seq": "CTACTGTTGGTAATGGTTTTCCTTGCTTGGCTAACAAATAAGCCATTGGAAAAACTTACTTTAATTATAGCCTAATTTCCATTTTTTTTTTTTGAG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 181,
+   "repetitions": 0,
+   "seq": "AATTAAAAGGCACAGACTGGCAAATTGGATAAAGAGTCAAGACTCATCAGTGCTCTATTCAGGAAACACATCTCACATGCAGAGACACACACAGGC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 182,
+   "repetitions": 0,
+   "seq": "GTTTCACTCTTGTTGCCCAGGCTAGAGTGCAATGGCACAATCTTGGCTTGCTGCAACATCTATCTCCCAGGTTCAAGTGATTCTCCTGCCTCAGGC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 183,
+   "repetitions": 0,
+   "seq": "GCCCACAATTTACTGTCCCTAGAAGCCCAAACCCCTTTTCCTTCATCTCGTCCCTTCTTCACAATTTATTACCAGTTGTCAAAATGGAATATAAGC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 184,
+   "repetitions": 0,
+   "seq": "GGAATCACGAAAGGGGTGGTCTTCTGATATCCTCCCTTTTCACAGGGGTCTGCAGAGGGAGGCAGCCGCTGTTGGGAGGTCACAGAGCGTCTGCAG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 185,
+   "repetitions": 0,
+   "seq": "GTGCTCTGTCTCCTGCTTCTGCCCACTCTCCACACCCGCCTCCAGTCTTTGAGCTGCAATTCTTTCATCCGCCGCTCCCAAAAAATTGGATGGCCC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 186,
+   "repetitions": 0,
+   "seq": "AGTGAAAGAAGACAGACACAAAAGAGGCAAATAGTATATGATTTCACTAACAAGAAGTACCTACAGTAGTCAATTTAATAAGGATGAAAAGTAGAA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 187,
+   "repetitions": 0,
+   "seq": "TGAGTGTCCGTCCCTCTCTTAGGATTCCAGAACACTGCTGCTGGGTCAAGAGTGTTTGTCCCTCACATAAGATTCAAGAACACAGCTGCTGGGTTG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 188,
+   "repetitions": 0,
+   "seq": "TGTCTGCCTAGACCAGATTTAGAGACCAACTTGAATTGCTGGGCTCTGAGTTTCTTTGAAGTCTGTCTTTCCCTCACCTCTCAAAGAAAACAGAAT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 189,
+   "repetitions": 0,
+   "seq": "GATATTAATTCCTTATATTGTATATAGTTTACAAATATTTTCTCCATTTCCTGGGTTGCCTTTTACTCTGTTGACAGTGGTTCTTGATGCACAAAA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 190,
+   "repetitions": 0,
+   "seq": "ACATGCCACCACGCCCAGTTAATTTTTGTATTTTTAGTAGAGACAGGACTTCACCATATTGGCCAGGCTTATCTCAAACTCCCGACCTCAGGTGAT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 191,
+   "repetitions": 0,
+   "seq": "CCTGTGCTAAGCAGGTGTTTCGATGGACCTGGGAGATCTTGCTCAGAGGTTCTGACAGGACAAAGGTAAAGGAAGGGCCAGAGTGGTCGGAGAGAT",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 192,
+   "repetitions": 0,
+   "seq": "CCACAGTGGACACAGATCAGAAGGTGTCACAACCACCTCCATTCGGATTTAGGTGTGCGGCAGGCCTCTGCCTCTGAGTGTCTCTAACATGAACCG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 193,
+   "repetitions": 0,
+   "seq": "CTGTTGGGGAAAATCTGAGTGTTGGGAAAAAAGCTGAGGCAGGGCTTGTATGTCTGATATAATGTAAAAGAGTCTCGGAACATGTCCAGGGTCCGG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 194,
+   "repetitions": 0,
+   "seq": "TATCACTGATCCTCTTTCCCTGCTATTAGGTATTGCTCTCTTCCTCCGCTGTTTGCCTTTTCGGATTATAGAAGTAATATATGTTCCCATATTTGG",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 195,
+   "repetitions": 0,
+   "seq": "TGGTTCTGTAAGCAGGCCCCTGACCCTGTTGCACATCACTGTACAGGATCTCCCAAATGGGGCCTCCAGCTACCACCACCAGCATTCCTTGGCCAA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 196,
+   "repetitions": 0,
+   "seq": "AAAAAAAACAAAGATGGTTCCACTGGGAAAACAGAAACCATGCTAAGGAATTTCTAACACGAAGGGTTTAATACAGAAAATAGGTGCTTTCAAAAC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 197,
+   "repetitions": 0,
+   "seq": "GCGTGGTGGCGGGTGCCTGTAGTCCCAGCTATTCGGGAGGCTGAGGCACGAGAATGATGTGAACCCAGGAGGCGGAGCTCGCAGTGAGGCAAGATC",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 198,
+   "repetitions": 0,
+   "seq": "TTAAAAATATATTTATAAACACTATTAAAAATGACAACGTTTCAAATTTTCACCTGTGTTTTTTGTCATAAACCTGTCTAAATAGTATGAAAGATA",
+   "host_rows": [],
+   "offsets": []
+  },
+  {
+   "probe_id": 199,
+   "repetitions": 0,
+   "seq": "GGTGTTTTAGGGGAGCTGTGAAATGTTGCATTGTCTGTGGGGGAAAGGAGAAGGTGGTGTCCAGGGGTTTGTTGGATGCACTACCCCAGGCGTTCA",
+   "host_rows": [],
+   "offsets": []
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+2026-10-25 02:16:44 START
+15 cells over 2 GPUs -> outputs/bpe_human
+02:16 start s0 ep15
+02:16 start s0 ep30
+02:20 rc=0 s0 ep30
+02:20 start s0 ep80
+02:20 rc=0 s0 ep15
+02:20 start s0 ep50
+02:23 rc=0 s0 ep80
+02:23 start s1 ep15
+02:23 rc=0 s0 ep50
+02:23 start s0 ep120
+02:27 rc=0 s1 ep15
+02:27 start s1 ep50
+02:27 rc=0 s0 ep120
+02:27 start s1 ep30
+02:30 rc=0 s1 ep50
+02:30 start s1 ep120
+02:31 rc=0 s1 ep30
+02:31 start s1 ep80
+02:33 rc=0 s1 ep120
+02:33 start s2 ep30
+02:34 rc=0 s1 ep80
+02:34 start s2 ep15
+02:37 rc=0 s2 ep30
+02:37 start s2 ep80
+02:38 rc=0 s2 ep15
+02:38 start s2 ep50
+02:40 rc=0 s2 ep80
+02:41 rc=0 s2 ep50
+02:41 start s2 ep120
+02:44 rc=0 s2 ep120
+2026-10-25 02:44:57 ALL_FINISHED

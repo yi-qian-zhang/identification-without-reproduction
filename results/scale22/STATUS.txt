@@ -1,0 +1,23 @@
+2026-10-25 02:16:44 START
+10 runs over 2 GPUs -> outputs/scale22  (canaries: /data/wh/yqdata/glm_data/human/canaries_chr22.npz)
+02:16 start n=1000 s0
+02:16 start n=1000 s1
+02:17 rc=0 n=1000 s1
+02:17 start n=2500 s1
+02:17 rc=0 n=1000 s0
+02:17 start n=2500 s0
+02:19 rc=0 n=2500 s1
+02:19 start n=5000 s1
+02:19 rc=0 n=2500 s0
+02:19 start n=5000 s0
+02:20 rc=0 n=5000 s1
+02:20 start n=10000 s1
+02:20 rc=0 n=5000 s0
+02:20 start n=10000 s0
+02:22 rc=0 n=10000 s0
+02:22 start n=20000 s0
+02:22 rc=0 n=10000 s1
+02:22 start n=20000 s1
+02:25 rc=0 n=20000 s0
+02:25 rc=0 n=20000 s1
+2026-10-25 02:25:31 ALL_FINISHED
