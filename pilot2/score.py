@@ -20,7 +20,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from .data import PROBE_LEN, PROBE_OFFSET, WINDOW, Dataset, Probe, random_dna, decode
+from .data import (PROBE_LEN, PROBE_OFFSET, WINDOW, Dataset, Probe, borrowed_hosts,
+                   random_dna, decode)
 from .tokenizers import KmerTokenizer
 from .train import with_bos
 
@@ -282,7 +283,7 @@ def extract_infill(model, tok, kind, probe: Probe, host: np.ndarray, device, k_n
 
 
 def score_run(model, tok: KmerTokenizer, kind: str, ds: Dataset, device, pool_size=500, seed=0, floor_n=500,
-              offset_mode: str = "fixed"):
+              offset_mode: str = "fixed", donor_tier=None):
     """offset_mode="random": the training host is scored at that copy's own offset, and the
     fresh host at a new random offset (`phase_match` = fraction of training copies whose
     k-mer phase equals the fresh offset's)."""
@@ -296,6 +297,7 @@ def score_run(model, tok: KmerTokenizer, kind: str, ds: Dataset, device, pool_si
     off_rng = np.random.default_rng(20_000 + seed)
     fresh_off = {p.probe_id: (PROBE_OFFSET if offset_mode == "fixed"
                               else int(off_rng.integers(0, WINDOW - PROBE_LEN + 1))) for p in ds.probes}
+    borrowed = borrowed_hosts(ds.probes, seed, donor_tier)
     res = {"kind": kind, "tokenizer": tok.name, "k": tok.k, "pool_size": pool_size, "floors": [], "probes": []}
     for sc in SCORERS_FOR[kind]:
         res["floors"].append(heldout_floor(model, tok, sc, ds.test, device, floor_n))
@@ -307,6 +309,10 @@ def score_run(model, tok: KmerTokenizer, kind: str, ds: Dataset, device, pool_si
         hosts = {"fresh": (fresh_hosts[p.probe_id], fo)}
         if p.repetitions > 0:
             hosts["train"] = (ds.train[p.host_rows[0]], p.offsets[0])
+        elif p.probe_id in borrowed:                  # matched own-host control
+            row, off, from_probe = borrowed[p.probe_id]
+            entry["borrowed_host"] = {"train_row": row, "offset": off, "from_probe": from_probe}
+            hosts["train"] = (ds.train[row], off)
         for hname, (host, off) in hosts.items():
             for sc in SCORERS_FOR[kind]:
                 entry["ranks"][f"{sc}/{hname}"] = rank_probe(model, tok, sc, p, host, pool, device, offset=off)

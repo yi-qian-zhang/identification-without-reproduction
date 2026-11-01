@@ -228,3 +228,65 @@ def with_bos(x: torch.Tensor) -> torch.Tensor:
     """Prepend BOS so the AR model can predict position 0. (B, L) -> (B, L+1)."""
     bos = torch.full((x.shape[0], 1), BOS, dtype=x.dtype, device=x.device)
     return torch.cat([bos, x], dim=1)
+
+
+def borrowed_hosts(probes, seed: int, donor_tier: int | None = None):
+    """{probe_id: (train row, offset, member it was borrowed from)} for every non-member probe.
+
+    WHY THIS EXISTS. Until 27 Oct the own-host condition had no control. Each score_run built
+    `hosts["train"]` only for probes with repetitions > 0, so a member was ranked inside the very
+    training window the fine-tuner had seen, while the only non-member number came from a fresh
+    window. The 0.92--0.96 own-host rate was then read against a fresh-host control, and that
+    comparison is not matched: the member's advantage could come from the memorised flanks rather
+    than from the planted record between them.
+
+    A control has no training row of its own, never having been planted, so it borrows one. The
+    probe region of that row is overwritten by each candidate, exactly as it is for a member, so
+    the two conditions differ in one thing only: whether the model has seen the 96 nucleotides now
+    sitting between those memorised flanks. If the borrowed-host control also ranks first, the
+    own-host rate is a property of the host window and not of the record.
+
+    WHAT THIS CONTROL DOES AND DOES NOT SEPARATE. `rank_probe` writes each candidate into the
+    probe region before scoring, so the record the model memorised at that offset is not one of
+    the candidates and cannot compete with them: the first version of this docstring claimed the
+    control was "if anything harder than the member's own case" for that reason, and that was
+    mechanically wrong. What the borrowed host does is put a non-member in a window whose flanks
+    the model has memorised, at an offset where it has memorised something. That is enough to
+    answer the question the column needs answered -- whether any sequence read in a trained
+    window ranks first -- and it is not enough to decide whether the model's conditional
+    distribution at that offset is sharp on a string absent from the candidate list. A control
+    near chance is therefore consistent with both "the window carries no advantage" and "the
+    window carries an advantage that no candidate can collect", and only the first of those is
+    what the own-host column is being read as.
+
+    DONOR TIER. The donor is drawn from one repetition tier, by default the SINGLE-COPY members,
+    without replacement while they last. The paper quotes the own-host rate at a single copy, so
+    that is the cell the default controls; a donor drawn from all tiers at once (the 27 Oct
+    morning version) put some controls in windows the fine-tuner had seen sixteen times and some
+    in windows it had seen once, which is a different host condition from the one being
+    controlled. Pass `donor_tier` to control a different cell: `donor_tier=16` borrows from the
+    sixteen-copy members and is the control for the sixteen-copy own-host rate. One scoring pass
+    controls one tier, which is why the tiers are measured as separate passes writing separate
+    files rather than all at once.
+    """
+    members = [p for p in probes if p.repetitions > 0 and p.host_rows]
+    controls = [p for p in probes if p.repetitions == 0]
+    if not members or not controls:
+        return {}
+    want = min(p.repetitions for p in members) if donor_tier is None else int(donor_tier)
+    donors = [p for p in members if p.repetitions == want]
+    if not donors:
+        raise ValueError("no members at tier %r to borrow a host from; tiers present: %s"
+                         % (want, sorted({p.repetitions for p in members})))
+    rng = np.random.default_rng(30_000 + seed)
+    if len(donors) >= len(controls):
+        pick = rng.permutation(len(donors))[:len(controls)]
+    else:
+        pick = rng.integers(0, len(donors), len(controls))
+    out = {}
+    for p, j in zip(controls, pick):
+        m = donors[int(j)]
+        out[p.probe_id] = (int(m.host_rows[0]),
+                           int(m.offsets[0]) if m.offsets else PROBE_OFFSET,
+                           int(m.probe_id))
+    return out

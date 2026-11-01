@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import re
 from pathlib import Path
 
@@ -64,27 +65,71 @@ def two(x):
 
 
 # ---------------------------------------------------------------- A4
-def table_ident(rows, out: Path):
-    """Every DNABERT-2 chromosome-22 cell, per seed: what the main text gives as three numbers."""
+def table_ident(rows, out: Path, res: Path):
+    """Every DNABERT-2 chromosome-22 cell, per seed: what the main text gives as three numbers.
+
+    Rewritten 27 Oct. The previous version had two faults the pre-submission panel found.
+
+    It had no fresh-host column, so the main text's headline range -- single-copy identification
+    in a window the model never saw, 0.18--0.26 -- had no per-seed table behind it anywhere in
+    the paper, which is the one thing this appendix exists to provide.
+
+    And its control row read "0 in all 18 cells, 300 segments", which was written by hand and is
+    false: results/borrowed_host.json has rank-1 hits among the never-trained probes. Both
+    control rows are now read out of that file like every other cell here, and the row says which
+    cells are non-zero instead of asserting that none are.
+    """
+    bh = json.loads((res / "borrowed_host.json").read_text(encoding="utf-8"))
+    by_ck = {r["checkpoint"]: r for r in bh["rows"]}
     runs = [f"dnabert2bpe_human_s{s}" for s in (0, 1, 2)]
     eps = sorted({r["epoch"] for r in rows if r["group"] == "bpe_human"}, key=lambda e: EPOCH_ORDER[e])
-    lines = [head("A4: per-seed DNABERT-2 on chromosome 22."),
-             "\\begin{tabular}{llccccc}", "\\toprule",
-             "checkpoint & seed & held-out \\bits & id, 16 copies & id, 1 copy & "
-             "verbatim, 16 & verbatim, 1 \\\\", "\\midrule"]
+    lines = [head("A4: per-seed DNABERT-2 on chromosome 22, both host conditions, both controls."),
+             "\\begin{tabular}{llcccccccc}", "\\toprule",
+             "& & & \\multicolumn{1}{c}{16 copies} & \\multicolumn{2}{c}{1 copy, id} & "
+             "\\multicolumn{2}{c}{control, id} & \\multicolumn{2}{c}{verbatim} \\\\",
+             "\\cmidrule(lr){4-4}\\cmidrule(lr){5-6}\\cmidrule(lr){7-8}\\cmidrule(lr){9-10}",
+             "checkpoint & seed & \\bits & id & own & fresh & own & fresh & 16 & 1 \\\\",
+             "\\midrule"]
+
+    def bhcell(e, key, i):
+        row = by_ck.get("ep" + e if e != "final" else "final")
+        if not row or key not in row["cells"]:
+            return None
+        v = row["cells"][key]["rate"]
+        return v[i] if i < len(v) and v[i] is not None else None
+
+    nonzero = []
     for e in eps:
         for i, run in enumerate(runs):
             floor = cell(rows, "bpe_human", run, "16", "train", e, "heldout_bits_per_nt")
+            c_own, c_fresh = bhcell(e, "r=0/train", i), bhcell(e, "r=0/fresh", i)
+            for host, v in (("own", c_own), ("fresh", c_fresh)):
+                if v:
+                    nonzero.append((e, i, host, v))
             lines.append(
                 f"{('round~' + e if e != 'final' else 'final') if i == 0 else ''} & {i} & "
                 f"{'---' if floor is None else f'{floor:.3f}'} & "
                 f"{two(cell(rows, 'bpe_human', run, '16', 'train', e, 'rank1_rate'))} & "
-                f"{two(cell(rows, 'bpe_human', run, '1', 'train', e, 'rank1_rate'))} & "
+                f"{two(bhcell(e, 'r=1/train', i))} & "
+                f"{two(bhcell(e, 'r=1/fresh', i))} & "
+                f"{two(c_own)} & {two(c_fresh)} & "
                 f"{pct(cell(rows, 'bpe_human', run, '16', 'train', e, 'exact_rate'))} & "
                 f"{pct(cell(rows, 'bpe_human', run, '1', 'train', e, 'exact_rate'))} \\\\")
         lines.append("\\addlinespace[2pt]")
+    # A list of thirteen cells is unreadable in a table footer and is not the quantity anyone
+    # needs. What the control has to establish is that no cell is large and that the hits are a
+    # few records rather than a rate, so the footer says the maximum, the count of non-zero cells
+    # and where the distinct-record count comes from.
+    n_cells = 2 * len(eps) * len(runs)
+    if not nonzero:
+        note = "every control cell is $0.00$"
+    else:
+        hi = max(v for _, _, _, v in nonzero)
+        note = (f"{len(nonzero)} of the {n_cells} control cells are non-zero, none above "
+                f"${hi:.2f}$; \\texttt{{pilot2/count\\_control\\_hits.py}} gives the distinct "
+                f"records behind them")
     lines += ["\\midrule",
-              "never-trained & 0--2 & --- & \\multicolumn{4}{c}{0 in all 18 cells, 300 segments} \\\\",
+              "\\multicolumn{10}{l}{\\footnotesize 50 records per cell. " + note + ".} \\\\",
               "\\bottomrule", "\\end{tabular}"]
     (out / "a4_ident_perseed.tex").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print("  a4_ident_perseed.tex")
@@ -256,7 +301,7 @@ def table_census(res: Path, out: Path):
 
 
 # ---------------------------------------------------------------- A9 capacity controls
-CAP = [("cap_regress", "6mer_ar", "6-mer, unchanged"),
+CAP = [("cap_regress", "6mer_ar", "6-mer, unchanged (8 slots)"),
        ("cap_r512", "6mer_ar", "\\quad embedding rank 512"),
        ("cap_r256", "6mer_ar", "\\quad rank 256"),
        ("cap_r128", "6mer_ar", "\\quad rank 128"),
@@ -266,10 +311,15 @@ CAP = [("cap_regress", "6mer_ar", "6-mer, unchanged"),
        ("cap_ff", "6mer_ar", "\\quad feed-forward width 1568"),
        ("cap_elr03", "6mer_ar", "\\quad embedding LR $\\times 0.3$"),
        ("cap_elr01", "6mer_ar", "\\quad embedding LR $\\times 0.1$"),
-       ("len_sp", "6mersp_ar", "\\quad spaced 6-mer (48 slots)"),
-       ("cap_3mer_r512", "3mer_ar", "3-mer, embedding rank 512"),
-       ("len_sp", "3mersp_ar", "\\quad spaced 3-mer"),
-       ("cap_char_r512", "char_ar", "character, embedding rank 512")]
+       # "(48 slots)" until 27 Oct, which was wrong and inverted the control's meaning. A spaced
+       # k-mer emits one k-mer token followed by k-1 deterministic FILL tokens; FILL is never
+       # predicted and the scorers skip it (tokenizers.SpacedKmerTokenizer.is_fill), so a spaced
+       # 6-mer covering 48 nucleotides occupies 48 SEQUENCE POSITIONS and 8 CONTENT SLOTS. The
+       # row is the control that holds the slot count fixed and stretches the sequence sixfold.
+       ("len_sp", "6mersp_ar", "\\quad spaced 6-mer (8 slots, 48 positions)"),
+       ("cap_3mer_r512", "3mer_ar", "3-mer, embedding rank 512 (16 slots)"),
+       ("len_sp", "3mersp_ar", "\\quad spaced 3-mer (16 slots, 48 positions)"),
+       ("cap_char_r512", "char_ar", "character, embedding rank 512 (48 slots)")]
 
 
 def table_capacity(rows, out: Path):
@@ -449,7 +499,7 @@ def main(argv=None):
     out.mkdir(parents=True, exist_ok=True)
     rows = load(res)
     print(f"{len(rows)} rows ->")
-    table_ident(rows, out)
+    table_ident(rows, out, res)
     table_kcurve(rows, out)
     table_downstream(res, out)
     table_rerun(res, out)

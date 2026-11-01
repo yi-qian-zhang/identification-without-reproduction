@@ -1,0 +1,76 @@
+{
+  "max_af": 0.001,
+  "max_carriers": 5,
+  "n_samples": 2548,
+  "n_rare_variants_in_table": 619639,
+  "n_canaries": 400,
+  "windows_with_no_substituted_site": 0,
+  "non_snv_sites_skipped_in_windows": 69,
+  "windows_with_a_non_snv_site": 62,
+  "pure_snv_by_status": {
+    "chimera": 194,
+    "haplotype": 124,
+    "genotype": 20
+  },
+  "by_status": {
+    "chimera": 235,
+    "haplotype": 145,
+    "genotype": 20
+  },
+  "reclassified_by_subtraction": {
+    "n": 19,
+    "note": "windows the substituted-sites-only intersection called haplotypes and that no chromosome actually carries once the other variant sites in the window are required to read reference"
+  },
+  "single_variant": {
+    "n": 163,
+    "by_status": {
+      "haplotype": 144,
+      "genotype": 19
+    }
+  },
+  "composite": {
+    "n": 237,
+    "by_status": {
+      "chimera": 235,
+      "genotype": 1,
+      "haplotype": 1
+    }
+  },
+  "haplotypes_carrying_all": {
+    "n": 145,
+    "hist": {
+      "1": 86,
+      "2": 23,
+      "3": 18,
+      "4": 10,
+      "5": 8
+    },
+    "max": 5
+  },
+  "individuals_carrying_all_max": 5,
+  "variants_per_canary_hist": {
+    "1": 163,
+    "2": 125,
+    "3": 60,
+    "4": 35,
+    "5": 12,
+    "6": 2,
+    "7": 2,
+    "8": 1
+  },
+  "variant_sites_per_window_hist": {
+    "1": 55,
+    "2": 96,
+    "3": 88,
+    "4": 71,
+    "5": 34,
+    "6": 31,
+    "7": 10,
+    "8": 8,
+    "9": 3,
+    "10": 2,
+    "12": 1,
+    "14": 1
+  },
+  "release_note": "Aggregate-only public export. Per-record rows and anchor coordinates are withheld; reconstruction code is provided."
+}

@@ -197,13 +197,21 @@ def fig_ident(rows, out: Path):
     for ax, tier, title in ((axes[0], "1", "one copy: the realistic case"),
                             (axes[1], "16", "sixteen copies")):
         _plot_band(ax, _band(rows, "bpe_human", runs, tier, "train", "rank1_rate"),
-                   C_ID, "identified, own genomic context")
+                   C_ID, "identified, own training window")
         _plot_band(ax, _band(rows, "bpe_human", runs, tier, "fresh", "rank1_rate"),
-                   C_ID2, "identified, unseen context", marker="d")
+                   C_ID2, "identified, unseen window", marker="d")
         _plot_band(ax, _band(rows, "bpe_human", runs, tier, "train", "exact_rate"),
                    C_VERB, "returned verbatim", marker="s")
+        # Both control conditions, not just the fresh one. The caption claims the control is
+        # read in both, and until 28 Oct only the fresh-window line was drawn -- the own-window
+        # control reached results/borrowed_host.json and no figure, because the exporter's
+        # pattern did not match scores_*_bh.json. Same colour, open marker, because they are one
+        # control read two ways rather than two different things.
         _plot_band(ax, _band(rows, "bpe_human", runs, "0", "fresh", "rank1_rate"),
-                   C_REF, "never-trained control", marker="^")
+                   C_REF, "never-trained control, unseen window", marker="^")
+        own = _band(rows, "bpe_human", runs, "0", "train", "rank1_rate")
+        if own:
+            _plot_band(ax, own, C_REF, "never-trained control, own window", marker="v")
         ax.axhline(0.01, color=C_REF, lw=0.5, ls=":")
         ax.set_title(title, color=INK)
         ax.set_xlabel("fine-tuning round")
@@ -336,7 +344,8 @@ def fig_probe(out: Path):
             "priced in"]),
         (47, "2", C_ID, "identification", [
             "rank the record against 100 other real rare segments: first?    chance $0.0099$",
-            "read twice: in the record's own genomic context, and in a window never trained on"]),
+            "read twice: in the training window the record was planted in, and in another "
+            "window from the same unused pool"]),
         (23, "3", C_VERB, "verbatim extraction", [
             "do all 48 target nucleotides come back exactly?",
             "prefix protocol  |  re-masking ICM  |  nucleotide-level (overlapping $k$-mers)  |  "

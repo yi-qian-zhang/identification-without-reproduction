@@ -24,7 +24,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from .data import PROBE_LEN, PROBE_OFFSET, WINDOW, Probe, build_dataset, decode, random_dna
+from .data import (PROBE_LEN, PROBE_OFFSET, WINDOW, Probe, borrowed_hosts, build_dataset,
+                   decode, random_dna)
 from .real_data import DATA_PATHS, REAL_DATA, build_real_dataset
 
 MODEL_ROOT = "/data/wh/yqdata/models/HyenaDNA"
@@ -100,7 +101,7 @@ def extract_prefix(model, probe: Probe, host, device, offset: int, k_nt: int = 4
             "hamming_nt": ham, "pred_nt": decode(pred), "truth_nt": decode(truth)}
 
 
-def score_run(model, ds, device, pool_size, seed, probes_per_tier=None):
+def score_run(model, ds, device, pool_size, seed, probes_per_tier=None, donor_tier=None):
     rng = np.random.default_rng(10_000 + seed)
     real_pool = getattr(ds, "pool_seqs", None)            # real canaries -> rank against real segments
     pool = random_dna(rng, pool_size, PROBE_LEN) if real_pool is None else real_pool[:pool_size]
@@ -110,6 +111,10 @@ def score_run(model, ds, device, pool_size, seed, probes_per_tier=None):
                    for i, p in enumerate(ds.probes)}
     off_rng = np.random.default_rng(20_000 + seed)
     fresh_off = {p.probe_id: int(off_rng.integers(0, WINDOW - PROBE_LEN + 1)) for p in ds.probes}
+    # The own-host condition had no control until 27 Oct: `hosts["train"]` was built only for
+    # probes the fine-tuner had planted, so this family's 0.40--0.50 single-copy own-host rate was
+    # being read against a FRESH-host non-member, two conditions apart. See data.borrowed_hosts.
+    borrowed = borrowed_hosts(ds.probes, seed, donor_tier)
     probes = ds.probes
     if probes_per_tier:
         keep, seen = [], {}
@@ -126,6 +131,10 @@ def score_run(model, ds, device, pool_size, seed, probes_per_tier=None):
         hosts = {"fresh": (fresh_hosts[p.probe_id], fo)}
         if p.repetitions > 0:
             hosts["train"] = (ds.train[p.host_rows[0]], p.offsets[0] if p.offsets else PROBE_OFFSET)
+        elif p.probe_id in borrowed:                   # matched own-host control
+            row, off, from_probe = borrowed[p.probe_id]
+            e["borrowed_host"] = {"train_row": row, "offset": off, "from_probe": from_probe}
+            hosts["train"] = (ds.train[row], off)
         for hname, (host, off) in hosts.items():
             e["ranks"][f"causal/{hname}"] = rank_probe(model, p, host, pool, device, off)
             e["extract"][hname] = extract_prefix(model, p, host, device, off)
@@ -211,6 +220,9 @@ def main(argv=None):
     ap.add_argument("--save_epochs", default="1,3,8,15,30")
     ap.add_argument("--snapshot_probes", type=int, default=20)
     ap.add_argument("--score_epoch0", action="store_true")
+    ap.add_argument("--drop_ckpt", action="store_true",
+                    help="delete each snapshot after scoring it, as this script did "
+                         "unconditionally until 27 Oct")
     ap.add_argument("--smoke", action="store_true")
     ap.add_argument("--downstream", action="store_true", help="GUE promoter probe (linear + fine-tune) at every scored snapshot")
     ap.add_argument("--downstream_tasks", default=None, help="comma list of GUE tasks; default by --data (gue: prom_300_all; yeast: emp_H3,emp_H3K4me3)")
@@ -263,10 +275,19 @@ def main(argv=None):
     sc["downstream"] = DS(model)
     (out_dir / "scores_final.json").write_text(json.dumps(sc, indent=1), encoding="utf-8")
     print(summary_line("final", sc), flush=True)
+    if not args.drop_ckpt:
+        torch.save(model.state_dict(), out_dir / "final.pt")
+    # Until 27 Oct this loop deleted every snapshot unconditionally, and so did the branch above
+    # it, so a finished HyenaDNA run left no weights at all. The 13 Oct decision to keep
+    # checkpoints was applied to run_pilot, dnabert, dnabert2 and nt and missed this file, which
+    # is why the own-host control of 27 Oct could be re-scored on three families and had to be
+    # retrained on this one. Scoring a saved snapshot is minutes; retraining is half an hour.
     for e in save_epochs:
         ck = out_dir / f"ep{e}.pt"
-        if not ck.exists() or e == args.epochs:
-            if ck.exists():
+        if not ck.exists():
+            continue
+        if e == args.epochs:                 # the same weights as final.pt, scored just above
+            if args.drop_ckpt:
                 ck.unlink()
             continue
         model.load_state_dict(torch.load(ck, map_location=device)); model.eval()
@@ -275,7 +296,8 @@ def main(argv=None):
         s2["downstream"] = DS(model)
         (out_dir / f"scores_ep{e}.json").write_text(json.dumps(s2, indent=1), encoding="utf-8")
         print(summary_line(f"ep{e}", s2), flush=True)
-        ck.unlink()
+        if args.drop_ckpt:
+            ck.unlink()
     print(f"[hyena] done in {time.time() - t0:.0f}s -> {out_dir}", flush=True)
     return 0
 

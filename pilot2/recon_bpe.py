@@ -94,10 +94,104 @@ def nt_dist_bpe(model, voc: BpeVocab, wins: np.ndarray, j: int, device, chunk: i
     return out
 
 
+def union_span(voc: BpeVocab, base: str, j: int, max_iter: int = 8):
+    """A nucleotide interval containing j, token-boundary aligned under all four candidates at j.
+
+    Grow [j, j+1) until, for every letter written at j, the tokens that overlap the interval begin
+    exactly at its start and end exactly at its end. The interval only grows and is bounded by the
+    window, so this terminates; in practice it settles in one or two rounds.
+
+    The point of the interval is that it does not depend on which letter sits at j. Scoring the same
+    nucleotides for every candidate is what makes the four numbers comparable, and it is what the
+    division this replaces was trying and failing to do.
+    """
+    lo, hi = j, j + 1
+    for _ in range(max_iter):
+        nlo, nhi = lo, hi
+        for a in NTS:
+            _, spans = voc.encode_str(base[:j] + a + base[j + 1:])
+            cov = [(s, e) for (s, e) in spans if s < hi and e > lo]
+            if cov:
+                nlo = min(nlo, min(s for s, _ in cov))
+                nhi = max(nhi, max(e for _, e in cov))
+        if (nlo, nhi) == (lo, hi):
+            break
+        lo, hi = nlo, nhi
+    return lo, hi
+
+
+@torch.no_grad()
+def nt_dist_bpe_fixed(model, voc: BpeVocab, wins: np.ndarray, j: int, device, chunk: int = 128,
+                      diag: list | None = None):
+    """log2 p(nucleotides of a fixed interval around j | the rest), shape (B, 4). No division.
+
+    WHY THIS REPLACES nt_dist_bpe. That function masked the tokens covering j and divided the
+    summed log-probability by the nucleotides those tokens covered. The divisor depends on the
+    candidate, and a log-probability is negative, so the candidate whose tokens happen to span more
+    nucleotides is pulled towards zero, which is towards winning. Measured on the released
+    DNABERT-2 vocabulary over 1,435 positions where the four divisors differ, the largest divisor
+    falls on A 707 times against 359 expected (pilot2/diag_bpe_denominator.py). Iterated over 48
+    positions that prior is enough to make a run of A the fixed point the decoder reports, and the
+    truth-free selection then prefers it to restarts six nucleotides closer to the truth.
+
+    Here the interval is chosen first, independently of the candidate (`union_span`), and every
+    candidate is scored on exactly those nucleotides: the masked event is "this interval reads
+    thus", the conditioning is the identical remainder of the window, and the four events differ
+    only at j. Summed log-probabilities are then directly comparable and nothing is divided. The
+    update is a block conditional on the interval rather than a single-site one, which is a
+    stronger ICM proposal, not a weaker one.
+
+    WHAT IS NOT FIXED. Candidates still decompose the interval into different numbers of tokens,
+    and a product of masked-token marginals is not the joint, so a segmentation with fewer factors
+    is still mildly favoured. That residual is in the same direction as the old bias but is no
+    longer multiplied by the span. `diag`, when given a list, collects (candidate, n_masked_tokens,
+    interval width) per row so the residual can be measured rather than assumed.
+    """
+    B = wins.shape[0]
+    jobs, meta = [], []
+    for b in range(B):
+        base = decode(wins[b])
+        lo, hi = union_span(voc, base, j)
+        for a in range(4):
+            ids, spans = voc.encode_str(base[:j] + NTS[a] + base[j + 1:])
+            cover = [t for t, (s, e) in enumerate(spans) if s < hi and e > lo]
+            masked = list(ids)
+            true = [ids[t + 1] for t in cover]            # +1 for [CLS]
+            for t in cover:
+                masked[t + 1] = voc.mask
+            jobs.append(masked)
+            meta.append((b, a, [(t + 1, tid) for t, tid in zip(cover, true)], hi - lo))
+
+    out = torch.full((B, 4), float("-inf"), device=device)
+    for c0 in range(0, len(jobs), chunk):
+        sl = slice(c0, c0 + chunk)
+        ids, am = voc.pad_batch(jobs[sl], device)
+        lp = F.log_softmax(_logits(model, ids, am), dim=-1) / math.log(2.0)
+        for r, (b, a, pos_tok, width) in enumerate(meta[sl]):
+            tot = 0.0
+            for p, tid in pos_tok:
+                tot += float(lp[r, p, tid])
+            out[b, a] = tot
+            if diag is not None:
+                diag.append({"letter": NTS[a], "n_masked": len(pos_tok), "width": int(width),
+                             "score": tot})
+    return out
+
+
 @torch.no_grad()
 def icm_bpe(model, voc: BpeVocab, win: np.ndarray, offset: int, device, k_nt: int = 48,
-            restarts: int = 16, sweeps: int = 4, seed: int = 0):
-    """Reveal win[:offset+k_nt]; recover the next 48 nucleotides by ICM in nucleotide space."""
+            restarts: int = 16, sweeps: int = 4, seed: int = 0, scorer="fixed"):
+    """Reveal win[:offset+k_nt]; recover the next 48 nucleotides by ICM in nucleotide space.
+
+    scorer="fixed"  the fixed-interval conditional, nothing divided (default since 27 Oct)
+    scorer="pernt"  the original: tokens covering j, divided by the nucleotides they cover.
+                   Kept so the submitted numbers stay reproducible; it carries the letter
+                   prior documented on nt_dist_bpe_fixed and should not be used for new
+                   measurements.
+    """
+    # NB: the body below binds `score` to the truth-free selection array, which is why the
+    # parameter is `scorer`.
+    dist = nt_dist_bpe if scorer == "pernt" else nt_dist_bpe_fixed
     start, end = offset + k_nt, offset + PROBE_LEN
     target = list(range(start, end))
     truth = win[start:end].copy()
@@ -112,7 +206,7 @@ def icm_bpe(model, voc: BpeVocab, win: np.ndarray, offset: int, device, k_nt: in
     for _ in range(sweeps):
         changed, n_sweeps = 0, n_sweeps + 1
         for j in target:
-            d = nt_dist_bpe(model, voc, cur, j, device)
+            d = dist(model, voc, cur, j, device)
             new = (d.argmax(1) + 1).cpu().numpy()
             changed += int((new != cur[:, j]).sum())
             cur[:, j] = new
@@ -122,7 +216,7 @@ def icm_bpe(model, voc: BpeVocab, win: np.ndarray, offset: int, device, k_nt: in
     # truth-free selection: the summed per-nucleotide score of the fixed point it converged to
     score = np.zeros(restarts)
     for j in target:
-        d = nt_dist_bpe(model, voc, cur, j, device).cpu().numpy()
+        d = dist(model, voc, cur, j, device).cpu().numpy()
         score += d[np.arange(restarts), cur[:, j] - 1]
     best = int(np.argmax(score))
     ham = [int((cur[r, start:end] != truth).sum()) for r in range(restarts)]
@@ -132,14 +226,23 @@ def icm_bpe(model, voc: BpeVocab, win: np.ndarray, offset: int, device, k_nt: in
     tw[0, start:end] = truth
     hits, bits = [], 0.0
     for j in target:
-        d = nt_dist_bpe(model, voc, tw, j, device)[0]
+        d = dist(model, voc, tw, j, device)[0]
         hits.append(bool(int(d.argmax()) + 1 == int(tw[0, j])))
         bits -= float(d[int(tw[0, j]) - 1])
     loo = float(np.mean(hits))
-    return {"protocol": f"icm-bpe-r{restarts}", "sweeps_used": n_sweeps, "restarts": restarts,
+    return {"protocol": f"icm-bpe-{scorer}-r{restarts}", "scorer": scorer,
+            "sweeps_used": n_sweeps, "restarts": restarts,
             "n_generated_nt": len(target), "exact": bool(ham[best] == 0), "hamming_nt": ham[best],
             "oracle_exact": bool(min(ham) == 0), "ham_by_restart": ham,
             "loo_top1": loo, "loo_bits_per_nt": bits / len(target),
+            # The two scorers do not measure the same thing here and the division is only a
+            # per-nucleotide one for the first. "pernt" scores one nucleotide's covering tokens, so
+            # the sum over the target divided by its length is bits per nucleotide. "fixed" scores a
+            # whole token-aligned interval per position, so the same division gives bits per
+            # interval per target nucleotide, which is several times larger and is NOT comparable to
+            # any other bits/nt figure in this project. Only loo_top1 and the Hamming distances
+            # compare across the two.
+            "loo_bits_unit": "bits/nt" if scorer == "pernt" else "bits/interval per target nt",
             "loo_bound": loo ** len(target),
             "pred_nt": decode(cur[best, start:end]), "truth_nt": decode(truth)}
 
@@ -168,6 +271,9 @@ def main(argv=None):
     ap.add_argument("--sweeps", type=int, default=4)
     ap.add_argument("--ckpt", default="final.pt")
     ap.add_argument("--name", default="recon_bpe")
+    ap.add_argument("--score", choices=("fixed", "pernt"), default="fixed",
+                    help="fixed: the fixed-interval conditional. pernt: the original "
+                         "divided-by-covered-nucleotides score, which carries a letter prior")
     args = ap.parse_args(argv)
     device = torch.device(f"cuda:{args.gpu}" if torch.cuda.is_available() else "cpu")
     tiers = [int(t) for t in args.tiers.split(",")]
@@ -195,7 +301,8 @@ def main(argv=None):
                     win = host.copy()
                     win[off:off + PROBE_LEN] = p.seq
                     r = icm_bpe(model, voc, win, off, device, restarts=args.restarts,
-                                sweeps=args.sweeps, seed=1000 * int(p.probe_id) + tier)
+                                sweeps=args.sweeps, seed=1000 * int(p.probe_id) + tier,
+                                scorer=args.score)
                     v = per[tier]
                     for key in ("exact", "oracle_exact"):
                         v[key].append(float(r[key]))
@@ -206,7 +313,8 @@ def main(argv=None):
                     cells.append({"tier": tier, "probe_id": p.probe_id, "icm_bpe": r})
             (d / f"{args.name}.json").write_text(
                 json.dumps({"run": d.name, "data": a.get("data"), "seed": a["seed"],
-                            "ckpt": args.ckpt, "cells": cells}, indent=1), encoding="utf-8")
+                            "ckpt": args.ckpt, "scorer": args.score, "cells": cells}, indent=1),
+                encoding="utf-8")
             for t in sorted(per, reverse=True):
                 m = lambda key: float(np.mean(per[t][key])) if per[t][key] else float("nan")
                 rows.append(dict(run=d.name, data=a.get("data"), seed=a["seed"], tier=t,

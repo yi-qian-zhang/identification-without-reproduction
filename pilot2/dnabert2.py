@@ -43,7 +43,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from .data import PROBE_LEN, PROBE_OFFSET, WINDOW, Probe, build_dataset, decode, random_dna
+from .data import (PROBE_LEN, PROBE_OFFSET, WINDOW, Probe, borrowed_hosts, build_dataset,
+                   decode, random_dna)
 from .real_data import DATA_PATHS, REAL_DATA, build_real_dataset
 
 MODEL_DIR = "/data/wh/yqdata/models/DNABERT2"
@@ -216,7 +217,8 @@ def extract_prefix(model, voc, probe: Probe, host, device, offset, objective, k_
             "exact": bool(ham == 0), "hamming_nt": int(ham), "pred_nt": pred, "truth_nt": truth}
 
 
-def score_run(model, voc, ds, device, pool_size, seed, probes_per_tier=None, floor_n=200, objective="mlm"):
+def score_run(model, voc, ds, device, pool_size, seed, probes_per_tier=None, floor_n=200,
+              objective="mlm", donor_tier=None):
     rng = np.random.default_rng(10_000 + seed)
     real_pool = getattr(ds, "pool_seqs", None)            # real canaries -> rank against real segments
     pool = random_dna(rng, pool_size, PROBE_LEN) if real_pool is None else real_pool[:pool_size]
@@ -226,6 +228,7 @@ def score_run(model, voc, ds, device, pool_size, seed, probes_per_tier=None, flo
                    for i, p in enumerate(ds.probes)}
     off_rng = np.random.default_rng(20_000 + seed)
     fresh_off = {p.probe_id: int(off_rng.integers(0, WINDOW - PROBE_LEN + 1)) for p in ds.probes}
+    borrowed = borrowed_hosts(ds.probes, seed, donor_tier)
     probes = ds.probes
     if probes_per_tier:
         keep, seen = [], {}
@@ -243,6 +246,10 @@ def score_run(model, voc, ds, device, pool_size, seed, probes_per_tier=None, flo
         hosts = {"fresh": (fresh_hosts[p.probe_id], fo)}
         if p.repetitions > 0:
             hosts["train"] = (ds.train[p.host_rows[0]], p.offsets[0] if p.offsets else PROBE_OFFSET)
+        elif p.probe_id in borrowed:                  # matched own-host control
+            row, off, from_probe = borrowed[p.probe_id]
+            e["borrowed_host"] = {"train_row": row, "offset": off, "from_probe": from_probe}
+            hosts["train"] = (ds.train[row], off)
         for hname, (host, off) in hosts.items():
             e["ranks"][f"{sc}/{hname}"] = rank_probe(model, voc, p, host, pool, device, off, objective)
             e["extract"][hname] = extract_prefix(model, voc, p, host, device, off, objective)
