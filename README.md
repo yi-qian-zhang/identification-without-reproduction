@@ -23,6 +23,11 @@ predictability or slot count as the sole explanation. At the end of training,
 planted-target surprise is 0.824 versus 0.0052 bits/nt; these are different checkpoints
 from the matched-loss comparison.
 
+The overlapping DNABERT family uses two separate campaigns: the 50-epoch causal
+fine-tuning arm supplies the cross-family membership comparison; the 150-epoch masked
+arm supplies the stronger-decoder and leave-one-out diagnostics. They do not share
+checkpoints. Both the manuscript and its configuration table distinguish these arms.
+
 ## Rebuild the reported figures and tables
 
 From the repository root, these commands need Python and matplotlib, without GPUs,
